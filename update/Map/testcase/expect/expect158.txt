@@ -1,0 +1,39 @@
+Position string constructor : Pos (1,1)
+Get row col : (1,1)
+Set (9,0)
+Get row col : (9,0)
+Position str : (9,0)
+IsEqual old Position: False
+IsEqual Watson Position: True
+Map Check : 14x14
+         0    1    2    3    4    5    6    7    8    9   10   11   12   13
+    0    .    .    .    .    .    .    .    F    .    .    .    F    .    .
+    1    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+    2    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+    3    .    .    F    .    .    .    .    .    .    .    .    .    .    .
+    4    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+    5    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+    6    .    .    .    .    .    .    .    .    .    .    .    F    .    .
+    7    .    .    .    .    F    .    .    .    .    .    .    .    .    .
+    8    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+    9    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+   10    .    .    .    .    .    .    .    .    .    .    .    .    F    .
+   11    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+   12    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+   13    .    .    .    .    .    .    .    .    .    .    .    .    .    .
+IsValid (-1,7,Watson,0) : False
+IsValid (7,-1,Watson,0) : False
+IsValid (0,14,Watson,0) : False
+IsValid (14,0,Watson,0) : False
+IsValid (-1,-1,UNKNORW,0) : False
+IsValid (0,0,UNKNORW,0) : False
+IsValid (0,0,Watson,0) : True
+IsValid (0,0,Sherlock,0) : True
+IsValid (0,0,Criminal,0) : True
+IsValid (0,0,Robot,0) : True
+FakeWall Check : 
+IsValid (3,2,Sherlock,0) : True
+IsValid (3,2,Criminal,0) : True
+IsValid (3,2,Robot,0) : True
+IsValid (3,2,Watson,0) : False
+IsValid (3,2,Watson,900) : True

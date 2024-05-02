@@ -1,0 +1,34 @@
+Position string constructor : Pos (5,3)
+Get row col : (5,3)
+Set (5,5)
+Get row col : (5,5)
+Position str : (5,5)
+IsEqual old Position: False
+IsEqual Watson Position: True
+Map Check : 4x4
+         0    1    2    3
+    0    .    .    .    .
+    1    .    .    .    .
+    2    .    .    .    .
+    3    .    .    .    .
+IsValid (-1,2,Watson,0) : False
+IsValid (2,-1,Watson,0) : False
+IsValid (0,4,Watson,0) : False
+IsValid (4,0,Watson,0) : False
+IsValid (-1,-1,UNKNORW,0) : False
+IsValid (0,0,UNKNORW,0) : False
+IsValid (0,0,Watson,0) : True
+IsValid (0,0,Sherlock,0) : True
+IsValid (0,0,Criminal,0) : True
+IsValid (0,0,Robot,0) : True
+Wall Check : 
+IsValid (11,5,Sherlock,0) : False
+IsValid (11,5,Watson,0) : False
+IsValid (11,5,Criminal,0) : False
+IsValid (11,5,Robot,0) : False
+FakeWall Check : 
+IsValid (6,12,Sherlock,0) : False
+IsValid (6,12,Criminal,0) : False
+IsValid (6,12,Robot,0) : False
+IsValid (6,12,Watson,0) : False
+IsValid (6,12,Watson,900) : False
