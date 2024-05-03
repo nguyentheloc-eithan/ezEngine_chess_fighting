@@ -1,28 +1,30 @@
-MAP_NUM_ROWS = 13
-MAP_NUM_COLS = 1
-MAX_NUM_MOVING_OBJECTS = 7
-ARRAY_WALLS = (10,0); (10,0)
-ARRAY_FAKE_WALLS = (10,0); (6,0); (10,0); (4,0); (1,0); (2,0); (1,0); (1,0)
-SHERLOCK_MOVING_RULE = URDRL
-SHERLOCK_INIT_POS = (7,0)
-SHERLOCK_INIT_HP = 44
-SHERLOCK_INIT_EXP = 860
-WATSON_MOVING_RULE = RLDLUUURD
-WATSON_INIT_POS = (5,0)
-WATSON_INIT_HP = 87
-WATSON_INIT_EXP = 253
-CRIMINAL_INIT_POS = (12,0)
-NUM_STEPS = 28
-
+Configuration[
+MAP_NUM_ROWS=13
+MAP_NUM_COLS=1
+MAX_NUM_MOVING_OBJECTS=7
+NUM_WALLS=2
+ARRAY_WALLS=[(10,0);(10,0)]
+NUM_FAKE_WALLS=8
+ARRAY_FAKE_WALLS=[(10,0);(6,0);(10,0);(4,0);(1,0);(2,0);(1,0);(1,0)]
+SHERLOCK_MOVING_RULE=URDRL
+SHERLOCK_INIT_POS=(7,0)
+SHERLOCK_INIT_HP=44
+SHERLOCK_INIT_EXP=860
+WATSON_MOVING_RULE=RLDLUUURD
+WATSON_INIT_POS=(5,0)
+WATSON_INIT_HP=87
+WATSON_INIT_EXP=253
+CRIMINAL_INIT_POS=(12,0)
+NUM_STEPS=28
+]
 __________________NEW STEP__________________
 ROUND : 0 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
@@ -39,11 +41,10 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 0 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
@@ -52,8 +53,8 @@ Sherlock move direction : U
     3|     |
     4|-----|
     5|  (W)|
-    6|  (S)|
-    7|     |
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -61,21 +62,20 @@ Sherlock move direction : U
    12|     |
 *********************************************************
 ROUND : 0 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -84,22 +84,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 1 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -107,21 +106,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 1 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -129,21 +127,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 1 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -152,22 +149,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 2 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -175,21 +171,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 2 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -197,21 +192,20 @@ Sherlock move direction : D
    12|     |
 *********************************************************
 ROUND : 2 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -220,22 +214,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 3 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -243,21 +236,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 3 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -265,21 +257,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 3 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -288,22 +279,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 4 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -311,21 +301,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 4 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -333,21 +322,20 @@ Sherlock move direction : L
    12|     |
 *********************************************************
 ROUND : 4 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -356,22 +344,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 5 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -379,21 +366,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 5 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -401,21 +387,20 @@ Sherlock move direction : U
    12|  (C)|
 *********************************************************
 ROUND : 5 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -424,22 +409,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 6 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -447,21 +431,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 6 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -469,21 +452,20 @@ Sherlock move direction : R
    12|     |
 *********************************************************
 ROUND : 6 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -492,22 +474,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 7 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -515,21 +496,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 7 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -537,21 +517,20 @@ Sherlock move direction : D
    12|  (C)|
 *********************************************************
 ROUND : 7 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -560,22 +539,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 8 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -583,21 +561,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 8 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -605,21 +582,20 @@ Sherlock move direction : R
    12|     |
 *********************************************************
 ROUND : 8 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -628,22 +604,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 9 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -651,21 +626,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 9 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -673,21 +647,20 @@ Sherlock move direction : L
    12|  (C)|
 *********************************************************
 ROUND : 9 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -696,22 +669,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 10 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -719,21 +691,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 10 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -741,21 +712,20 @@ Sherlock move direction : U
    12|     |
 *********************************************************
 ROUND : 10 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -764,22 +734,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 11 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -787,21 +756,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 11 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -809,21 +777,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 11 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -832,22 +799,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 12 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -855,21 +821,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 12 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -877,21 +842,20 @@ Sherlock move direction : D
    12|     |
 *********************************************************
 ROUND : 12 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -900,22 +864,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 13 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -923,21 +886,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 13 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -945,21 +907,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 13 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -968,22 +929,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 14 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -991,21 +951,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 14 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1013,21 +972,20 @@ Sherlock move direction : L
    12|     |
 *********************************************************
 ROUND : 14 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1036,22 +994,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 15 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1059,21 +1016,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 15 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1081,21 +1037,20 @@ Sherlock move direction : U
    12|  (C)|
 *********************************************************
 ROUND : 15 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1104,22 +1059,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 16 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1127,21 +1081,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 16 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1149,21 +1102,20 @@ Sherlock move direction : R
    12|     |
 *********************************************************
 ROUND : 16 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1172,22 +1124,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 17 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1195,21 +1146,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 17 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1217,21 +1167,20 @@ Sherlock move direction : D
    12|  (C)|
 *********************************************************
 ROUND : 17 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1240,22 +1189,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 18 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1263,21 +1211,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 18 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1285,21 +1232,20 @@ Sherlock move direction : R
    12|     |
 *********************************************************
 ROUND : 18 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1308,22 +1254,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 19 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1331,21 +1276,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 19 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1353,21 +1297,20 @@ Sherlock move direction : L
    12|  (C)|
 *********************************************************
 ROUND : 19 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1376,22 +1319,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 20 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1399,21 +1341,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 20 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1421,21 +1362,20 @@ Sherlock move direction : U
    12|     |
 *********************************************************
 ROUND : 20 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1444,22 +1384,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 21 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1467,21 +1406,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 21 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1489,21 +1427,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 21 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1512,22 +1449,21 @@ Watson move direction : L
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 22 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1535,21 +1471,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 22 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1557,21 +1492,20 @@ Sherlock move direction : D
    12|     |
 *********************************************************
 ROUND : 22 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1580,22 +1514,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 23 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1603,21 +1536,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 23 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1625,21 +1557,20 @@ Sherlock move direction : R
    12|  (C)|
 *********************************************************
 ROUND : 23 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1648,22 +1579,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 24 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1671,21 +1601,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 24 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : L
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1693,21 +1622,20 @@ Sherlock move direction : L
    12|     |
 *********************************************************
 ROUND : 24 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1716,22 +1644,21 @@ Watson move direction : U
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 25 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1739,21 +1666,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 25 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : U
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1761,21 +1687,20 @@ Sherlock move direction : U
    12|  (C)|
 *********************************************************
 ROUND : 25 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1784,22 +1709,21 @@ Watson move direction : R
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 26 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1807,21 +1731,20 @@ Criminal count after moving : -826297056
    12|     |
 *********************************************************
 ROUND : 26 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1829,21 +1752,20 @@ Sherlock move direction : R
    12|     |
 *********************************************************
 ROUND : 26 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1852,22 +1774,21 @@ Watson move direction : D
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 27 - TURN : 0
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(11,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
-Criminal current count : -826297056
-Criminal count after moving : -826297056
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
+Criminal current count : 161220176
+Criminal count after moving : 161220176
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1875,21 +1796,20 @@ Criminal count after moving : -826297056
    12|  (C)|
 *********************************************************
 ROUND : 27 - TURN : 1
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Sherlock move direction : D
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|
@@ -1897,21 +1817,20 @@ Sherlock move direction : D
    12|  (C)|
 *********************************************************
 ROUND : 27 - TURN : 2
-ArrayMovingObject [count=3; capacity=7; ]
+ArrayMovingObject[count=3;capacity=7;]
 	Ciminal[index=0;pos=(12,0)]
-	 Sherlock[index=1;pos=(6,0);moving_rule=URDRL]
-	 Watson[index=2;pos=(4,0);moving_rule=RLDLUUURD]
-	 ]
+	Sherlock[index=1;pos=(7,0);moving_rule=URDRL]
+	Watson[index=2;pos=(5,0);moving_rule=RLDLUUURD]
 Watson move direction : R
      |    0|
     0|     |
     1|-----|
     2|-----|
     3|     |
-    4|  (W)|
-    5|     |
-    6|  (S)|
-    7|     |
+    4|-----|
+    5|  (W)|
+    6|-----|
+    7|  (S)|
     8|     |
     9|     |
    10|IIIII|

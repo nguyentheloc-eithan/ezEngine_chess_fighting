@@ -935,10 +935,10 @@ bool ArrayMovingObject::add(MovingObject *mv_obj)
     // Kiểm tra xem mảng đã đầy chưa
     if (count < capacity)
     {
-        // Thêm đối tượng mới vào cuối mảng
+
         arr_mv_objs[count] = mv_obj;
-        // Tăng giá trị của count lên một
-        ++count;
+
+        count++;
         return true; // Trả về true để thông báo rằng việc thêm đối tượng thành công
     }
     else
@@ -960,24 +960,23 @@ MovingObject *ArrayMovingObject::get(int index) const
 
 int ArrayMovingObject::size() const
 {
-    return count;
+    return this->count;
 }
 
 string ArrayMovingObject::str() const
 {
     stringstream ss;
-    ss << "ArrayMovingObject [count=" << count << "; capacity=" << capacity << "; ";
+    ss << "ArrayMovingObject[count=" << count << ";capacity=" << capacity << ";";
 
     // Liệt kê các đối tượng trong mảng
-    for (int i = 0; i < count; ++i)
+    for (int i = 0; i < count; i++)
     {
         if (arr_mv_objs[i] != nullptr)
         {
-            ss << arr_mv_objs[i]->str() << "; ";
+            ss << arr_mv_objs[i]->str() << ";";
         }
     }
 
-    ss << "]";
     return ss.str();
 }
 /*
@@ -1110,7 +1109,7 @@ string Configuration::str() const
     oss << "WATSON_INIT_EXP=" << watson_init_exp << endl;
     oss << "CRIMINAL_INIT_POS=(" << criminal_init_pos.getRow() << "," << criminal_init_pos.getCol() << ")" << endl;
     oss << "NUM_STEPS=" << num_steps << endl;
-    oss << "]" << endl;
+    oss << "]";
 
     return oss.str(); // Return the built string
 }
@@ -1196,6 +1195,7 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
         OUTPUT << "__________________NEW STEP__________________" << endl;
         MovingObject *robot = nullptr;
         int roundSize = arr_mv_objs->size();
+        // cout << "roundSize: " << roundSize << endl;
         for (int i = 0; i < roundSize; ++i)
         {
 
@@ -1208,7 +1208,7 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
             OUTPUT << "\tC" << lineArr.substr(1) << "]" << endl;
             while (getline(ss, lineArr, ']'))
             {
-                if (lineArr.length() > 0)
+                if (lineArr.length() > 1)
                     OUTPUT << "\t" << lineArr.substr(1) << "]" << endl;
             }
             if (i == 0)
@@ -1229,18 +1229,18 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
             printMap(OUTPUT, roundSize);
             OUTPUT << "*********************************************************" << endl;
         }
-        if (robot != nullptr)
-        {
-            if (criminal->getCount() % 3 == 0 && criminal->getCount() > 0)
-            {
-                string robotType[4] = {"C", "S", "W", "SW"};
-                OUTPUT << "Robot " << robotType[dynamic_cast<Robot *>(robot)->getType()] << " has been created" << endl;
-                arr_mv_objs->add(robot);
-            }
-            else
-            {
-                // delete robot;
-            }
-        }
+        // if (robot != nullptr)
+        // {
+        //     if (criminal->getCount() % 3 == 0 && criminal->getCount() > 0)
+        //     {
+        //         string robotType[4] = {"C", "S", "W", "SW"};
+        //         OUTPUT << "Robot " << robotType[dynamic_cast<Robot *>(robot)->getType()] << " has been created" << endl;
+        //         arr_mv_objs->add(robot);
+        //     }
+        //     else
+        //     {
+        //         // delete robot;
+        //     }
+        // }
     }
 }
