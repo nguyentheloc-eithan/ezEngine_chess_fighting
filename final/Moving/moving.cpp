@@ -1,5 +1,9 @@
 #include "moving.h"
 const Position Position::npos = Position(-1, -1);
+bool isDivisibleByThree(int num)
+{
+    return num % 3 == 0;
+}
 /*
  * CLASS: MapElement
  */
@@ -439,56 +443,86 @@ Criminal::Criminal(int index, const Position &init_pos, Map *map, Sherlock *sher
     : Character(index, init_pos, map, "CRIMINAL"), sherlock(sherlock), watson(watson)
 {
 }
+// Position Criminal::getNextPosition()
+// {
+//     vector<char> directions = {'U', 'L', 'D', 'R'};
+//     Position nextPos = pos;
+//     int maxDistance = INT_MIN;
+//     char bestDirection = '\0'; // Initialize with null character
+
+//     // Iterate through all possible directions
+//     for (char direction : directions)
+//     {
+//         int nextRow = pos.getRow();
+//         int nextCol = pos.getCol();
+
+//         // Calculate the next position based on the current direction
+//         switch (direction)
+//         {
+//         case 'U':
+//             nextRow--;
+//             break;
+//         case 'L':
+//             nextCol--;
+//             break;
+//         case 'D':
+//             nextRow++;
+//             break;
+//         case 'R':
+//             nextCol++;
+//             break;
+//         }
+
+//         Position newPos(nextRow, nextCol);
+//         // Check if the new position is valid
+//         if (map->isValid(newPos, this))
+//         {
+//             // Calculate the Manhattan distance to both Sherlock and Watson
+//             int distanceToSherlock = abs(newPos.getRow() - sherlock->getCurrentPosition().getRow()) + abs(newPos.getCol() - sherlock->getCurrentPosition().getCol());
+//             int distanceToWatson = abs(newPos.getRow() - watson->getCurrentPosition().getRow()) + abs(newPos.getCol() - watson->getCurrentPosition().getCol());
+//             int totalDistance = distanceToSherlock + distanceToWatson;
+
+//             // Update the next position if the total distance is greater than the current maximum
+//             if (totalDistance > maxDistance || (totalDistance == maxDistance && direction < bestDirection))
+//             {
+//                 maxDistance = totalDistance;
+//                 nextPos = newPos;
+//                 bestDirection = direction;
+//             }
+//         }
+//     }
+
+//     return nextPos;
+// }
 Position Criminal::getNextPosition()
 {
-    vector<char> directions = {'U', 'L', 'D', 'R'};
-    Position nextPos = pos;
-    int maxDistance = INT_MIN;
-    char bestDirection = '\0'; // Initialize with null character
-
-    // Iterate through all possible directions
-    for (char direction : directions)
+    std::vector<Position> adjacentPositions = pos.getAdjacentPositions();
+    int maxDistance = -1;
+    Position nextPos;
+    cout << "pass Criminal::getNextPosition()" << endl;
+    // Duyệt qua các vị trí lân cận
+    for (const auto &adjPos : adjacentPositions)
     {
-        int nextRow = pos.getRow();
-        int nextCol = pos.getCol();
-
-        // Calculate the next position based on the current direction
-        switch (direction)
+        // Kiểm tra tính hợp lệ của vị trí
+        if (map->isValid(adjPos, this))
         {
-        case 'U':
-            nextRow--;
-            break;
-        case 'L':
-            nextCol--;
-            break;
-        case 'D':
-            nextRow++;
-            break;
-        case 'R':
-            nextCol++;
-            break;
-        }
-
-        Position newPos(nextRow, nextCol);
-
-        // Check if the new position is valid
-        if (map->isValid(newPos, this))
-        {
-            // Calculate the Manhattan distance to both Sherlock and Watson
-            int distanceToSherlock = abs(newPos.getRow() - sherlock->getCurrentPosition().getRow()) + abs(newPos.getCol() - sherlock->getCurrentPosition().getCol());
-            int distanceToWatson = abs(newPos.getRow() - watson->getCurrentPosition().getRow()) + abs(newPos.getCol() - watson->getCurrentPosition().getCol());
+            // Tính toán tổng khoảng cách Manhattan
+            int distanceToSherlock = manhattanDistance(adjPos, sherlock->getCurrentPosition());
+            int distanceToWatson = manhattanDistance(adjPos, watson->getCurrentPosition());
             int totalDistance = distanceToSherlock + distanceToWatson;
 
-            // Update the next position if the total distance is greater than the current maximum
-            if (totalDistance > maxDistance || (totalDistance == maxDistance && direction < bestDirection))
+            // Nếu tổng khoảng cách lớn hơn hoặc bằng maxDistance, cập nhật vị trí
+            if (totalDistance >= maxDistance)
             {
-                maxDistance = totalDistance;
-                nextPos = newPos;
-                bestDirection = direction;
+                // Ưu tiên hướng đi 'U', 'L', 'D', 'R'
+                if (totalDistance > maxDistance || (adjPos.getRow() < nextPos.getRow()) || (adjPos.getRow() == nextPos.getRow() && adjPos.getCol() < nextPos.getCol()))
+                {
+                    maxDistance = totalDistance;
+                    nextPos = adjPos;
+                }
             }
         }
     }
-
     return nextPos;
 }
 
@@ -517,10 +551,7 @@ int Criminal::getCount() const
 {
     return this->count;
 }
-bool Criminal::isCreatedRobotNext() const
-{
-    return (count > 0 && count % 3 == 0);
-}
+
 int Criminal::manhattanDistance(const Position &pos1, const Position &pos2) const
 {
     // Tính khoảng cách Manhattan giữa hai vị trí
@@ -539,25 +570,32 @@ Robot::Robot(int index, const Position &pos, Map *map, RobotType robot_type, Cri
 Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock, Watson *watson)
 {
     // Check if this is the first robot created on the map
-    if (index == 0)
+
+    // cout << "criminalCount: " << criminalCount << endl;
+
+    if (isDivisibleByThree(index))
     {
         // Create RobotC
+        criminal->increaseCount();
         return new RobotC(index, criminal->getCurrentPosition(), map, C, criminal);
     }
+
     else
     {
         // Calculate distances to Sherlock and Watson manually
         int criminalRow = criminal->getCurrentPosition().getRow();
         int criminalCol = criminal->getCurrentPosition().getCol();
+
         int sherlockRow = sherlock->getCurrentPosition().getRow();
         int sherlockCol = sherlock->getCurrentPosition().getCol();
+
         int watsonRow = watson->getCurrentPosition().getRow();
         int watsonCol = watson->getCurrentPosition().getCol();
 
         // Calculate Manhattan distances
         int distanceToSherlock = abs(criminalRow - sherlockRow) + abs(criminalCol - sherlockCol);
         int distanceToWatson = abs(criminalRow - watsonRow) + abs(criminalCol - watsonCol);
-
+        criminal->increaseCount();
         // Compare distances and create appropriate type of robot
         if (distanceToSherlock < distanceToWatson)
         {
@@ -620,14 +658,11 @@ Position RobotC::getNextPosition()
 }
 void RobotC::move()
 {
-    // Lấy vị trí tiếp theo
     Position nextPos = getNextPosition();
 
-    // Kiểm tra xem vị trí tiếp theo có hợp lệ không
     if (map->isValid(nextPos, this))
     {
-        // Nếu hợp lệ, di chuyển robot đến vị trí mới
-        pos = nextPos;
+        this->pos = nextPos;
     }
 }
 string RobotC::str() const
@@ -636,9 +671,11 @@ string RobotC::str() const
 
     // Tính toán khoảng cách từ robot đến tội phạm
     int distance = criminal->manhattanDistance(robotPos, criminal->getCurrentPosition());
-
+    // cout << "distance: " << to_string(distance) << endl;
     // Tạo chuỗi mô tả robot
-    string description = "Robot[pos=" + robotPos.str() + ";type=C;dist=" + to_string(distance) + "]";
+    string description = "Robot[pos=" + robotPos.str() + ";type=C;dist=" + "]";
+    // cout << "description_tostring: " << description << endl;
+
     return description;
 }
 int RobotC::getDistance() const
@@ -752,6 +789,24 @@ Position RobotS::getNextPosition()
 
     // Lấy vị trí tiếp theo gần nhất với Sherlock
     Position nextPos;
+
+    // // Trên + dưới
+    // Position *posUp = new Position(currentPos.getRow() - 1, currentPos.getCol());
+    // Position *posBottom = new Position(currentPos.getRow() + 1, currentPos.getCol());
+
+    // // Phải + Trái
+    // Position *posRight = new Position(currentPos.getRow(), currentPos.getCol() + 1);
+    // Position *posLeft = new Position(currentPos.getRow(), currentPos.getCol() - 1);
+
+    // // xiên phải -trái (trên)
+    // Position *posUpRight = new Position(currentPos.getRow() - 1, currentPos.getCol() + 1);
+    // Position *posUpLeft = new Position(currentPos.getRow() - 1, currentPos.getCol() - 1);
+
+    // // xiên phải dưới
+    // Position *posBottomRight = new Position(currentPos.getRow() + 1, currentPos.getCol() + 1);
+    // // xiên dưới trái
+    // Position *posBottomLeft = new Position(currentPos.getRow() + 1, currentPos.getCol() - 1);
+
     int minDistance = std::numeric_limits<int>::max(); // Khởi tạo giá trị khoảng cách tối thiểu
     std::vector<Position> adjacentPositions = currentPos.getAdjacentPositions();
 
@@ -925,6 +980,7 @@ ArrayMovingObject::~ArrayMovingObject()
         delete arr_mv_objs[i];
     }
     delete[] arr_mv_objs;
+    count = 0;
 }
 bool ArrayMovingObject::isFull() const
 {
@@ -932,14 +988,13 @@ bool ArrayMovingObject::isFull() const
 }
 bool ArrayMovingObject::add(MovingObject *mv_obj)
 {
+    // cout << "check count: " << count << endl;
     // Kiểm tra xem mảng đã đầy chưa
     if (count < capacity)
     {
-
         arr_mv_objs[count] = mv_obj;
-
-        count++;
-        return true; // Trả về true để thông báo rằng việc thêm đối tượng thành công
+        this->count++;
+        return true;
     }
     else
     {
@@ -969,16 +1024,26 @@ string ArrayMovingObject::str() const
     ss << "ArrayMovingObject[count=" << count << ";capacity=" << capacity << ";";
 
     // Liệt kê các đối tượng trong mảng
+    bool isFirstObject = true; // Flag to determine if it's the first object
     for (int i = 0; i < count; i++)
     {
         if (arr_mv_objs[i] != nullptr)
         {
-            ss << arr_mv_objs[i]->str() << ";";
+            // Append a semicolon before adding the object details if it's not the first object
+            if (!isFirstObject)
+            {
+                ss << ";";
+            }
+            ss << arr_mv_objs[i]->str();
+            isFirstObject = false; // Update the flag
         }
     }
 
+    ss << "]"; // Close the string with a closing bracket
+
     return ss.str();
 }
+
 /*
  * CLASS: Configuration
  */
@@ -1195,7 +1260,7 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
         OUTPUT << "__________________NEW STEP__________________" << endl;
         MovingObject *robot = nullptr;
         int roundSize = arr_mv_objs->size();
-        // cout << "roundSize: " << roundSize << endl;
+
         for (int i = 0; i < roundSize; ++i)
         {
 
@@ -1208,8 +1273,10 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
             OUTPUT << "\tC" << lineArr.substr(1) << "]" << endl;
             while (getline(ss, lineArr, ']'))
             {
-                if (lineArr.length() > 1)
-                    OUTPUT << "\t" << lineArr.substr(1) << "]" << endl;
+                // cout << "Test :" << lineArr << "pos: " << i << endl;
+                if (lineArr.length() > 0)
+                    OUTPUT
+                        << "\t" << lineArr.substr(1) << "]" << endl;
             }
             if (i == 0)
                 OUTPUT << "Criminal current count : " << criminal->getCount() << endl;
@@ -1229,18 +1296,18 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
             printMap(OUTPUT, roundSize);
             OUTPUT << "*********************************************************" << endl;
         }
-        // if (robot != nullptr)
-        // {
-        //     if (criminal->getCount() % 3 == 0 && criminal->getCount() > 0)
-        //     {
-        //         string robotType[4] = {"C", "S", "W", "SW"};
-        //         OUTPUT << "Robot " << robotType[dynamic_cast<Robot *>(robot)->getType()] << " has been created" << endl;
-        //         arr_mv_objs->add(robot);
-        //     }
-        //     else
-        //     {
-        //         // delete robot;
-        //     }
-        // }
+        if (robot != nullptr)
+        {
+            if (criminal->getCount() % 3 == 0 && criminal->getCount() > 0)
+            {
+                string robotType[4] = {"C", "S", "W", "SW"};
+                OUTPUT << "Robot " << robotType[dynamic_cast<Robot *>(robot)->getType()] << " has been created" << endl;
+                arr_mv_objs->add(robot);
+            }
+            else
+            {
+                delete robot;
+            }
+        }
     }
 }

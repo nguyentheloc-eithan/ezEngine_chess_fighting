@@ -83,6 +83,12 @@ public:
         adjacentPositions.push_back(Position(r - 1, c)); // Bên trái
         adjacentPositions.push_back(Position(r, c + 1)); // Bên dưới
         adjacentPositions.push_back(Position(r, c - 1)); // Bên trên
+
+        // adjacentPositions.push_back(Position(r - 1, c + 1)); // xiên phải -trái (trên)
+        // adjacentPositions.push_back(Position(r - 1, c - 1));
+
+        // adjacentPositions.push_back(Position(r + 1, c + 1)); // xiên phải -trái (dưới)
+        // adjacentPositions.push_back(Position(r + 1, c - 1));
         return adjacentPositions;
     }
 };
@@ -289,6 +295,10 @@ public:
     string str() const;
     MovingObjectType getObjectType() const;
     int getCount() const;
+    void increaseCount()
+    {
+        this->count++;
+    }
 };
 
 class Robot : public MovingObject
