@@ -85,6 +85,15 @@ public:
         adjacentPositions[3] = Position(r, c + 1); // Bên R
         return adjacentPositions;
     }
+    std::array<Position, 4> getAdjacentPositions2Steps() const
+    {
+        std::array<Position, 4> adjacentPositions;
+        adjacentPositions[0] = Position(r - 2, c); // Bên U
+        adjacentPositions[1] = Position(r, c - 2); // Bên L
+        adjacentPositions[2] = Position(r + 2, c); // Bên D
+        adjacentPositions[3] = Position(r, c + 2); // Bên R
+        return adjacentPositions;
+    }
 };
 
 class Map;

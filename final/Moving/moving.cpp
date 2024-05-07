@@ -468,62 +468,11 @@ Criminal::Criminal(int index, const Position &init_pos, Map *map, Sherlock *sher
     : Character(index, init_pos, map, "CRIMINAL"), sherlock(sherlock), watson(watson)
 {
 }
-// Position Criminal::getNextPosition()
-// {
-//     vector<char> directions = {'U', 'L', 'D', 'R'};
-//     Position nextPos = pos;
-//     int maxDistance = INT_MIN;
-//     char bestDirection = '\0'; // Initialize with null character
 
-//     // Iterate through all possible directions
-//     for (char direction : directions)
-//     {
-//         int nextRow = pos.getRow();
-//         int nextCol = pos.getCol();
-
-//         // Calculate the next position based on the current direction
-//         switch (direction)
-//         {
-//         case 'U':
-//             nextRow--;
-//             break;
-//         case 'L':
-//             nextCol--;
-//             break;
-//         case 'D':
-//             nextRow++;
-//             break;
-//         case 'R':
-//             nextCol++;
-//             break;
-//         }
-
-//         Position newPos(nextRow, nextCol);
-//         // Check if the new position is valid
-//         if (map->isValid(newPos, this))
-//         {
-//             // Calculate the Manhattan distance to both Sherlock and Watson
-//             int distanceToSherlock = abs(newPos.getRow() - sherlock->getCurrentPosition().getRow()) + abs(newPos.getCol() - sherlock->getCurrentPosition().getCol());
-//             int distanceToWatson = abs(newPos.getRow() - watson->getCurrentPosition().getRow()) + abs(newPos.getCol() - watson->getCurrentPosition().getCol());
-//             int totalDistance = distanceToSherlock + distanceToWatson;
-
-//             // Update the next position if the total distance is greater than the current maximum
-//             if (totalDistance > maxDistance || (totalDistance == maxDistance && direction < bestDirection))
-//             {
-//                 maxDistance = totalDistance;
-//                 nextPos = newPos;
-//                 bestDirection = direction;
-//             }
-//         }
-//     }
-
-//     return nextPos;
-// }
 Position Criminal::getNextPosition()
 {
     std::array<Position, 4> adjacentPositions = pos.getAdjacentPositions();
     int maxDistance = -1;
-    Position currPos = getCurrentPosition();
     Position nextPos;
 
     // Duyệt qua các vị trí lân cận
@@ -598,7 +547,7 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
 
     // cout << "criminalCount: " << criminalCount << endl;
 
-    if (isDivisibleByThree(index))
+    if (criminal->getCount() == 2 && index != 0)
     {
         // Create RobotC
         criminal->increaseCount();
@@ -718,48 +667,28 @@ RobotW::RobotW(int index, const Position &init_pos, Map *map, RobotType robot_ty
 
 Position RobotW::getNextPosition()
 {
-    vector<char> directions = {'U', 'L', 'D', 'R'};
-    Position nextPos = pos;
-    int minDistanceToWatson = INT_MAX;
-    char bestDirection = '\0'; // Initialize with null character
 
-    // Iterate through all possible directions
-    for (char direction : directions)
+    std::array<Position, 4> adjacentPositions = pos.getAdjacentPositions();
+    int minDistance = INT_MAX;
+    Position nextPos;
+
+    // Duyệt qua các vị trí lân cận
+    for (const auto &adjPos : adjacentPositions)
     {
-        int nextRow = pos.getRow();
-        int nextCol = pos.getCol();
-
-        // Calculate the next position based on the current direction
-        switch (direction)
+        // Kiểm tra tính hợp lệ của vị trí
+        if (map->isValid(adjPos, this))
         {
-        case 'U':
-            nextRow--;
-            break;
-        case 'L':
-            nextCol--;
-            break;
-        case 'D':
-            nextRow++;
-            break;
-        case 'R':
-            nextCol++;
-            break;
-        }
+            // Tính toán khoảng cách Manhattan đến watson
+            int distanceToWatson = criminal->manhattanDistance(adjPos, watson->getCurrentPosition());
 
-        Position newPos(nextRow, nextCol);
-
-        // Check if the new position is valid
-        if (map->isValid(newPos, this))
-        {
-            // Calculate the Manhattan distance to Watson
-            int distanceToWatson = abs(newPos.getRow() - watson->getCurrentPosition().getRow()) + abs(newPos.getCol() - watson->getCurrentPosition().getCol());
-
-            // Update the next position if the distance to Watson is minimized
-            if (distanceToWatson < minDistanceToWatson || (distanceToWatson == minDistanceToWatson && direction < bestDirection))
+            // Nếu tổng khoảng cách lớn hơn hoặc bằng minDistance, cập nhật vị trí
+            if (distanceToWatson <= minDistance)
             {
-                minDistanceToWatson = distanceToWatson;
-                nextPos = newPos;
-                bestDirection = direction;
+                if (distanceToWatson < minDistance || (adjPos.getRow() < nextPos.getRow()) || (adjPos.getRow() == nextPos.getRow() && adjPos.getCol() < nextPos.getCol()))
+                {
+                    minDistance = distanceToWatson;
+                    nextPos = adjPos;
+                }
             }
         }
     }
@@ -865,7 +794,7 @@ RobotSW::RobotSW(int index, const Position &init_pos, Map *map, RobotType robot_
 
 Position RobotSW::getNextPosition()
 {
-    vector<char> directions = {'U', 'L', 'D', 'R'};
+    std::array<char, 4> directions = {'U', 'L', 'D', 'R'};
     Position nextPos = pos;
     int minDistanceToSW = INT_MAX;
     char bestDirection = '\0'; // Initialize with null character
@@ -1308,7 +1237,7 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
             }
             else
             {
-                delete robot;
+                // delete robot;
             }
         }
     }

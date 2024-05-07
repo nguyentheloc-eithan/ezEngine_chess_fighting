@@ -23,8 +23,8 @@ ArrayMovingObject[count=3;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
 	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-Criminal current count : 9
-Criminal count after moving : 10
+Criminal current count : 10
+Criminal count after moving : 11
      |    0|    1|    2|
     0|  (C)|  (S)|  (W)|
 *********************************************************
@@ -44,657 +44,717 @@ ArrayMovingObject[count=3;capacity=8;]
 	Watson[index=2;pos=(0,2);moving_rule=ULLR]
 Watson move direction : U
      |    0|    1|    2|
-    0|  (C)|  (S)|  (W)|
+    0|  (C)| (SW)|     |
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 1 - TURN : 0
 ArrayMovingObject[count=3;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-Criminal current count : 10
-Criminal count after moving : 11
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+Criminal current count : 11
+Criminal count after moving : 12
      |    0|    1|    2|
-    0|-----| (CS)|  (W)|
+    0|-----|(CSW)|     |
 *********************************************************
 ROUND : 1 - TURN : 1
 ArrayMovingObject[count=3;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
 Sherlock move direction : D
      |    0|    1|    2|
-    0|-----| (CS)|  (W)|
+    0|-----|(CSW)|     |
 *********************************************************
 ROUND : 1 - TURN : 2
 ArrayMovingObject[count=3;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
 Watson move direction : L
      |    0|    1|    2|
-    0|-----| (CS)|  (W)|
+    0|  (W)| (CS)|     |
 *********************************************************
+Robot SW has been created
 __________________NEW STEP__________________
 ROUND : 2 - TURN : 0
-ArrayMovingObject[count=3;capacity=8;]
+ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-Criminal current count : 11
-Criminal count after moving : 12
-     |    0|    1|    2|
-    0|  (C)|  (S)|  (W)|
-*********************************************************
-ROUND : 2 - TURN : 1
-ArrayMovingObject[count=3;capacity=8;]
-	Ciminal[index=0;pos=(0,0)]
-	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-Sherlock move direction : U
-     |    0|    1|    2|
-    0|  (C)|  (S)|  (W)|
-*********************************************************
-ROUND : 2 - TURN : 2
-ArrayMovingObject[count=3;capacity=8;]
-	Ciminal[index=0;pos=(0,0)]
-	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-Watson move direction : L
-     |    0|    1|    2|
-    0|  (C)|  (S)|  (W)|
-*********************************************************
-Robot C has been created
-__________________NEW STEP__________________
-ROUND : 3 - TURN : 0
-ArrayMovingObject[count=4;capacity=8;]
-	Ciminal[index=0;pos=(0,0)]
-	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,0);moving_rule=ULLR]
+	Robot[pos=(0,0);type=SW;dist=1]
 Criminal current count : 12
 Criminal count after moving : 13
      |    0|    1|    2|
-    0|-----|(CSc)|  (W)|
+    0| (W2)|  (S)|  (C)|
+*********************************************************
+ROUND : 2 - TURN : 1
+ArrayMovingObject[count=4;capacity=8;]
+	Ciminal[index=0;pos=(0,2)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,0);moving_rule=ULLR]
+	Robot[pos=(0,0);type=SW;dist=1]
+Sherlock move direction : U
+     |    0|    1|    2|
+    0| (W2)|  (S)|  (C)|
+*********************************************************
+ROUND : 2 - TURN : 2
+ArrayMovingObject[count=4;capacity=8;]
+	Ciminal[index=0;pos=(0,2)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,0);moving_rule=ULLR]
+	Robot[pos=(0,0);type=SW;dist=1]
+Watson move direction : L
+     |    0|    1|    2|
+    0|  (2)| (SW)|  (C)|
+*********************************************************
+ROUND : 2 - TURN : 3
+ArrayMovingObject[count=4;capacity=8;]
+	Ciminal[index=0;pos=(0,2)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,0);type=SW;dist=2]
+     |    0|    1|    2|
+    0|-----|(SW2)|  (C)|
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 3 - TURN : 0
+ArrayMovingObject[count=4;capacity=8;]
+	Ciminal[index=0;pos=(0,2)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 13
+Criminal count after moving : 14
+     |    0|    1|    2|
+    0|-----|(CSW2)|     |
 *********************************************************
 ROUND : 3 - TURN : 1
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : D
      |    0|    1|    2|
-    0|-----|(CSc)|  (W)|
+    0|-----|(CSW2)|     |
 *********************************************************
 ROUND : 3 - TURN : 2
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : R
      |    0|    1|    2|
-    0|-----|(CSc)|  (W)|
+    0|-----|(CSW2)|     |
 *********************************************************
 ROUND : 3 - TURN : 3
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|-----|(CSc)|  (W)|
+    0|-----|(CSW2)|     |
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 4 - TURN : 0
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-Criminal current count : 13
-Criminal count after moving : 14
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 14
+Criminal count after moving : 15
      |    0|    1|    2|
-    0|  (C)| (Sc)|  (W)|
+    0|  (C)|(SW2)|     |
 *********************************************************
 ROUND : 4 - TURN : 1
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : L
      |    0|    1|    2|
-    0|  (C)| (Sc)|  (W)|
+    0|  (C)|(SW2)|     |
 *********************************************************
 ROUND : 4 - TURN : 2
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : U
      |    0|    1|    2|
-    0|  (C)| (Sc)|  (W)|
+    0|  (C)|(SW2)|     |
 *********************************************************
 ROUND : 4 - TURN : 3
 ArrayMovingObject[count=4;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0| (Cc)|  (S)|  (W)|
+    0|  (C)|(SW2)|     |
 *********************************************************
+Robot SW has been created
 __________________NEW STEP__________________
 ROUND : 5 - TURN : 0
-ArrayMovingObject[count=4;capacity=8;]
+ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-Criminal current count : 14
-Criminal count after moving : 15
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 15
+Criminal count after moving : 16
      |    0|    1|    2|
-    0|  (c)| (CS)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 5 - TURN : 1
-ArrayMovingObject[count=4;capacity=8;]
+ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : L
      |    0|    1|    2|
-    0|  (c)| (CS)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 5 - TURN : 2
-ArrayMovingObject[count=4;capacity=8;]
+ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : L
      |    0|    1|    2|
-    0|  (c)| (CS)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 5 - TURN : 3
-ArrayMovingObject[count=4;capacity=8;]
+ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|-----|(CSc)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
-Robot S has been created
+ROUND : 5 - TURN : 4
+ArrayMovingObject[count=5;capacity=8;]
+	Ciminal[index=0;pos=(0,1)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+     |    0|    1|    2|
+    0|-----|(CSW22)|     |
+*********************************************************
 __________________NEW STEP__________________
 ROUND : 6 - TURN : 0
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-Criminal current count : 15
-Criminal count after moving : 16
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 16
+Criminal count after moving : 17
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0|  (C)|(SW22)|     |
 *********************************************************
 ROUND : 6 - TURN : 1
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : D
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0|  (C)|(SW22)|     |
 *********************************************************
 ROUND : 6 - TURN : 2
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : L
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0|  (C)|(SW22)|     |
 *********************************************************
 ROUND : 6 - TURN : 3
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccs)|  (S)|  (W)|
+    0|  (C)|(SW22)|     |
 *********************************************************
 ROUND : 6 - TURN : 4
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0| (Cc)| (Ss)|  (W)|
+    0|  (C)|(SW22)|     |
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 7 - TURN : 0
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-Criminal current count : 16
-Criminal count after moving : 17
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 17
+Criminal count after moving : 18
      |    0|    1|    2|
-    0|  (c)|(CSs)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 7 - TURN : 1
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : U
      |    0|    1|    2|
-    0|  (c)|(CSs)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 7 - TURN : 2
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : R
      |    0|    1|    2|
-    0|  (c)|(CSs)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 7 - TURN : 3
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|-----|(CScs)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
 ROUND : 7 - TURN : 4
 ArrayMovingObject[count=5;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|  (s)|(CSc)|  (W)|
+    0|-----|(CSW22)|     |
 *********************************************************
+Robot SW has been created
 __________________NEW STEP__________________
 ROUND : 8 - TURN : 0
-ArrayMovingObject[count=5;capacity=8;]
+ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-Criminal current count : 17
-Criminal count after moving : 18
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
+Criminal current count : 18
+Criminal count after moving : 19
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0| (C2)|(SW22)|     |
 *********************************************************
 ROUND : 8 - TURN : 1
-ArrayMovingObject[count=5;capacity=8;]
+ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
 Sherlock move direction : D
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0| (C2)|(SW22)|     |
 *********************************************************
 ROUND : 8 - TURN : 2
-ArrayMovingObject[count=5;capacity=8;]
+ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
 Watson move direction : U
      |    0|    1|    2|
-    0| (Cs)| (Sc)|  (W)|
+    0| (C2)|(SW22)|     |
 *********************************************************
 ROUND : 8 - TURN : 3
-ArrayMovingObject[count=5;capacity=8;]
+ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
      |    0|    1|    2|
-    0|(Ccs)|  (S)|  (W)|
+    0| (C2)|(SW22)|     |
 *********************************************************
 ROUND : 8 - TURN : 4
-ArrayMovingObject[count=5;capacity=8;]
+ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
      |    0|    1|    2|
-    0| (Cc)| (Ss)|  (W)|
+    0| (C2)|(SW22)|     |
 *********************************************************
-Robot S has been created
+ROUND : 8 - TURN : 5
+ArrayMovingObject[count=6;capacity=8;]
+	Ciminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,0);type=SW;dist=2]
+     |    0|    1|    2|
+    0|  (C)|(SW222)|     |
+*********************************************************
 __________________NEW STEP__________________
 ROUND : 9 - TURN : 0
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
-Criminal current count : 18
-Criminal count after moving : 19
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 19
+Criminal count after moving : 20
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 ROUND : 9 - TURN : 1
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : U
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 ROUND : 9 - TURN : 2
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : L
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 ROUND : 9 - TURN : 3
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|-----|(CScss)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 ROUND : 9 - TURN : 4
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|  (s)|(CScs)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 ROUND : 9 - TURN : 5
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0| (ss)|(CSc)|  (W)|
+    0|-----|(CSW222)|     |
 *********************************************************
 __________________NEW STEP__________________
 ROUND : 10 - TURN : 0
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-Criminal current count : 19
-Criminal count after moving : 20
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 20
+Criminal count after moving : 21
      |    0|    1|    2|
-    0|(Css)| (Sc)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
 ROUND : 10 - TURN : 1
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : D
      |    0|    1|    2|
-    0|(Css)| (Sc)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
 ROUND : 10 - TURN : 2
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : L
      |    0|    1|    2|
-    0|(Css)| (Sc)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
 ROUND : 10 - TURN : 3
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccss)|  (S)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
 ROUND : 10 - TURN : 4
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccs)| (Ss)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
 ROUND : 10 - TURN : 5
 ArrayMovingObject[count=6;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,0);type=S;dist=1]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0| (Cc)|(Sss)|  (W)|
+    0|  (C)|(SW222)|     |
 *********************************************************
+Robot SW has been created
 __________________NEW STEP__________________
 ROUND : 11 - TURN : 0
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
-Criminal current count : 20
-Criminal count after moving : 21
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 21
+Criminal count after moving : 22
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
 ROUND : 11 - TURN : 1
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : L
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
 ROUND : 11 - TURN : 2
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : R
      |    0|    1|    2|
-    0|  (c)|(CSss)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
 ROUND : 11 - TURN : 3
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|-----|(CScss)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
 ROUND : 11 - TURN : 4
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|  (s)|(CScs)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
 ROUND : 11 - TURN : 5
-ArrayMovingObject[count=6;capacity=8;]
+ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,1);type=S;dist=0]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0| (ss)|(CSc)|  (W)|
+    0|-----|(CSW2222)|     |
 *********************************************************
-Robot C has been created
+ROUND : 11 - TURN : 6
+ArrayMovingObject[count=7;capacity=8;]
+	Ciminal[index=0;pos=(0,1)]
+	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+     |    0|    1|    2|
+    0|-----|(CSW2222)|     |
+*********************************************************
 __________________NEW STEP__________________
 ROUND : 12 - TURN : 0
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,1)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
-Criminal current count : 21
-Criminal count after moving : 22
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+Criminal current count : 22
+Criminal count after moving : 23
      |    0|    1|    2|
-    0|(Cssc)| (Sc)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 1
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Sherlock move direction : L
      |    0|    1|    2|
-    0|(Cssc)| (Sc)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 2
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
 Watson move direction : U
      |    0|    1|    2|
-    0|(Cssc)| (Sc)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 3
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,1);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccssc)|  (S)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 4
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccsc)| (Ss)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 5
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,0);type=S;dist=1]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccc)|(Sss)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
 ROUND : 12 - TURN : 6
 ArrayMovingObject[count=7;capacity=8;]
 	Ciminal[index=0;pos=(0,0)]
 	Sherlock[index=1;pos=(0,1);moving_rule=UDUDLLD]
-	Watson[index=2;pos=(0,2);moving_rule=ULLR]
-	Robot[pos=(0,0);type=C;dist=]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,1);type=S;dist=0]
-	Robot[pos=(0,0);type=C;dist=]
+	Watson[index=2;pos=(0,1);moving_rule=ULLR]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
+	Robot[pos=(0,1);type=SW;dist=0]
      |    0|    1|    2|
-    0|(Ccc)|(Sss)|  (W)|
+    0|  (C)|(SW2222)|     |
 *********************************************************
