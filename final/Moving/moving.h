@@ -79,10 +79,23 @@ public:
     std::array<Position, 4> getAdjacentPositions() const
     {
         std::array<Position, 4> adjacentPositions;
+        // theo chiều kim đồng hồ
+        adjacentPositions[0] = Position(r - 1, c); // Bên U
+        adjacentPositions[1] = Position(r, c + 1); // Bên R
+        adjacentPositions[2] = Position(r + 1, c); // Bên D
+        adjacentPositions[3] = Position(r, c - 1); // Bên L
+
+        return adjacentPositions;
+    }
+    std::array<Position, 4> getAdjacentPositionsULDR() const
+    {
+        std::array<Position, 4> adjacentPositions;
+        // theo chiều kim đồng hồ
         adjacentPositions[0] = Position(r - 1, c); // Bên U
         adjacentPositions[1] = Position(r, c - 1); // Bên L
         adjacentPositions[2] = Position(r + 1, c); // Bên D
         adjacentPositions[3] = Position(r, c + 1); // Bên R
+
         return adjacentPositions;
     }
     std::array<Position, 4> getAdjacentPositions2Steps() const
@@ -140,6 +153,10 @@ public:
 
     Position getNextPosition() override;
     void move();
+    void updatePos(Position new_pos)
+    {
+        this->pos = new_pos;
+    }
     string str() const;
 
     MovingObjectType getObjectType() const;
@@ -162,7 +179,10 @@ public:
     Watson(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp);
 
     Position getNextPosition() override;
-
+    void updatePos(Position new_pos)
+    {
+        this->pos = new_pos;
+    }
     void move();
     string str() const override;
 

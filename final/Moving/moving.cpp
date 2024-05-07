@@ -143,6 +143,7 @@ Character::Character(int index, const Position pos, Map *map, const string &name
 Sherlock::Sherlock(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp)
     : Character(index, init_pos, map, "SHERLOCK")
 {
+    this->index_moving_rule = 0;
     this->moving_rule = moving_rule;
     this->HP = init_hp;
     this->EXP = init_exp;
@@ -182,26 +183,19 @@ Position Sherlock::getNextPosition()
     }
     else
     {
-        return pos;
+        index_moving_rule++;
+        return Position(-1, -1);
     }
 }
 void Sherlock::move()
 {
+
     Position next_pos = getNextPosition();
-
-    if (!pos.isEqual(next_pos))
+    if (map->isValid(next_pos, this))
     {
+
+        // Move to the next position
         pos = next_pos;
-
-        MapElement *next_element = map->getElementAtPosition(pos);
-
-        if (next_element != nullptr && next_element->getType() == ElementType::FAKE_WALL)
-        {
-            FakeWall *fakeWall = dynamic_cast<FakeWall *>(next_element);
-            int required_exp = fakeWall->getReqExp();
-
-            EXP += required_exp;
-        }
     }
 }
 string Sherlock::str() const
@@ -236,8 +230,9 @@ void Sherlock::setEXP(int exp)
  */
 
 Watson::Watson(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp)
-    : Character(index, init_pos, map, " ")
+    : Character(index, init_pos, map, "WATSON")
 {
+    this->index_moving_rule = 0;
     this->EXP = init_exp;
     this->HP = init_hp;
     this->moving_rule = moving_rule;
@@ -250,7 +245,6 @@ Position Watson::getNextPosition()
         return pos;
 
     char direction = moving_rule[index_moving_rule % moving_rule.size()];
-
     int next_row = pos.getRow();
     int next_col = pos.getCol();
 
@@ -271,34 +265,29 @@ Position Watson::getNextPosition()
     }
 
     Position next_pos(next_row, next_col);
-    if (map->isValid(next_pos, this))
+    if (map->isValid(next_pos, this) == true)
     {
         index_moving_rule++;
         return next_pos;
     }
     else
     {
-        return pos;
+        index_moving_rule++;
+        return pos.npos; // Position(-1,-1)
     }
 }
 
 void Watson::move()
 {
+
     Position next_pos = getNextPosition();
 
-    if (!pos.isEqual(next_pos))
+    if (map->isValid(next_pos, this) == true)
     {
-        pos = next_pos;
 
-        MapElement *next_element = map->getElementAtPosition(pos);
-
-        if (next_element != nullptr && next_element->getType() == ElementType::FAKE_WALL)
-        {
-            FakeWall *fakeWall = dynamic_cast<FakeWall *>(next_element);
-            int required_exp = fakeWall->getReqExp();
-
-            EXP += required_exp;
-        }
+        // cout << "Moving Pass" << " row_next_pos: " << next_pos.getRow() << " col_next_pos: " << next_pos.getCol() << endl;
+        this->pos = next_pos;
+        // cout << "Moving Pass" << " row_next_pos: " << this->pos.getRow() << " col_next_pos: " << this->pos.getCol() << endl;
     }
 }
 string Watson::str() const
@@ -420,14 +409,15 @@ bool Map::isValid(const Position pos, MovingObject *mv_obj) const
     {
         return false; // Position is outside the matrix
     }
-
     ElementType elementType = getElementType(pos.getRow(), pos.getCol());
 
     switch (mv_obj->getObjectType())
+
     {
     case SHERLOCK:
         return (elementType == PATH || elementType == FAKE_WALL);
     case WATSON:
+
         if (elementType == PATH)
         {
             return true;
@@ -439,9 +429,11 @@ bool Map::isValid(const Position pos, MovingObject *mv_obj) const
             FakeWall *fakeWall = dynamic_cast<FakeWall *>(map[pos.getRow()][pos.getCol()]);
             if (fakeWall && watson->getEXP() >= fakeWall->getReqExp())
             {
+                // cout << "FAKE_WALL WATSON: true -> " << watson->getEXP() << "  -  " << fakeWall->getReqExp() << endl;
                 return true;
             }
         }
+        // cout << " WATSON: false" << endl;
         return false;
     case CRIMINAL:
         return (elementType == PATH || elementType == FAKE_WALL);
@@ -467,11 +459,12 @@ MapElement *Map::getElementAtPosition(const Position &pos) const
 Criminal::Criminal(int index, const Position &init_pos, Map *map, Sherlock *sherlock, Watson *watson)
     : Character(index, init_pos, map, "CRIMINAL"), sherlock(sherlock), watson(watson)
 {
+    this->count = 0;
 }
 
 Position Criminal::getNextPosition()
 {
-    std::array<Position, 4> adjacentPositions = pos.getAdjacentPositions();
+    std::array<Position, 4> adjacentPositions = pos.getAdjacentPositionsULDR();
     int maxDistance = -1;
     Position nextPos;
 
@@ -489,7 +482,7 @@ Position Criminal::getNextPosition()
             // Nếu tổng khoảng cách lớn hơn hoặc bằng maxDistance, cập nhật vị trí
             if (totalDistance >= maxDistance)
             {
-                if (totalDistance > maxDistance || (adjPos.getRow() < nextPos.getRow()) || (adjPos.getRow() == nextPos.getRow() && adjPos.getCol() < nextPos.getCol()))
+                if (totalDistance > maxDistance)
                 {
                     maxDistance = totalDistance;
                     nextPos = adjPos;
@@ -544,9 +537,6 @@ Robot::Robot(int index, const Position &pos, Map *map, RobotType robot_type, Cri
 Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock, Watson *watson)
 {
     // Check if this is the first robot created on the map
-
-    // cout << "criminalCount: " << criminalCount << endl;
-
     if (criminal->getCount() == 2 && index != 0)
     {
         // Create RobotC
@@ -569,21 +559,24 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
         // Calculate Manhattan distances
         int distanceToSherlock = abs(criminalRow - sherlockRow) + abs(criminalCol - sherlockCol);
         int distanceToWatson = abs(criminalRow - watsonRow) + abs(criminalCol - watsonCol);
-        criminal->increaseCount();
+
         // Compare distances and create appropriate type of robot
         if (distanceToSherlock < distanceToWatson)
         {
             // Create RobotS
+            criminal->increaseCount();
             return new RobotS(index, criminal->getCurrentPosition(), map, S, criminal, sherlock);
         }
         else if (distanceToSherlock > distanceToWatson)
         {
             // Create RobotW
+            criminal->increaseCount();
             return new RobotW(index, criminal->getCurrentPosition(), map, W, criminal, watson);
         }
         else
         {
             // Create RobotSW
+            criminal->increaseCount();
             return new RobotSW(index, criminal->getCurrentPosition(), map, SW, criminal, sherlock, watson);
         }
     }
@@ -638,12 +631,9 @@ string RobotC::str() const
 {
     Position robotPos = getCurrentPosition();
 
-    // Tính toán khoảng cách từ robot đến tội phạm
-    int distance = criminal->manhattanDistance(robotPos, criminal->getCurrentPosition());
-    // cout << "distance: " << to_string(distance) << endl;
-    // Tạo chuỗi mô tả robot
+    // int distance = criminal->manhattanDistance(robotPos, criminal->getCurrentPosition());
+
     string description = "Robot[pos=" + robotPos.str() + ";type=C;dist=" + "]";
-    // cout << "description_tostring: " << description << endl;
 
     return description;
 }
@@ -684,7 +674,7 @@ Position RobotW::getNextPosition()
             // Nếu tổng khoảng cách lớn hơn hoặc bằng minDistance, cập nhật vị trí
             if (distanceToWatson <= minDistance)
             {
-                if (distanceToWatson < minDistance || (adjPos.getRow() < nextPos.getRow()) || (adjPos.getRow() == nextPos.getRow() && adjPos.getCol() < nextPos.getCol()))
+                if (distanceToWatson < minDistance)
                 {
                     minDistance = distanceToWatson;
                     nextPos = adjPos;
@@ -760,7 +750,7 @@ void RobotS::move()
 {
     Position nextPos = getNextPosition();
     Position nposTemp = Position(-1, -1);
-    if (nextPos.getRow() != nposTemp.getRow() || nextPos.getCol() != nposTemp.getCol())
+    if (nextPos.getRow() != nposTemp.getRow() && nextPos.getCol() != nposTemp.getCol())
     {
         setCurrentPosition(nextPos);
     }
@@ -876,7 +866,7 @@ void RobotSW::move()
     Position nextPos = pos;
 
     // Thử di chuyển lần lượt đến các ô lân cận và chọn ô có tổng khoảng cách nhỏ nhất
-    for (const Position &adjPos : pos.getAdjacentPositions())
+    for (const Position &adjPos : pos.getAdjacentPositions2Steps())
     {
         int distanceToSherlockNew = abs(adjPos.getRow() - sherlockPos.getRow()) + abs(adjPos.getCol() - sherlockPos.getCol());
         int distanceToWatsonNew = abs(adjPos.getRow() - watsonPos.getRow()) + abs(adjPos.getCol() - watsonPos.getCol());
