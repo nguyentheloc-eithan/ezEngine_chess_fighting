@@ -1,5 +1,30 @@
 #include "moving.h"
 const Position Position::npos = Position(-1, -1);
+int findMaxULDR(int arr[], int size)
+{
+    if (size <= 0)
+    {
+        return -1;
+    }
+
+    int maxIndex = 0;
+
+    for (int i = 1; i < size; ++i)
+    {
+
+        if (arr[i] > arr[maxIndex])
+        {
+            maxIndex = i;
+            // If the next element is smaller than the current max, break the loop
+            if (arr[i + 1] < arr[maxIndex])
+            {
+                break;
+            }
+        }
+    }
+
+    return maxIndex; // Return the index of the maximum element found
+}
 bool isDivisibleByThree(int num)
 {
     return num % 3 == 0;
@@ -496,10 +521,11 @@ Criminal::Criminal(int index, const Position &init_pos, Map *map, Sherlock *sher
 // }
 Position Criminal::getNextPosition()
 {
-    std::vector<Position> adjacentPositions = pos.getAdjacentPositions();
+    std::array<Position, 4> adjacentPositions = pos.getAdjacentPositions();
     int maxDistance = -1;
+    Position currPos = getCurrentPosition();
     Position nextPos;
-    cout << "pass Criminal::getNextPosition()" << endl;
+
     // Duyệt qua các vị trí lân cận
     for (const auto &adjPos : adjacentPositions)
     {
@@ -514,7 +540,6 @@ Position Criminal::getNextPosition()
             // Nếu tổng khoảng cách lớn hơn hoặc bằng maxDistance, cập nhật vị trí
             if (totalDistance >= maxDistance)
             {
-                // Ưu tiên hướng đi 'U', 'L', 'D', 'R'
                 if (totalDistance > maxDistance || (adjPos.getRow() < nextPos.getRow()) || (adjPos.getRow() == nextPos.getRow() && adjPos.getCol() < nextPos.getCol()))
                 {
                     maxDistance = totalDistance;
@@ -523,13 +548,13 @@ Position Criminal::getNextPosition()
             }
         }
     }
+
     return nextPos;
 }
 
 void Criminal::move()
 {
     Position nextPos = getNextPosition();
-
     // Check if the next position is valid
     if (map->isValid(nextPos, this))
     {
@@ -625,10 +650,7 @@ MovingObjectType Robot::getObjectType() const
 RobotC::RobotC(int index, const Position &init_pos, Map *map, RobotType robot_type, Criminal *criminal)
     : Robot(index, init_pos, map, robot_type, criminal)
 {
-    // Initialize any additional attributes specific to RobotC
-    // OPTIONAL: Initialize nextPosition attribute with the next position of the criminal
-    // For example:
-    // nextPosition = criminal->getNextPosition();
+    nextPosition = criminal->getNextPosition();
 }
 int RobotC::getDistance(Sherlock *sherlock)
 {
@@ -651,10 +673,7 @@ int RobotC::getDistance(Watson *watson)
 
 Position RobotC::getNextPosition()
 {
-    Position criminalPos = criminal->getCurrentPosition();
-
-    // Trả về vị trí của tội phạm làm vị trí tiếp theo cho robot
-    return criminalPos;
+    return nextPosition;
 }
 void RobotC::move()
 {
@@ -664,6 +683,7 @@ void RobotC::move()
     {
         this->pos = nextPos;
     }
+    nextPosition = criminal->getCurrentPosition();
 }
 string RobotC::str() const
 {
@@ -782,39 +802,20 @@ RobotS::RobotS(int index, const Position &init_pos, Map *map, RobotType robot_ty
 {
     // Phần khởi tạo cụ thể cho lớp RobotS
 }
-
 Position RobotS::getNextPosition()
 {
     Position currentPos = getCurrentPosition();
-
-    // Lấy vị trí tiếp theo gần nhất với Sherlock
     Position nextPos;
 
-    // // Trên + dưới
-    // Position *posUp = new Position(currentPos.getRow() - 1, currentPos.getCol());
-    // Position *posBottom = new Position(currentPos.getRow() + 1, currentPos.getCol());
+    int minDistance = std::numeric_limits<int>::max();
 
-    // // Phải + Trái
-    // Position *posRight = new Position(currentPos.getRow(), currentPos.getCol() + 1);
-    // Position *posLeft = new Position(currentPos.getRow(), currentPos.getCol() - 1);
-
-    // // xiên phải -trái (trên)
-    // Position *posUpRight = new Position(currentPos.getRow() - 1, currentPos.getCol() + 1);
-    // Position *posUpLeft = new Position(currentPos.getRow() - 1, currentPos.getCol() - 1);
-
-    // // xiên phải dưới
-    // Position *posBottomRight = new Position(currentPos.getRow() + 1, currentPos.getCol() + 1);
-    // // xiên dưới trái
-    // Position *posBottomLeft = new Position(currentPos.getRow() + 1, currentPos.getCol() - 1);
-
-    int minDistance = std::numeric_limits<int>::max(); // Khởi tạo giá trị khoảng cách tối thiểu
-    std::vector<Position> adjacentPositions = currentPos.getAdjacentPositions();
+    std::array<Position, 4> adjacentPositions = currentPos.getAdjacentPositions();
 
     for (const auto &pos : adjacentPositions)
     {
-        if (map->isValid(pos, this)) // Ensure the correct number of arguments
+        if (map->isValid(pos, this))
         {
-            int distance = criminal->manhattanDistance(pos, sherlock->getCurrentPosition()); // Use the appropriate function to calculate distance
+            int distance = criminal->manhattanDistance(pos, sherlock->getCurrentPosition());
             if (distance < minDistance)
             {
                 minDistance = distance;
@@ -825,6 +826,7 @@ Position RobotS::getNextPosition()
 
     return nextPos;
 }
+
 void RobotS::move()
 {
     Position nextPos = getNextPosition();

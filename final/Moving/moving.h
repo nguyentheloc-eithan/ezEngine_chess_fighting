@@ -76,19 +76,13 @@ public:
         x = stoi(xStr);
         y = stoi(yStr);
     }
-    std::vector<Position> getAdjacentPositions() const
+    std::array<Position, 4> getAdjacentPositions() const
     {
-        std::vector<Position> adjacentPositions;
-        adjacentPositions.push_back(Position(r + 1, c)); // Bên phải
-        adjacentPositions.push_back(Position(r - 1, c)); // Bên trái
-        adjacentPositions.push_back(Position(r, c + 1)); // Bên dưới
-        adjacentPositions.push_back(Position(r, c - 1)); // Bên trên
-
-        // adjacentPositions.push_back(Position(r - 1, c + 1)); // xiên phải -trái (trên)
-        // adjacentPositions.push_back(Position(r - 1, c - 1));
-
-        // adjacentPositions.push_back(Position(r + 1, c + 1)); // xiên phải -trái (dưới)
-        // adjacentPositions.push_back(Position(r + 1, c - 1));
+        std::array<Position, 4> adjacentPositions;
+        adjacentPositions[0] = Position(r - 1, c); // Bên U
+        adjacentPositions[1] = Position(r, c - 1); // Bên L
+        adjacentPositions[2] = Position(r + 1, c); // Bên D
+        adjacentPositions[3] = Position(r, c + 1); // Bên R
         return adjacentPositions;
     }
 };
