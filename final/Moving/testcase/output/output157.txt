@@ -938,8 +938,8 @@ ArrayMovingObject[count=7;capacity=10;]
      |    0|    1|
     0|IIIII|     |
     1|-----|  (w)|
-    2| (Ss)|  (W)|
-    3| (C2)|IIIII|
+    2| (Ss)| (W2)|
+    3|  (C)|IIIII|
     4|  (c)|-----|
 *********************************************************
 __________________NEW STEP__________________
@@ -951,14 +951,14 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=0]
-	Robot[pos=(3,0);type=SW;dist=3]
+	Robot[pos=(2,1);type=SW;dist=1]
 Criminal current count : 13
 Criminal count after moving : 14
      |    0|    1|
     0|IIIII|     |
     1|-----|  (w)|
-    2| (Ss)|  (W)|
-    3|  (2)|IIIII|
+    2| (Ss)| (W2)|
+    3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
 ROUND : 13 - TURN : 1
@@ -969,13 +969,13 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=0]
-	Robot[pos=(3,0);type=SW;dist=3]
+	Robot[pos=(2,1);type=SW;dist=1]
 Sherlock move direction : U
      |    0|    1|
     0|IIIII|     |
     1|  (S)|  (w)|
-    2|  (s)|  (W)|
-    3|  (2)|IIIII|
+    2|  (s)| (W2)|
+    3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
 ROUND : 13 - TURN : 2
@@ -986,13 +986,13 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(3,0);type=SW;dist=4]
+	Robot[pos=(2,1);type=SW;dist=2]
 Watson move direction : D
      |    0|    1|
     0|IIIII|     |
     1|  (S)|  (w)|
-    2|  (s)|  (W)|
-    3|  (2)|IIIII|
+    2|  (s)| (W2)|
+    3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
 ROUND : 13 - TURN : 3
@@ -1003,12 +1003,12 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(3,0);type=SW;dist=4]
+	Robot[pos=(2,1);type=SW;dist=2]
      |    0|    1|
     0|IIIII|     |
     1|  (S)|  (w)|
-    2|  (s)|  (W)|
-    3| (c2)|IIIII|
+    2|  (s)| (W2)|
+    3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
 ROUND : 13 - TURN : 4
@@ -1019,12 +1019,12 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(3,0);type=SW;dist=4]
+	Robot[pos=(2,1);type=SW;dist=2]
      |    0|    1|
     0|IIIII|     |
     1|  (S)|     |
-    2|  (s)| (Ww)|
-    3| (c2)|IIIII|
+    2|  (s)|(Ww2)|
+    3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
 ROUND : 13 - TURN : 5
@@ -1035,12 +1035,12 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(3,0);type=SW;dist=4]
+	Robot[pos=(2,1);type=SW;dist=2]
      |    0|    1|
     0|IIIII|     |
     1| (Ss)|     |
-    2|     | (Ww)|
-    3| (c2)|IIIII|
+    2|     |(Ww2)|
+    3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
 ROUND : 13 - TURN : 6
@@ -1051,10 +1051,10 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=0]
-	Robot[pos=(3,0);type=SW;dist=4]
+	Robot[pos=(2,1);type=SW;dist=2]
      |    0|    1|
-    0|IIIII|     |
-    1|(Ss2)|     |
+    0|  (2)|     |
+    1| (Ss)|     |
     2|     | (Ww)|
     3|  (c)|IIIII|
     4|  (C)|-----|
@@ -1068,12 +1068,12 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=2]
+	Robot[pos=(0,0);type=SW;dist=4]
 Criminal current count : 14
 Criminal count after moving : 15
      |    0|    1|
-    0|IIIII|     |
-    1|(Ss2)|     |
+    0|  (2)|     |
+    1| (Ss)|     |
     2|     | (Ww)|
     3|  (c)|IIIII|
     4|     |  (C)|
@@ -1086,11 +1086,11 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=2]
+	Robot[pos=(0,0);type=SW;dist=4]
 Sherlock move direction : D
      |    0|    1|
-    0|IIIII|     |
-    1| (s2)|     |
+    0|  (2)|     |
+    1|  (s)|     |
     2|  (S)| (Ww)|
     3|  (c)|IIIII|
     4|     |  (C)|
@@ -1103,11 +1103,11 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(0,0);type=SW;dist=5]
 Watson move direction : D
      |    0|    1|
-    0|IIIII|     |
-    1| (s2)|     |
+    0|  (2)|     |
+    1|  (s)|     |
     2|  (S)| (Ww)|
     3|  (c)|IIIII|
     4|     |  (C)|
@@ -1120,10 +1120,10 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1| (s2)|     |
+    0|  (2)|     |
+    1|  (s)|     |
     2|  (S)| (Ww)|
     3|-----|IIIII|
     4|  (c)|  (C)|
@@ -1136,10 +1136,10 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1| (s2)|  (w)|
+    0|  (2)|     |
+    1|  (s)|  (w)|
     2|  (S)|  (W)|
     3|-----|IIIII|
     4|  (c)|  (C)|
@@ -1152,10 +1152,10 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)|  (w)|
+    0|  (2)|     |
+    1|-----|  (w)|
     2| (Ss)|  (W)|
     3|-----|IIIII|
     4|  (c)|  (C)|
@@ -1168,11 +1168,11 @@ ArrayMovingObject[count=7;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|  (w)|
-    2| (Ss)|  (W)|
+    1|-----|  (w)|
+    2|(Ss2)|  (W)|
     3|-----|IIIII|
     4|  (c)|  (C)|
 *********************************************************
@@ -1186,14 +1186,14 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(4,0);type=SW;dist=5]
 Criminal current count : 15
 Criminal count after moving : 16
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|  (w)|
-    2| (Ss)|  (W)|
+    1|-----|  (w)|
+    2|(Ss2)|  (W)|
     3|-----|IIIII|
     4|(Cc2)|-----|
 *********************************************************
@@ -1205,13 +1205,13 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(4,0);type=SW;dist=5]
 Sherlock move direction : R
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|  (w)|
-    2|  (s)| (SW)|
+    1|-----|  (w)|
+    2| (s2)| (SW)|
     3|-----|IIIII|
     4|(Cc2)|-----|
 *********************************************************
@@ -1223,13 +1223,13 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(4,0);type=SW;dist=6]
 Watson move direction : U
      |    0|    1|
     0|IIIII|     |
-    1|  (2)| (Ww)|
-    2|  (s)|  (S)|
+    1|-----| (Ww)|
+    2| (s2)|  (S)|
     3|-----|IIIII|
     4|(Cc2)|-----|
 *********************************************************
@@ -1241,12 +1241,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=0]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=3]
 	Robot[pos=(4,0);type=SW;dist=7]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)| (Ww)|
-    2|  (s)|  (S)|
+    1|-----| (Ww)|
+    2| (s2)|  (S)|
     3|-----|IIIII|
     4| (C2)|  (c)|
 *********************************************************
@@ -1258,12 +1258,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=0]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=3]
 	Robot[pos=(4,0);type=SW;dist=7]
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
-    2|  (s)|  (S)|
+    1|-----|  (W)|
+    2| (s2)|  (S)|
     3|-----|IIIII|
     4| (C2)|  (c)|
 *********************************************************
@@ -1275,12 +1275,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,0);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=3]
 	Robot[pos=(4,0);type=SW;dist=7]
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
-    2|     | (Ss)|
+    1|-----|  (W)|
+    2|  (2)| (Ss)|
     3|-----|IIIII|
     4| (C2)|  (c)|
 *********************************************************
@@ -1292,11 +1292,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=3]
 	Robot[pos=(4,0);type=SW;dist=7]
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
+    1|-----| (W2)|
     2|     | (Ss)|
     3|-----|IIIII|
     4| (C2)|  (c)|
@@ -1309,11 +1309,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(1,1);type=SW;dist=1]
 	Robot[pos=(4,0);type=SW;dist=7]
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
+    1|-----| (W2)|
     2|  (2)| (Ss)|
     3|-----|IIIII|
     4|  (C)|  (c)|
@@ -1327,13 +1327,13 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(1,1);type=SW;dist=1]
 	Robot[pos=(2,0);type=SW;dist=3]
 Criminal current count : 16
 Criminal count after moving : 17
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
+    1|-----| (W2)|
     2|  (2)| (Ss)|
     3|  (C)|IIIII|
     4|     |  (c)|
@@ -1346,12 +1346,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(1,1);type=SW;dist=1]
 	Robot[pos=(2,0);type=SW;dist=3]
 Sherlock move direction : D
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|  (W)|
+    1|-----| (W2)|
     2|  (2)| (Ss)|
     3|  (C)|IIIII|
     4|     |  (c)|
@@ -1364,12 +1364,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(1,1);type=SW;dist=1]
 	Robot[pos=(2,0);type=SW;dist=3]
 Watson move direction : D
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|     |
+    1|-----|  (2)|
     2|  (2)|(SWs)|
     3|  (C)|IIIII|
     4|     |  (c)|
@@ -1382,11 +1382,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,1);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=2]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(1,1);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
      |    0|    1|
     0|IIIII|  (w)|
-    1|  (2)|     |
+    1|-----|  (2)|
     2|  (2)|(SWs)|
     3|  (C)|IIIII|
     4|  (c)|-----|
@@ -1399,11 +1399,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(0,1);type=W;dist=2]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(1,1);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|  (w)|
+    1|-----| (w2)|
     2|  (2)|(SWs)|
     3|  (C)|IIIII|
     4|  (c)|-----|
@@ -1416,11 +1416,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(1,1);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)| (ws)|
+    1|-----|(ws2)|
     2|  (2)| (SW)|
     3|  (C)|IIIII|
     4|  (c)|-----|
@@ -1433,11 +1433,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(1,1);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
+    0|  (2)|     |
+    1|-----| (ws)|
     2|  (2)| (SW)|
     3|  (C)|IIIII|
     4|  (c)|-----|
@@ -1450,12 +1450,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(0,0);type=SW;dist=6]
 	Robot[pos=(2,0);type=SW;dist=2]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2|  (2)| (SW)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|     | (SW)|
     3|  (C)|IIIII|
     4|  (c)|-----|
 *********************************************************
@@ -1468,14 +1468,14 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
-	Robot[pos=(2,0);type=SW;dist=2]
+	Robot[pos=(0,0);type=SW;dist=6]
+	Robot[pos=(0,0);type=SW;dist=6]
 Criminal current count : 17
 Criminal count after moving : 18
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2|  (2)| (SW)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|     | (SW)|
     3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
@@ -1487,13 +1487,13 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
-	Robot[pos=(2,0);type=SW;dist=2]
+	Robot[pos=(0,0);type=SW;dist=6]
+	Robot[pos=(0,0);type=SW;dist=6]
 Sherlock move direction : L
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2| (S2)|  (W)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|  (S)|  (W)|
     3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
@@ -1505,13 +1505,13 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=2]
-	Robot[pos=(1,0);type=SW;dist=3]
-	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
+	Robot[pos=(0,0);type=SW;dist=5]
 Watson move direction : R
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2| (S2)|  (W)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|  (S)|  (W)|
     3|-----|IIIII|
     4| (Cc)|-----|
 *********************************************************
@@ -1523,12 +1523,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=2]
-	Robot[pos=(1,0);type=SW;dist=3]
-	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2| (S2)|  (W)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|  (S)|  (W)|
     3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
@@ -1540,12 +1540,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=2]
-	Robot[pos=(1,0);type=SW;dist=3]
-	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)|  (s)|
-    2| (S2)| (Ww)|
+    0| (22)|     |
+    1|-----|  (s)|
+    2|  (S)| (Ww)|
     3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
@@ -1557,12 +1557,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(1,1);type=S;dist=2]
-	Robot[pos=(1,0);type=SW;dist=3]
-	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)|     |
-    2| (S2)|(Wws)|
+    0| (22)|     |
+    1|-----|     |
+    2|  (S)|(Wws)|
     3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
@@ -1574,11 +1574,11 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
-	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)|     |
+    0|  (2)|     |
+    1|-----|     |
     2| (S2)|(Wws)|
     3|  (c)|IIIII|
     4|  (C)|-----|
@@ -1591,12 +1591,12 @@ ArrayMovingObject[count=8;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
 	Robot[pos=(2,0);type=SW;dist=1]
+	Robot[pos=(0,0);type=SW;dist=5]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|     |
-    2| (S2)|(Wws)|
+    1|-----|     |
+    2|(S22)|(Wws)|
     3|  (c)|IIIII|
     4|  (C)|-----|
 *********************************************************
@@ -1610,15 +1610,15 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(3,0);type=SW;dist=3]
 Criminal current count : 18
 Criminal count after moving : 19
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|     |
-    2| (S2)|(Wws)|
+    1|-----|     |
+    2|(S22)|(Wws)|
     3| (c2)|IIIII|
     4|     |  (C)|
 *********************************************************
@@ -1630,14 +1630,14 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=3]
+	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(2,0);type=SW;dist=1]
 	Robot[pos=(3,0);type=SW;dist=3]
 Sherlock move direction : R
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|     |
-    2|  (2)|(SWws)|
+    1|-----|     |
+    2| (22)|(SWws)|
     3| (c2)|IIIII|
     4|     |  (C)|
 *********************************************************
@@ -1649,14 +1649,14 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
 Watson move direction : R
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|     |
-    2|  (2)|(SWws)|
+    1|-----|     |
+    2| (22)|(SWws)|
     3| (c2)|IIIII|
     4|     |  (C)|
 *********************************************************
@@ -1668,13 +1668,13 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(3,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|     |
-    2|  (2)|(SWws)|
+    1|-----|     |
+    2| (22)|(SWws)|
     3|  (2)|IIIII|
     4|  (c)|  (C)|
 *********************************************************
@@ -1686,13 +1686,13 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(2,1);type=W;dist=0]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)|  (w)|
-    2|  (2)|(SWs)|
+    1|-----|  (w)|
+    2| (22)|(SWs)|
     3|  (2)|IIIII|
     4|  (c)|  (C)|
 *********************************************************
@@ -1704,13 +1704,13 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(2,1);type=S;dist=0]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
     0|IIIII|     |
-    1|  (2)| (ws)|
-    2|  (2)| (SW)|
+    1|-----| (ws)|
+    2| (22)| (SW)|
     3|  (2)|IIIII|
     4|  (c)|  (C)|
 *********************************************************
@@ -1722,12 +1722,12 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
+    0|  (2)|     |
+    1|-----| (ws)|
     2|  (2)| (SW)|
     3|  (2)|IIIII|
     4|  (c)|  (C)|
@@ -1740,13 +1740,13 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
+	Robot[pos=(0,0);type=SW;dist=6]
 	Robot[pos=(2,0);type=SW;dist=2]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2|  (2)| (SW)|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|     | (SW)|
     3|  (2)|IIIII|
     4|  (c)|  (C)|
 *********************************************************
@@ -1758,13 +1758,13 @@ ArrayMovingObject[count=9;capacity=10;]
 	Robot[pos=(4,0);type=C;dist=]
 	Robot[pos=(1,1);type=W;dist=1]
 	Robot[pos=(1,1);type=S;dist=1]
-	Robot[pos=(1,0);type=SW;dist=4]
-	Robot[pos=(2,0);type=SW;dist=2]
+	Robot[pos=(0,0);type=SW;dist=6]
+	Robot[pos=(0,0);type=SW;dist=6]
 	Robot[pos=(3,0);type=SW;dist=4]
      |    0|    1|
-    0|IIIII|     |
-    1|  (2)| (ws)|
-    2|  (2)| (SW)|
-    3|  (2)|IIIII|
+    0| (22)|     |
+    1|-----| (ws)|
+    2|     |(SW2)|
+    3|-----|IIIII|
     4|  (c)|  (C)|
 *********************************************************

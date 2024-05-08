@@ -784,55 +784,42 @@ RobotSW::RobotSW(int index, const Position &init_pos, Map *map, RobotType robot_
 
 Position RobotSW::getNextPosition()
 {
-    std::array<char, 4> directions = {'U', 'L', 'D', 'R'};
-    Position nextPos = pos;
-    int minDistanceToSW = INT_MAX;
-    char bestDirection = '\0'; // Initialize with null character
+    // Lấy vị trí hiện tại của Sherlock và Watson
+    Position sherlockPos = sherlock->getCurrentPosition();
+    Position watsonPos = watson->getCurrentPosition();
 
-    // Iterate through all possible directions
-    for (char direction : directions)
+    // Tính toán khoảng cách từ vị trí hiện tại của robot đến Sherlock và Watson
+    int distanceToSherlock = abs(pos.getRow() - sherlockPos.getRow()) + abs(pos.getCol() - sherlockPos.getCol());
+    int distanceToWatson = abs(pos.getRow() - watsonPos.getRow()) + abs(pos.getCol() - watsonPos.getCol());
+
+    // Chọn vị trí mới sao cho tổng khoảng cách là nhỏ nhất
+    int minTotalDistance = distanceToSherlock + distanceToWatson;
+    Position nextPos;
+
+    for (const Position &adjPos : pos.getAdjacentPositions2Steps())
     {
-        int nextRow = pos.getRow();
-        int nextCol = pos.getCol();
-
-        // Calculate the next position based on the current direction
-        switch (direction)
+        int distanceToSherlockNew = abs(adjPos.getRow() - sherlockPos.getRow()) + abs(adjPos.getCol() - sherlockPos.getCol());
+        int distanceToWatsonNew = abs(adjPos.getRow() - watsonPos.getRow()) + abs(adjPos.getCol() - watsonPos.getCol());
+        int totalDistanceNew = distanceToSherlockNew + distanceToWatsonNew;
+        if (totalDistanceNew < minTotalDistance && map->isValid(adjPos, this))
         {
-        case 'U':
-            nextRow--;
-            break;
-        case 'L':
-            nextCol--;
-            break;
-        case 'D':
-            nextRow++;
-            break;
-        case 'R':
-            nextCol++;
-            break;
-        }
-
-        Position newPos(nextRow, nextCol);
-
-        // Check if the new position is valid
-        if (map->isValid(newPos, this))
-        {
-            // Calculate the Manhattan distance to both Sherlock and Watson
-            int distanceToSherlock = abs(newPos.getRow() - sherlock->getCurrentPosition().getRow()) + abs(newPos.getCol() - sherlock->getCurrentPosition().getCol());
-            int distanceToWatson = abs(newPos.getRow() - watson->getCurrentPosition().getRow()) + abs(newPos.getCol() - watson->getCurrentPosition().getCol());
-            int totalDistance = distanceToSherlock + distanceToWatson;
-
-            // Update the next position if the total distance is minimized
-            if (totalDistance < minDistanceToSW || (totalDistance == minDistanceToSW && direction < bestDirection))
-            {
-                minDistanceToSW = totalDistance;
-                nextPos = newPos;
-                bestDirection = direction;
-            }
+            minTotalDistance = totalDistanceNew;
+            nextPos = adjPos;
         }
     }
-
     return nextPos;
+}
+void RobotSW::move()
+{
+
+    Position nextPos = getNextPosition();
+    Position nposTemp = Position(-1, -1);
+    if (nextPos.getRow() != nposTemp.getRow() && nextPos.getCol() != nposTemp.getCol())
+    {
+        pos = nextPos;
+    }
+
+    // Di chuyển robot đến vị trí mới
 }
 string RobotSW::str() const
 {
@@ -850,36 +837,6 @@ int RobotSW::getDistance() const
     int distanceToWatson = abs(pos.getRow() - watson->getCurrentPosition().getRow()) + abs(pos.getCol() - watson->getCurrentPosition().getCol());
 
     return distanceToSherlock + distanceToWatson;
-}
-void RobotSW::move()
-{
-    // Lấy vị trí hiện tại của Sherlock và Watson
-    Position sherlockPos = sherlock->getCurrentPosition();
-    Position watsonPos = watson->getCurrentPosition();
-
-    // Tính toán khoảng cách từ vị trí hiện tại của robot đến Sherlock và Watson
-    int distanceToSherlock = abs(pos.getRow() - sherlockPos.getRow()) + abs(pos.getCol() - sherlockPos.getCol());
-    int distanceToWatson = abs(pos.getRow() - watsonPos.getRow()) + abs(pos.getCol() - watsonPos.getCol());
-
-    // Chọn vị trí mới sao cho tổng khoảng cách là nhỏ nhất
-    int minTotalDistance = distanceToSherlock + distanceToWatson;
-    Position nextPos = pos;
-
-    // Thử di chuyển lần lượt đến các ô lân cận và chọn ô có tổng khoảng cách nhỏ nhất
-    for (const Position &adjPos : pos.getAdjacentPositions2Steps())
-    {
-        int distanceToSherlockNew = abs(adjPos.getRow() - sherlockPos.getRow()) + abs(adjPos.getCol() - sherlockPos.getCol());
-        int distanceToWatsonNew = abs(adjPos.getRow() - watsonPos.getRow()) + abs(adjPos.getCol() - watsonPos.getCol());
-        int totalDistanceNew = distanceToSherlockNew + distanceToWatsonNew;
-        if (totalDistanceNew < minTotalDistance && map->isValid(adjPos, this))
-        {
-            minTotalDistance = totalDistanceNew;
-            nextPos = adjPos;
-        }
-    }
-
-    // Di chuyển robot đến vị trí mới
-    setCurrentPosition(nextPos);
 }
 
 /*

@@ -98,13 +98,21 @@ public:
 
         return adjacentPositions;
     }
-    std::array<Position, 4> getAdjacentPositions2Steps() const
+    std::array<Position, 8> getAdjacentPositions2Steps() const
     {
-        std::array<Position, 4> adjacentPositions;
-        adjacentPositions[0] = Position(r - 2, c); // Bên U
-        adjacentPositions[1] = Position(r, c - 2); // Bên L
-        adjacentPositions[2] = Position(r + 2, c); // Bên D
-        adjacentPositions[3] = Position(r, c + 2); // Bên R
+        std::array<Position, 8> adjacentPositions;
+        adjacentPositions[0] = Position(r - 2, c);     // Bên U
+        adjacentPositions[1] = Position(r - 1, c + 1); // Bên UR
+
+        adjacentPositions[2] = Position(r, c + 2);     // Bên R
+        adjacentPositions[3] = Position(r + 1, c + 1); // Bên DR
+
+        adjacentPositions[4] = Position(r + 2, c);     // Bên D
+        adjacentPositions[5] = Position(r + 1, c - 1); // Bên DL
+
+        adjacentPositions[6] = Position(r, c - 2);      // Bên L
+        adjacentPositions[7] = Position(r - 1, c - -1); // Bên LU
+
         return adjacentPositions;
     }
 };
