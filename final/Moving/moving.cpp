@@ -746,7 +746,7 @@ void RobotS::move()
     Position nposTemp = Position(-1, -1);
     if (nextPos.getRow() != nposTemp.getRow() && nextPos.getCol() != nposTemp.getCol())
     {
-        setCurrentPosition(nextPos);
+        pos = nextPos;
     }
 }
 

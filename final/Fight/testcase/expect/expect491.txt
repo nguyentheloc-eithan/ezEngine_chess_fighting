@@ -1,0 +1,242 @@
+Configuration[
+MAP_NUM_ROWS=9
+MAP_NUM_COLS=7
+MAX_NUM_MOVING_OBJECTS=6
+NUM_WALLS=2
+ARRAY_WALLS=[(3,4);(3,4)]
+NUM_FAKE_WALLS=12
+ARRAY_FAKE_WALLS=[(5,5);(5,4);(3,0);(3,3);(2,0);(8,1);(3,1);(1,1);(7,2);(1,4);(2,3);(2,3)]
+SHERLOCK_MOVING_RULE=LRRDUDDUL
+SHERLOCK_INIT_POS=(7,6)
+SHERLOCK_INIT_HP=338
+SHERLOCK_INIT_EXP=642
+WATSON_MOVING_RULE=DULL
+WATSON_INIT_POS=(0,1)
+WATSON_INIT_HP=73
+WATSON_INIT_EXP=451
+CRIMINAL_INIT_POS=(0,1)
+NUM_STEPS=28
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(0,1)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Criminal current count : 0
+Criminal count after moving : 1
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|      C|      W|       |       |       |       |       |
+      1|       |  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|      C|      W|       |       |       |       |       |
+      1|       |  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |      S|       |
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(7,5);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|      C|      W|       |       |       |       |       |
+      1|       |  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |      S|       |
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(7,5);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Criminal current count : 1
+Criminal count after moving : 2
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|       |      W|       |       |       |       |       |
+      1|      C|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |      S|       |
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 1
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(7,5);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Sherlock move direction : R
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|       |      W|       |       |       |       |       |
+      1|      C|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 2
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Watson move direction : U
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|       |      W|       |       |       |       |       |
+      1|      C|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+Criminal current count : 2
+Criminal count after moving : 3
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|      C|      W|       |       |       |       |       |
+      1|      0|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 1
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+	Robot[pos=(1,0);type=C;dist=]
+Sherlock move direction : R
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|      C|      W|       |       |       |       |       |
+      1|      0|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 2
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(7,6);moving_rule=LRRDUDDUL]
+	Watson[index=2;pos=(0,1);moving_rule=DULL]
+	Robot[pos=(1,0);type=C;dist=]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|
+      0|     CW|       |       |       |       |       |       |
+      1|      0|  -----|       |       |  -----|       |       |
+      2|  -----|       |       |  -----|       |       |       |
+      3|  -----|  -----|       |  -----|  IIIII|       |       |
+      4|       |       |       |       |       |       |       |
+      5|       |       |       |       |  -----|  -----|       |
+      6|       |       |       |       |       |       |       |
+      7|       |       |  -----|       |       |       |      S|
+      8|       |  -----|       |       |       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_338 EXP_642
+Watson HP_73 EXP_451
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal was caught

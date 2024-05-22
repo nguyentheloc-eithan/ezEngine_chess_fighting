@@ -1,0 +1,38 @@
+Configuration[
+MAP_NUM_ROWS=1
+MAP_NUM_COLS=1
+MAX_NUM_MOVING_OBJECTS=3
+NUM_WALLS=0
+ARRAY_WALLS=[]
+NUM_FAKE_WALLS=0
+ARRAY_FAKE_WALLS=[]
+SHERLOCK_MOVING_RULE=RU
+SHERLOCK_INIT_POS=(0,0)
+SHERLOCK_INIT_HP=214
+SHERLOCK_INIT_EXP=651
+WATSON_MOVING_RULE=URU
+WATSON_INIT_POS=(0,0)
+WATSON_INIT_HP=313
+WATSON_INIT_EXP=575
+CRIMINAL_INIT_POS=(0,0)
+NUM_STEPS=29
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=3;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(0,0);moving_rule=RU]
+	Watson[index=2;pos=(0,0);moving_rule=URU]
+Criminal current count : 0
+Criminal count after moving : 0
+       |      0|
+      0|    CSW|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_214 EXP_651
+Watson HP_313 EXP_575
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal was caught

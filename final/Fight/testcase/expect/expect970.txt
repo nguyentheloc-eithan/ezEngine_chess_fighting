@@ -1,0 +1,2987 @@
+Configuration[
+MAP_NUM_ROWS=7
+MAP_NUM_COLS=10
+MAX_NUM_MOVING_OBJECTS=6
+NUM_WALLS=21
+ARRAY_WALLS=[(5,4);(1,5);(5,8);(6,7);(1,6);(3,0);(5,0);(5,3);(4,0);(4,9);(3,1);(1,9);(5,8);(1,6);(1,2);(4,8);(0,3);(5,4);(5,6);(5,0);(5,0)]
+NUM_FAKE_WALLS=3
+ARRAY_FAKE_WALLS=[(2,1);(5,2);(5,2)]
+SHERLOCK_MOVING_RULE=LDLDLULRU
+SHERLOCK_INIT_POS=(2,2)
+SHERLOCK_INIT_HP=204
+SHERLOCK_INIT_EXP=554
+WATSON_MOVING_RULE=DDL
+WATSON_INIT_POS=(2,3)
+WATSON_INIT_HP=431
+WATSON_INIT_EXP=631
+CRIMINAL_INIT_POS=(3,9)
+NUM_STEPS=23
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,2);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(2,3);moving_rule=DDL]
+Criminal current count : 0
+Criminal count after moving : 1
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|      S|      W|       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,2);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(2,3);moving_rule=DDL]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |      W|       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(2,3);moving_rule=DDL]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |      W|       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(3,3);moving_rule=DDL]
+Criminal current count : 1
+Criminal count after moving : 2
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |      W|       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 1
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(3,3);moving_rule=DDL]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |      W|       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 2
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(3,3);moving_rule=DDL]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |      W|       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,3);moving_rule=DDL]
+Criminal current count : 2
+Criminal count after moving : 3
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      S|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |      W|       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 1
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,3);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |      W|       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 2 - TURN : 2
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,3);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 3 - TURN : 0
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Criminal current count : 3
+Criminal count after moving : 4
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 3 - TURN : 1
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 3 - TURN : 2
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 3 - TURN : 3
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 4 - TURN : 0
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+Criminal current count : 4
+Criminal count after moving : 5
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 4 - TURN : 1
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 4 - TURN : 2
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 4 - TURN : 3
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 5 - TURN : 0
+ArrayMovingObject[count=4;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+Criminal current count : 5
+Criminal count after moving : 6
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      3|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 5 - TURN : 1
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=18]
+Sherlock move direction : U
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      3|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |      W|       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 5 - TURN : 2
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,2);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=19]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      3|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      W|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 5 - TURN : 3
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=20]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |     03|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|      W|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 6 - TURN : 0
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=20]
+Criminal current count : 6
+Criminal count after moving : 7
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |    C03|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|      W|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 6 - TURN : 1
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=20]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |    C03|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|      W|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 6 - TURN : 2
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(4,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=20]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |    C03|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|      W|  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 6 - TURN : 3
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(5,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=21]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |     C3|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|      W|  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 6 - TURN : 4
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(5,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,9);type=SW;dist=21]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      3|       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|      W|  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 7 - TURN : 0
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(5,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,7);type=SW;dist=17]
+Criminal current count : 7
+Criminal count after moving : 8
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      3|       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|      W|  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 7 - TURN : 1
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(5,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,7);type=SW;dist=17]
+Sherlock move direction : R
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      3|       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|      W|  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 7 - TURN : 2
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(5,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,7);type=SW;dist=16]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      3|       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |      W|       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 7 - TURN : 3
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,1);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,7);type=SW;dist=17]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      3|       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |      W|       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 7 - TURN : 4
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,7);type=SW;dist=17]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |      3|       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |      W|       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 0
+ArrayMovingObject[count=5;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,5);type=SW;dist=13]
+Criminal current count : 8
+Criminal count after moving : 9
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |      3|       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      1|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |      W|       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,5);type=SW;dist=13]
+	Robot[pos=(3,9);type=S;dist=10]
+Sherlock move direction : U
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |      3|       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      1|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|       |      W|       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,1);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,5);type=SW;dist=14]
+	Robot[pos=(3,9);type=S;dist=11]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |      3|       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      1|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,5);type=SW;dist=15]
+	Robot[pos=(3,9);type=S;dist=11]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |      3|       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     01|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,5);type=SW;dist=15]
+	Robot[pos=(3,9);type=S;dist=11]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |      3|       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     01|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,3);type=SW;dist=11]
+	Robot[pos=(3,9);type=S;dist=11]
+Criminal current count : 9
+Criminal count after moving : 10
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |      3|       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |    C01|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,3);type=SW;dist=11]
+	Robot[pos=(3,9);type=S;dist=11]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |      3|       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |    C01|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,3);type=SW;dist=12]
+	Robot[pos=(3,9);type=S;dist=12]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |      3|       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |    C01|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,3);type=SW;dist=12]
+	Robot[pos=(3,9);type=S;dist=12]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |      3|       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C1|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,3);type=SW;dist=12]
+	Robot[pos=(3,9);type=S;dist=12]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C1|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 9 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(3,9);type=S;dist=12]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     01|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(2,9);type=S;dist=11]
+Criminal current count : 10
+Criminal count after moving : 11
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |    C01|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(2,9);type=S;dist=11]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |    C01|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,9);type=S;dist=10]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |    C01|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,9);type=S;dist=10]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C1|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_204 EXP_554
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,9);type=S;dist=10]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |     C1|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_174 EXP_471
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 10 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,9);type=S;dist=10]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |      1|      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_174 EXP_471
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,8);type=S;dist=9]
+Criminal current count : 11
+Criminal count after moving : 12
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_174 EXP_471
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,8);type=S;dist=9]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,8);type=S;dist=9]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |      1|      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |      1|      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 11 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(1,8);type=S;dist=8]
+Criminal current count : 12
+Criminal count after moving : 13
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(1,8);type=S;dist=8]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,8);type=S;dist=9]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |      1|  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 12 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(1,8);type=S;dist=9]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |      1|      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Criminal current count : 13
+Criminal count after moving : 14
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |      1|       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |      1|      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |      1|      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 13 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(2,8);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |      1|       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(2,7);type=S;dist=7]
+Criminal current count : 14
+Criminal count after moving : 15
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |      1|       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(2,7);type=S;dist=7]
+Sherlock move direction : U
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |      1|       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,7);type=S;dist=8]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |      1|       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,7);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |      1|       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_148 EXP_401
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(2,7);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |      1|       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_126 EXP_341
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 14 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(2,7);type=S;dist=8]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_126 EXP_341
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(1,7);type=S;dist=7]
+Criminal current count : 15
+Criminal count after moving : 16
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_126 EXP_341
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(1,7);type=S;dist=7]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(1,7);type=S;dist=7]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 15 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,7);type=S;dist=8]
+Criminal current count : 16
+Criminal count after moving : 17
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,7);type=S;dist=8]
+Sherlock move direction : R
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(0,7);type=S;dist=7]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 16 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(1,7);type=S;dist=6]
+Criminal current count : 17
+Criminal count after moving : 18
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |      S|  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(1,7);type=S;dist=6]
+Sherlock move direction : U
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=7]
+	Robot[pos=(1,7);type=S;dist=7]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=7]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=7]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|      1|       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 17 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(1,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |      1|       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,7);type=S;dist=6]
+Criminal current count : 18
+Criminal count after moving : 19
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |      S|       |  IIIII|       |       |       |      1|       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,1);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,7);type=S;dist=6]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(0,7);type=S;dist=7]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |      1|       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=8]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |       |      1|       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 18 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,7);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |      1|       |       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,6);type=S;dist=6]
+Criminal current count : 19
+Criminal count after moving : 20
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|      S|       |       |  IIIII|       |       |      1|       |       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_108 EXP_290
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(0,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,6);type=S;dist=6]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |      1|       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,6);type=S;dist=7]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |      1|       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,6);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |      1|       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,6);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |      1|       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 19 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,6);type=S;dist=7]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,5);type=S;dist=6]
+Criminal current count : 20
+Criminal count after moving : 21
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,5);type=S;dist=6]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,5);type=S;dist=6]
+Watson move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,5);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|      S|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |      3|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_92 EXP_247
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=7]
+	Robot[pos=(0,5);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |      1|       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 20 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,5);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,4);type=S;dist=5]
+Criminal current count : 21
+Criminal count after moving : 22
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|     S3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|       |  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(1,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=5]
+	Robot[pos=(0,4);type=S;dist=5]
+Sherlock move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,4);type=S;dist=6]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |       |
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |     C0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,4);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|      3|       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(1,0);type=SW;dist=6]
+	Robot[pos=(0,4);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|      1|       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 21 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(0,4);type=S;dist=6]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |      0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      C|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 0
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(3,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Criminal current count : 22
+Criminal count after moving : 23
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 1
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 2
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Watson move direction : D
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |     C0|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |       |
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 3
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(2,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|      3|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|       |       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 4
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(2,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |      1|  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |       |       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 22 - TURN : 5
+ArrayMovingObject[count=6;capacity=6;]
+	Criminal[index=0;pos=(2,9)]
+	Sherlock[index=1;pos=(2,0);moving_rule=LDLDLULRU]
+	Watson[index=2;pos=(6,0);moving_rule=DDL]
+	Robot[pos=(3,9);type=C;dist=]
+	Robot[pos=(4,1);type=SW;dist=6]
+	Robot[pos=(1,4);type=S;dist=5]
+Robot holding item : PassingCard
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|      9|
+      0|       |       |       |  IIIII|       |       |       |       |       |       |
+      1|       |       |  IIIII|       |       |  IIIII|  IIIII|       |       |  IIIII|
+      2|      S|  -----|       |       |      1|       |       |       |       |      C|
+      3|  IIIII|  IIIII|       |       |       |       |       |       |       |      0|
+      4|  IIIII|      3|       |       |       |       |       |       |  IIIII|  IIIII|
+      5|  IIIII|       |  -----|  IIIII|  IIIII|       |  IIIII|       |  IIIII|       |
+      6|      W|       |       |       |       |       |       |  IIIII|       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_79 EXP_210
+Watson HP_431 EXP_631
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal escaped

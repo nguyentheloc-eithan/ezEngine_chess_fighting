@@ -102,7 +102,6 @@ public:
         adjacentPositions[1] = Position(r, c - 1); // Bên L
         adjacentPositions[2] = Position(r + 1, c); // Bên D
         adjacentPositions[3] = Position(r, c + 1); // Bên R
-
         return adjacentPositions;
     }
     std::array<Position, 8> eightDirectionOfRobotSW() const
@@ -110,16 +109,12 @@ public:
         std::array<Position, 8> adjacentPositions;
         adjacentPositions[0] = Position(r - 2, c);     // Bên U
         adjacentPositions[1] = Position(r - 1, c + 1); // Bên UR
-
         adjacentPositions[2] = Position(r, c + 2);     // Bên R
         adjacentPositions[3] = Position(r + 1, c + 1); // Bên DR
-
         adjacentPositions[4] = Position(r + 2, c);     // Bên D
         adjacentPositions[5] = Position(r + 1, c - 1); // Bên DL
-
-        adjacentPositions[6] = Position(r, c - 2);      // Bên L
-        adjacentPositions[7] = Position(r - 1, c - -1); // Bên LU
-
+        adjacentPositions[6] = Position(r, c - 2);     // Bên L
+        adjacentPositions[7] = Position(r - 1, c - 1); // Bên LU
         return adjacentPositions;
     }
 };
@@ -166,7 +161,6 @@ private:
 public:
     Sherlock(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp);
 
-    // TODO implement các phương thức getNextPosition, move, str, getObjectType ....
     Position getNextPosition() override;
     void move();
     string str() const;
@@ -232,7 +226,6 @@ private:
 
 public:
     int manhattanDistance(const Position &pos1, const Position &pos2) const;
-    bool isCreatedRobotNext() const;
     Criminal(int index, const Position &init_pos, Map *map, Sherlock *sherlock, Watson *watson);
     Position getNextPosition() override;
     void move();
@@ -256,10 +249,6 @@ protected:
 
 public:
     Robot(int index, const Position &pos, Map *map, RobotType robot_type, Criminal *criminal, const string &name = "");
-    void setCurrentPosition(const Position &newPos)
-    {
-        pos = newPos;
-    }
     static Robot *create(int index, Map *map, Criminal *criminal, Sherlock *sherlock, Watson *watson);
     MovingObjectType getObjectType() const;
     virtual Position getNextPosition() = 0;

@@ -1,0 +1,85 @@
+Configuration[
+MAP_NUM_ROWS=6
+MAP_NUM_COLS=1
+MAX_NUM_MOVING_OBJECTS=5
+NUM_WALLS=0
+ARRAY_WALLS=[]
+NUM_FAKE_WALLS=2
+ARRAY_FAKE_WALLS=[(2,0);(2,0)]
+SHERLOCK_MOVING_RULE=LURURLU
+SHERLOCK_INIT_POS=(3,0)
+SHERLOCK_INIT_HP=311
+SHERLOCK_INIT_EXP=455
+WATSON_MOVING_RULE=DRDUR
+WATSON_INIT_POS=(0,0)
+WATSON_INIT_HP=390
+WATSON_INIT_EXP=321
+CRIMINAL_INIT_POS=(0,0)
+NUM_STEPS=20
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=5;]
+	Criminal[index=0;pos=(0,0)]
+	Sherlock[index=1;pos=(3,0);moving_rule=LURURLU]
+	Watson[index=2;pos=(0,0);moving_rule=DRDUR]
+Criminal current count : 0
+Criminal count after moving : 1
+       |      0|
+      0|      W|
+      1|      C|
+      2|  -----|
+      3|      S|
+      4|       |
+      5|       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_311 EXP_455
+Watson HP_390 EXP_321
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=5;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(3,0);moving_rule=LURURLU]
+	Watson[index=2;pos=(0,0);moving_rule=DRDUR]
+Sherlock move direction : L
+       |      0|
+      0|      W|
+      1|      C|
+      2|  -----|
+      3|      S|
+      4|       |
+      5|       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_311 EXP_455
+Watson HP_390 EXP_321
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=5;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(3,0);moving_rule=LURURLU]
+	Watson[index=2;pos=(0,0);moving_rule=DRDUR]
+Watson move direction : D
+       |      0|
+      0|       |
+      1|     CW|
+      2|  -----|
+      3|      S|
+      4|       |
+      5|       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_311 EXP_455
+Watson HP_390 EXP_321
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal was caught
