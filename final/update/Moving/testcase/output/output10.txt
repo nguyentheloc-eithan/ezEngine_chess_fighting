@@ -1,0 +1,59 @@
+Configuration[
+MAP_NUM_ROWS=12
+MAP_NUM_COLS=10
+MAX_NUM_MOVING_OBJECTS=2
+NUM_WALLS=6
+ARRAY_WALLS=[(8,2);(8,9);(6,7);(6,5);(7,2);(7,2)]
+NUM_FAKE_WALLS=4
+ARRAY_FAKE_WALLS=[(9,7);(9,9);(2,3);(2,3)]
+SHERLOCK_MOVING_RULE=DDDDDRU
+SHERLOCK_INIT_POS=(2,6)
+SHERLOCK_INIT_HP=72
+SHERLOCK_INIT_EXP=491
+WATSON_MOVING_RULE=URURRU
+WATSON_INIT_POS=(2,8)
+WATSON_INIT_HP=59
+WATSON_INIT_EXP=321
+CRIMINAL_INIT_POS=(4,9)
+NUM_STEPS=1
+]
+__________________NEW STEP__________________
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=2;capacity=2;]
+	Ciminal[index=0;pos=(4,9)]
+	Sherlock[index=1;pos=(2,6);moving_rule=DDDDDRU]
+Criminal current count : 0
+Criminal count after moving : 1
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|     |     |     |     |     |     |     |     |     |     |
+    2|     |     |     |-----|     |     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |     |     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |  (C)|
+    6|     |     |     |     |     |IIIII|     |IIIII|     |     |
+    7|     |     |IIIII|     |     |     |     |     |     |     |
+    8|     |     |IIIII|     |     |     |     |     |     |IIIII|
+    9|     |     |     |     |     |     |     |-----|     |-----|
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=2;capacity=2;]
+	Ciminal[index=0;pos=(5,9)]
+	Sherlock[index=1;pos=(2,6);moving_rule=DDDDDRU]
+Sherlock move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|     |     |     |     |     |     |     |     |     |     |
+    2|     |     |     |-----|     |     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |     |     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |  (C)|
+    6|     |     |     |     |     |IIIII|     |IIIII|     |     |
+    7|     |     |IIIII|     |     |     |     |     |     |     |
+    8|     |     |IIIII|     |     |     |     |     |     |IIIII|
+    9|     |     |     |     |     |     |     |-----|     |-----|
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************

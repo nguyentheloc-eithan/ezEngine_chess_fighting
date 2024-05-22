@@ -1,0 +1,51 @@
+Configuration[
+MAP_NUM_ROWS=2
+MAP_NUM_COLS=2
+MAX_NUM_MOVING_OBJECTS=6
+NUM_WALLS=4
+ARRAY_WALLS=[(0,1);(0,0);(0,1);(0,0)]
+NUM_FAKE_WALLS=2
+ARRAY_FAKE_WALLS=[(0,1);(0,1)]
+SHERLOCK_MOVING_RULE=U
+SHERLOCK_INIT_POS=(1,0)
+SHERLOCK_INIT_HP=59
+SHERLOCK_INIT_EXP=204
+WATSON_MOVING_RULE=RLU
+WATSON_INIT_POS=(1,1)
+WATSON_INIT_HP=39
+WATSON_INIT_EXP=459
+CRIMINAL_INIT_POS=(1,0)
+NUM_STEPS=1
+]
+__________________NEW STEP__________________
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=6;]
+	Ciminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(1,0);moving_rule=U]
+	Watson[index=2;pos=(1,1);moving_rule=RLU]
+Criminal current count : 0
+Criminal count after moving : 1
+     |    0|    1|
+    0|IIIII|IIIII|
+    1|  (S)| (CW)|
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=6;]
+	Ciminal[index=0;pos=(1,1)]
+	Sherlock[index=1;pos=(1,0);moving_rule=U]
+	Watson[index=2;pos=(1,1);moving_rule=RLU]
+Sherlock move direction : U
+     |    0|    1|
+    0|IIIII|IIIII|
+    1|  (S)| (CW)|
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=6;]
+	Ciminal[index=0;pos=(1,1)]
+	Sherlock[index=1;pos=(1,0);moving_rule=U]
+	Watson[index=2;pos=(1,1);moving_rule=RLU]
+Watson move direction : R
+     |    0|    1|
+    0|IIIII|IIIII|
+    1|  (S)| (CW)|
+*********************************************************

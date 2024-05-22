@@ -84,7 +84,6 @@ public:
         adjacentPositions[1] = Position(r, c + 1); // Bên R
         adjacentPositions[2] = Position(r + 1, c); // Bên D
         adjacentPositions[3] = Position(r, c - 1); // Bên L
-
         return adjacentPositions;
     }
     std::array<Position, 4> getAdjacentPositionsULDR() const
@@ -98,7 +97,7 @@ public:
 
         return adjacentPositions;
     }
-    std::array<Position, 8> getAdjacentPositions2Steps() const
+    std::array<Position, 8> eightDirectionOfRobotSW() const
     {
         std::array<Position, 8> adjacentPositions;
         adjacentPositions[0] = Position(r - 2, c);     // Bên U
@@ -110,8 +109,8 @@ public:
         adjacentPositions[4] = Position(r + 2, c);     // Bên D
         adjacentPositions[5] = Position(r + 1, c - 1); // Bên DL
 
-        adjacentPositions[6] = Position(r, c - 2);      // Bên L
-        adjacentPositions[7] = Position(r - 1, c - -1); // Bên LU
+        adjacentPositions[6] = Position(r, c - 2);     // Bên L
+        adjacentPositions[7] = Position(r - 1, c - 1); // Bên LU
 
         return adjacentPositions;
     }
@@ -198,9 +197,7 @@ public:
 
     int getHP() const;
     int getEXP() const;
-
     void setHP(int hp);
-
     void setEXP(int exp);
 };
 
@@ -257,12 +254,10 @@ public:
         {
             if (c == '(')
             {
-                // Entering a coordinate pair
                 inPair = true;
             }
             else if (c == ')')
             {
-                // Exiting a coordinate pair
                 inPair = false;
                 ++count;
             }
@@ -285,12 +280,9 @@ public:
             int end_pos = input.find(')', start_pos);
 
             string coordinate = input.substr(start_pos + 1, end_pos - start_pos - 1);
-
             int comma_pos = coordinate.find(',');
-
             int x = stoi(coordinate.substr(0, comma_pos));
             int y = stoi(coordinate.substr(comma_pos + 1));
-
             arr_walls[i] = Position(x, y);
 
             index = end_pos + 2;
@@ -416,7 +408,6 @@ private:
 
 public:
     RobotSW(int index, const Position &init_pos, Map *map, RobotType robot_type, Criminal *criminal, Sherlock *sherlock, Watson *watson);
-
     Position getNextPosition() override;
     string str() const;
     RobotType getType() const override;

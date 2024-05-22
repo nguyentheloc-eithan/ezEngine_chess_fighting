@@ -1,0 +1,3252 @@
+Configuration[
+MAP_NUM_ROWS=12
+MAP_NUM_COLS=10
+MAX_NUM_MOVING_OBJECTS=10
+NUM_WALLS=0
+ARRAY_WALLS=[]
+NUM_FAKE_WALLS=8
+ARRAY_FAKE_WALLS=[(2,2);(6,6);(2,4);(1,0);(1,4);(1,2);(4,1);(4,1)]
+SHERLOCK_MOVING_RULE=LRLURUDL
+SHERLOCK_INIT_POS=(5,7)
+SHERLOCK_INIT_HP=80
+SHERLOCK_INIT_EXP=44
+WATSON_MOVING_RULE=RUDUL
+WATSON_INIT_POS=(9,5)
+WATSON_INIT_HP=90
+WATSON_INIT_EXP=740
+CRIMINAL_INIT_POS=(11,4)
+NUM_STEPS=22
+]
+__________________NEW STEP__________________
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,4)]
+	Sherlock[index=1;pos=(5,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,5);moving_rule=RUDUL]
+Criminal current count : 0
+Criminal count after moving : 1
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |  (S)|     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |  (W)|     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |     |  (C)|     |     |     |     |     |     |
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,3)]
+	Sherlock[index=1;pos=(5,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,5);moving_rule=RUDUL]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |  (W)|     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |     |  (C)|     |     |     |     |     |     |
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,3)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,5);moving_rule=RUDUL]
+Watson move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |     |  (C)|     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 1 - TURN : 0
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,3)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+Criminal current count : 1
+Criminal count after moving : 2
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |  (C)|     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 1 - TURN : 1
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,2)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |  (S)|     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |  (C)|     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 1 - TURN : 2
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,2)]
+	Sherlock[index=1;pos=(5,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |  (S)|     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |     |  (C)|     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 2 - TURN : 0
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,2)]
+	Sherlock[index=1;pos=(5,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+Criminal current count : 2
+Criminal count after moving : 3
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |  (S)|     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |  (C)|     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 2 - TURN : 1
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,1)]
+	Sherlock[index=1;pos=(5,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |  (C)|     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 2 - TURN : 2
+ArrayMovingObject[count=3;capacity=10;]
+	Ciminal[index=0;pos=(11,1)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+Watson move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|     |  (C)|     |     |     |     |     |     |     |     |
+*********************************************************
+Robot C has been created
+__________________NEW STEP__________________
+ROUND : 3 - TURN : 0
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,1)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+	Robot[pos=(11,2);type=C;dist=]
+Criminal current count : 3
+Criminal count after moving : 4
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (S)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |  (c)|     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 3 - TURN : 1
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(5,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+	Robot[pos=(11,2);type=C;dist=]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |  (W)|     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |  (c)|     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 3 - TURN : 2
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(9,6);moving_rule=RUDUL]
+	Robot[pos=(11,2);type=C;dist=]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |  (c)|     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 3 - TURN : 3
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,2);type=C;dist=]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|  (C)|  (c)|     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 4 - TURN : 0
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,1);type=C;dist=]
+Criminal current count : 4
+Criminal count after moving : 5
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|     |  (c)|     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 4 - TURN : 1
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,1);type=C;dist=]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|     |  (c)|     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 4 - TURN : 2
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,1);type=C;dist=]
+Watson move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |  (W)|     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|     |  (c)|     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 4 - TURN : 3
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,5);moving_rule=RUDUL]
+	Robot[pos=(11,1);type=C;dist=]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |  (W)|     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 5 - TURN : 0
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+Criminal current count : 5
+Criminal count after moving : 6
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |  (W)|     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 5 - TURN : 1
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |  (S)|     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |  (W)|     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 5 - TURN : 2
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+Watson move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |  (S)|     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 5 - TURN : 3
+ArrayMovingObject[count=4;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |  (S)|     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot W has been created
+__________________NEW STEP__________________
+ROUND : 6 - TURN : 0
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(10,0);type=W;dist=8]
+Criminal current count : 6
+Criminal count after moving : 7
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |  (S)|     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 6 - TURN : 1
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(10,0);type=W;dist=8]
+Sherlock move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 6 - TURN : 2
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(10,0);type=W;dist=8]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 6 - TURN : 3
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 6 - TURN : 4
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 7 - TURN : 0
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(9,0);type=W;dist=8]
+Criminal current count : 7
+Criminal count after moving : 8
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |  (S)|     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 7 - TURN : 1
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,7);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(9,0);type=W;dist=8]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 7 - TURN : 2
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(9,0);type=W;dist=8]
+Watson move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 7 - TURN : 3
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(9,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |  (W)|     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 7 - TURN : 4
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(9,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 8 - TURN : 0
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(8,0);type=W;dist=6]
+Criminal current count : 8
+Criminal count after moving : 9
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 8 - TURN : 1
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(8,0);type=W;dist=6]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 8 - TURN : 2
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(8,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(8,0);type=W;dist=6]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 8 - TURN : 3
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 8 - TURN : 4
+ArrayMovingObject[count=5;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot W has been created
+__________________NEW STEP__________________
+ROUND : 9 - TURN : 0
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Criminal current count : 9
+Criminal count after moving : 10
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 9 - TURN : 1
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 9 - TURN : 2
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Watson move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 9 - TURN : 3
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,0);type=W;dist=5]
+	Robot[pos=(11,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 9 - TURN : 4
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,0);type=W;dist=5]
+	Robot[pos=(11,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 9 - TURN : 5
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=4]
+	Robot[pos=(11,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (cw)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 10 - TURN : 0
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=4]
+	Robot[pos=(10,0);type=W;dist=8]
+Criminal current count : 10
+Criminal count after moving : 11
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (S)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 10 - TURN : 1
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=4]
+	Robot[pos=(10,0);type=W;dist=8]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |  (W)|     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 10 - TURN : 2
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=4]
+	Robot[pos=(10,0);type=W;dist=8]
+Watson move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 10 - TURN : 3
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=5]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |  (w)|     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 10 - TURN : 4
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,1);type=W;dist=5]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 10 - TURN : 5
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=4]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 11 - TURN : 0
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=4]
+	Robot[pos=(9,0);type=W;dist=8]
+Criminal current count : 11
+Criminal count after moving : 12
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |  (S)|     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 11 - TURN : 1
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(4,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=4]
+	Robot[pos=(9,0);type=W;dist=8]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 11 - TURN : 2
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=4]
+	Robot[pos=(9,0);type=W;dist=8]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |  (W)|     |     |     |
+    7|     |     |  (w)|     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 11 - TURN : 3
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=5]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |  (W)|     |     |     |
+    7|     |     |  (w)|     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 11 - TURN : 4
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(7,2);type=W;dist=5]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 11 - TURN : 5
+ArrayMovingObject[count=6;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot W has been created
+__________________NEW STEP__________________
+ROUND : 12 - TURN : 0
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=W;dist=10]
+Criminal current count : 12
+Criminal count after moving : 13
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 1
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=W;dist=10]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 2
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=W;dist=10]
+Watson move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 3
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 4
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,2);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |  (W)|     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 5
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 12 - TURN : 6
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(10,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 13 - TURN : 0
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=8]
+Criminal current count : 13
+Criminal count after moving : 14
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 1
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=8]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |  (W)|     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 2
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(7,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=8]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |  (W)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 3
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |  (w)|     |     |  (W)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 4
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,3);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |  (w)|     |  (W)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 5
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=2]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 13 - TURN : 6
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 14 - TURN : 0
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+Criminal current count : 14
+Criminal count after moving : 15
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |  (S)|     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 1
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+Sherlock move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 2
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+Watson move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|  (W)|-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 3
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=1]
+	Robot[pos=(6,0);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |  (w)|  (W)|-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 4
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,4);type=W;dist=1]
+	Robot[pos=(6,0);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |     |     |     | (Ww)|-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 5
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=0]
+	Robot[pos=(6,0);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     | (Ww)|-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 14 - TURN : 6
+ArrayMovingObject[count=7;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=0]
+	Robot[pos=(6,1);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=7]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     | (Ww)|-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot W has been created
+__________________NEW STEP__________________
+ROUND : 15 - TURN : 0
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=0]
+	Robot[pos=(6,1);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Criminal current count : 15
+Criminal count after moving : 16
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |  (S)|     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     | (Ww)|-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 1
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,6);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=0]
+	Robot[pos=(6,1);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     | (Ww)|-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 2
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=0]
+	Robot[pos=(6,1);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=10]
+Watson move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     |  (w)|  (W)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 3
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=1]
+	Robot[pos=(6,1);type=W;dist=5]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(11,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     |  (w)|  (W)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 4
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,5);type=W;dist=1]
+	Robot[pos=(6,1);type=W;dist=5]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(11,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |  (w)|     |     |     |     | (Ww)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 5
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,1);type=W;dist=5]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(11,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |  (w)|     |     |     | (Ww)|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 6
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(11,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 15 - TURN : 7
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(11,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (cw)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 16 - TURN : 0
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(10,0);type=W;dist=10]
+Criminal current count : 16
+Criminal count after moving : 17
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 1
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(10,0);type=W;dist=10]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 2
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=4]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(10,0);type=W;dist=10]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (W)|     |     |     |
+    6|  (w)|     |  (w)|     |     |     |  (w)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Ccw)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 3
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=1]
+	Robot[pos=(6,2);type=W;dist=5]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     |  (W)|     |     |     |
+    6|  (w)|     |  (w)|     |     |     |  (w)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 4
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=1]
+	Robot[pos=(6,2);type=W;dist=5]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |     |     | (Ww)|     |     |     |
+    6|  (w)|     |  (w)|     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 5
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(6,2);type=W;dist=5]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |     |     | (Ww)|     |     |     |
+    6|  (w)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 6
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(10,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cw)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 16 - TURN : 7
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(10,0);type=W;dist=11]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 17 - TURN : 0
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=10]
+Criminal current count : 17
+Criminal count after moving : 18
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 1
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=10]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 2
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=10]
+Watson move direction : D
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     |  (w)|     |     |     |
+    6|     |     |     |     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 3
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,2);type=W;dist=5]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     |  (w)|     |     |     |
+    6|     |     |     |     |     |     |  (W)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 4
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,2);type=W;dist=5]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |  (w)|     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 5
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=5]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |     |  (w)|     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 6
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=4]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|  (w)|     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 17 - TURN : 7
+ArrayMovingObject[count=8;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=4]
+	Robot[pos=(5,1);type=W;dist=6]
+	Robot[pos=(9,0);type=W;dist=9]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot SW has been created
+__________________NEW STEP__________________
+ROUND : 18 - TURN : 0
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=4]
+	Robot[pos=(5,1);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=SW;dist=22]
+Criminal current count : 18
+Criminal count after moving : 19
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |  (S)|     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Cc2)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 1
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=4]
+	Robot[pos=(5,1);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=SW;dist=22]
+Sherlock move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |     |     |     |     |
+    6|     |     |     |     |     |     | (Ww)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Cc2)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 2
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(6,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=4]
+	Robot[pos=(5,1);type=W;dist=6]
+	Robot[pos=(8,0);type=W;dist=8]
+	Robot[pos=(10,0);type=SW;dist=21]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |  (W)|     |     |     |
+    6|     |     |     |     |     |     |  (w)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|(Cc2)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 3
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=1]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(5,1);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=9]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     |  (W)|     |     |     |
+    6|     |     |     |     |     |     |  (w)|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (C2)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 4
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(6,6);type=W;dist=1]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(5,1);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=9]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |  (w)|     |     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (C2)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 5
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(5,1);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=9]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |  (w)|     |     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (C2)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 6
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,1);type=W;dist=5]
+	Robot[pos=(8,0);type=W;dist=9]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (w)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (C2)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 7
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(8,0);type=W;dist=9]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (C2)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 18 - TURN : 8
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=8]
+	Robot[pos=(10,0);type=SW;dist=22]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 19 - TURN : 0
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=8]
+	Robot[pos=(8,0);type=SW;dist=18]
+Criminal current count : 19
+Criminal count after moving : 20
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |  (S)|     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 1
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(3,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=8]
+	Robot[pos=(8,0);type=SW;dist=18]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|     | (Ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 2
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,2);type=W;dist=4]
+	Robot[pos=(7,0);type=W;dist=8]
+	Robot[pos=(8,0);type=SW;dist=19]
+Watson move direction : L
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|  (W)|  (w)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11| (Cc)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 3
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,4);type=W;dist=1]
+	Robot[pos=(5,2);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)|  (W)|  (w)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 4
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,4);type=W;dist=1]
+	Robot[pos=(5,2);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |  (w)| (Ww)|     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 5
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=1]
+	Robot[pos=(5,2);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |  (w)|     |     |(Www)|     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 6
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,2);type=W;dist=3]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |(Www)|     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|  (w)|     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 7
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=2]
+	Robot[pos=(7,0);type=W;dist=7]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |(Www)|     |     |     |     |
+    6|  (w)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|  (2)|     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 19 - TURN : 8
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(8,0);type=SW;dist=18]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |(Www)|     |     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+__________________NEW STEP__________________
+ROUND : 20 - TURN : 0
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(6,0);type=SW;dist=14]
+Criminal current count : 20
+Criminal count after moving : 21
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |  (S)|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |(Www)|     |     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 1
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,4);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(6,0);type=SW;dist=14]
+Sherlock move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |(Www)|     |     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 2
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,5);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=6]
+	Robot[pos=(6,0);type=SW;dist=15]
+Watson move direction : R
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     | (ww)|  (W)|     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (Cc)|     |     |     |     |     |     |     |     |     |
+   11|     |     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 3
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=1]
+	Robot[pos=(5,5);type=W;dist=1]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     | (ww)|  (W)|     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 4
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,5);type=W;dist=1]
+	Robot[pos=(5,5);type=W;dist=1]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |  (w)| (Ww)|     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 5
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,5);type=W;dist=1]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |  (w)|     |     |(Www)|     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 6
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,3);type=W;dist=3]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|     |     |     |     |  (w)|     |(Www)|     |     |     |
+    6| (w2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 7
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(6,0);type=W;dist=7]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|     |     |     |  (w)|     |(Www)|     |     |     |
+    6|  (2)|     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 20 - TURN : 8
+ArrayMovingObject[count=9;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(6,0);type=SW;dist=16]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     |(Www)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (C)|     |     |     |     |     |     |     |     |     |
+   11|  (c)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+Robot W has been created
+__________________NEW STEP__________________
+ROUND : 21 - TURN : 0
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(10,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(5,1);type=SW;dist=12]
+	Robot[pos=(11,0);type=W;dist=12]
+Criminal current count : 21
+Criminal count after moving : 22
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|     |     |     |     |     |
+    2|     |     |-----|     |-----|  (S)|     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     |(Www)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 1
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(2,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(5,1);type=SW;dist=12]
+	Robot[pos=(11,0);type=W;dist=12]
+Sherlock move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |     |     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     |(Www)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 2
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(5,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=2]
+	Robot[pos=(5,0);type=W;dist=6]
+	Robot[pos=(5,1);type=SW;dist=13]
+	Robot[pos=(11,0);type=W;dist=12]
+Watson move direction : U
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (W)|     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     | (ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|     |     |     |     |     |     |     |     |     |     |
+   11|(Ccw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 3
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(11,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,4);type=W;dist=3]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |  (W)|     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     | (ww)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 4
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,4);type=W;dist=3]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     | (Ww)|     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     |  (w)|     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 5
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(5,6);type=W;dist=1]
+	Robot[pos=(5,4);type=W;dist=3]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |     |     |(Www)|     |     |     |
+    5|  (w)|  (2)|     |     |  (w)|     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 6
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(5,4);type=W;dist=3]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|     |-----|     |     |  (w)|     |(Www)|     |     |     |
+    5|  (w)|  (2)|     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 7
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,4);type=W;dist=2]
+	Robot[pos=(5,0);type=W;dist=7]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|  (w)|-----|     |     |  (w)|     |(Www)|     |     |     |
+    5|     |  (2)|     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 8
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,4);type=W;dist=2]
+	Robot[pos=(4,0);type=W;dist=6]
+	Robot[pos=(5,1);type=SW;dist=14]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|  (w)|-----|  (2)|     |  (w)|     |(Www)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10|  (c)|     |     |     |     |     |     |     |     |     |
+   11| (Cw)|     |     |     |     |     |     |     |     |     |
+*********************************************************
+ROUND : 21 - TURN : 9
+ArrayMovingObject[count=10;capacity=10;]
+	Ciminal[index=0;pos=(11,0)]
+	Sherlock[index=1;pos=(1,5);moving_rule=LRLURUDL]
+	Watson[index=2;pos=(4,6);moving_rule=RUDUL]
+	Robot[pos=(10,0);type=C;dist=]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,6);type=W;dist=0]
+	Robot[pos=(4,4);type=W;dist=2]
+	Robot[pos=(4,0);type=W;dist=6]
+	Robot[pos=(4,2);type=SW;dist=10]
+	Robot[pos=(11,0);type=W;dist=13]
+     |    0|    1|    2|    3|    4|    5|    6|    7|    8|    9|
+    0|     |     |     |     |     |     |     |     |     |     |
+    1|-----|     |-----|     |-----|  (S)|     |     |     |     |
+    2|     |     |-----|     |-----|     |     |     |     |     |
+    3|     |     |     |     |     |     |     |     |     |     |
+    4|  (w)|-----|  (2)|     |  (w)|     |(Www)|     |     |     |
+    5|     |     |     |     |     |     |     |     |     |     |
+    6|     |     |     |     |     |     |-----|     |     |     |
+    7|     |     |     |     |     |     |     |     |     |     |
+    8|     |     |     |     |     |     |     |     |     |     |
+    9|     |     |     |     |     |     |     |     |     |     |
+   10| (cw)|     |     |     |     |     |     |     |     |     |
+   11|  (C)|     |     |     |     |     |     |     |     |     |
+*********************************************************
