@@ -189,6 +189,8 @@ public:
     int getEXP() const;
     void setHP(int hp);
     void setEXP(int exp);
+    // Adding setter for swap bag
+    void setBag(BaseBag *newBag) { bag = newBag; }
 };
 
 class Watson : public Character
@@ -221,6 +223,8 @@ public:
     bool meet(RobotSW *robotSW);
     bool meet(RobotC *robotC);
     bool meet(Sherlock *sherlock);
+    // Adding setter for swap bag
+    void setBag(BaseBag *newBag) { bag = newBag; }
 };
 
 class Map
@@ -624,8 +628,8 @@ private:
 
 public:
     WatsonBag(Watson *character)
-        : BaseBag(15),      // Call the base class constructor with capacity
-          watson(character) // Initialize `watson` member variable
+        : BaseBag(15),
+          watson(character)
     {
     }
     BaseItem *get();

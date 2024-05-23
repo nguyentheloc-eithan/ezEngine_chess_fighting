@@ -1,0 +1,64 @@
+Configuration[
+MAP_NUM_ROWS=6
+MAP_NUM_COLS=5
+MAX_NUM_MOVING_OBJECTS=3
+NUM_WALLS=17
+ARRAY_WALLS=[(1,3);(4,1);(5,0);(3,2);(1,1);(0,3);(0,3);(0,2);(5,1);(4,2);(2,3);(0,0);(5,3);(1,0);(4,1);(0,3);(0,3)]
+NUM_FAKE_WALLS=15
+ARRAY_FAKE_WALLS=[(1,0);(5,1);(3,2);(4,4);(5,4);(4,3);(1,3);(0,3);(3,4);(3,1);(3,3);(5,3);(1,3);(5,0);(5,0)]
+SHERLOCK_MOVING_RULE=LDLRL
+SHERLOCK_INIT_POS=(2,1)
+SHERLOCK_INIT_HP=483
+SHERLOCK_INIT_EXP=347
+WATSON_MOVING_RULE=URLUR
+WATSON_INIT_POS=(0,1)
+WATSON_INIT_HP=180
+WATSON_INIT_EXP=804
+CRIMINAL_INIT_POS=(2,1)
+NUM_STEPS=29
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=3;]
+	Criminal[index=0;pos=(2,1)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLRL]
+	Watson[index=2;pos=(0,1);moving_rule=URLUR]
+Criminal current count : 0
+Criminal count after moving : 1
+       |      0|      1|      2|      3|      4|
+      0|  IIIII|      W|  IIIII|  IIIII|       |
+      1|  IIIII|  IIIII|       |  IIIII|       |
+      2|      C|      S|       |  IIIII|       |
+      3|       |  -----|  IIIII|  -----|  -----|
+      4|       |  IIIII|  IIIII|  -----|  -----|
+      5|  IIIII|  IIIII|       |  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_483 EXP_347
+Watson HP_180 EXP_804
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=3;]
+	Criminal[index=0;pos=(2,0)]
+	Sherlock[index=1;pos=(2,1);moving_rule=LDLRL]
+	Watson[index=2;pos=(0,1);moving_rule=URLUR]
+Sherlock move direction : L
+       |      0|      1|      2|      3|      4|
+      0|  IIIII|      W|  IIIII|  IIIII|       |
+      1|  IIIII|  IIIII|       |  IIIII|       |
+      2|     CS|       |       |  IIIII|       |
+      3|       |  -----|  IIIII|  -----|  -----|
+      4|       |  IIIII|  IIIII|  -----|  -----|
+      5|  IIIII|  IIIII|       |  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_483 EXP_347
+Watson HP_180 EXP_804
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal was caught

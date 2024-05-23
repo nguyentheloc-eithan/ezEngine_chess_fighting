@@ -1,0 +1,95 @@
+Configuration[
+MAP_NUM_ROWS=3
+MAP_NUM_COLS=3
+MAX_NUM_MOVING_OBJECTS=10
+NUM_WALLS=8
+ARRAY_WALLS=[(0,1);(1,1);(1,2);(1,1);(0,1);(2,1);(0,1);(0,1)]
+NUM_FAKE_WALLS=13
+ARRAY_FAKE_WALLS=[(2,2);(2,0);(1,1);(1,1);(0,2);(1,2);(0,2);(2,0);(1,1);(1,1);(1,1);(1,1);(1,1)]
+SHERLOCK_MOVING_RULE=RDDLLRURD
+SHERLOCK_INIT_POS=(1,0)
+SHERLOCK_INIT_HP=163
+SHERLOCK_INIT_EXP=700
+WATSON_MOVING_RULE=UUURD
+WATSON_INIT_POS=(0,0)
+WATSON_INIT_HP=374
+WATSON_INIT_EXP=633
+CRIMINAL_INIT_POS=(1,0)
+NUM_STEPS=24
+]
+
+*********************************************************
+ROUND : 0 - TURN : 0
+ArrayMovingObject[count=3;capacity=10;]
+	Criminal[index=0;pos=(1,0)]
+	Sherlock[index=1;pos=(1,0);moving_rule=RDDLLRURD]
+	Watson[index=2;pos=(0,0);moving_rule=UUURD]
+Criminal current count : 0
+Criminal count after moving : 1
+       |      0|      1|      2|
+      0|      W|  IIIII|  -----|
+      1|      S|  IIIII|  IIIII|
+      2|      C|  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_163 EXP_700
+Watson HP_374 EXP_633
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 1
+ArrayMovingObject[count=3;capacity=10;]
+	Criminal[index=0;pos=(2,0)]
+	Sherlock[index=1;pos=(1,0);moving_rule=RDDLLRURD]
+	Watson[index=2;pos=(0,0);moving_rule=UUURD]
+Sherlock move direction : R
+       |      0|      1|      2|
+      0|      W|  IIIII|  -----|
+      1|      S|  IIIII|  IIIII|
+      2|      C|  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_163 EXP_700
+Watson HP_374 EXP_633
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 0 - TURN : 2
+ArrayMovingObject[count=3;capacity=10;]
+	Criminal[index=0;pos=(2,0)]
+	Sherlock[index=1;pos=(1,0);moving_rule=RDDLLRURD]
+	Watson[index=2;pos=(0,0);moving_rule=UUURD]
+Watson move direction : U
+       |      0|      1|      2|
+      0|      W|  IIIII|  -----|
+      1|      S|  IIIII|  IIIII|
+      2|      C|  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_163 EXP_700
+Watson HP_374 EXP_633
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 1 - TURN : 0
+ArrayMovingObject[count=3;capacity=10;]
+	Criminal[index=0;pos=(2,0)]
+	Sherlock[index=1;pos=(1,0);moving_rule=RDDLLRURD]
+	Watson[index=2;pos=(0,0);moving_rule=UUURD]
+Criminal current count : 1
+Criminal count after moving : 2
+       |      0|      1|      2|
+      0|      W|  IIIII|  -----|
+      1|     CS|  IIIII|  IIIII|
+      2|  -----|  IIIII|  -----|
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_163 EXP_700
+Watson HP_374 EXP_633
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
+---------------
+RESULT : The Criminal was caught
