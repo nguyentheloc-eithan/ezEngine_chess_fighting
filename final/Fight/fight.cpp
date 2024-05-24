@@ -45,13 +45,13 @@ void MagicBook::use(Character *obj, Robot *robot)
     if (ObjectType == MovingObjectType::SHERLOCK)
     {
         Sherlock *sherlock = dynamic_cast<Sherlock *>(obj);
-        int newEXP = ceil((sherlock->getEXP() * 125) / 100.0);
+        int newEXP = ceil((sherlock->getEXP() * 1.25) - 0.001);
         sherlock->setEXP(newEXP);
     }
     else if (ObjectType == MovingObjectType::WATSON)
     {
         Watson *watson = dynamic_cast<Watson *>(obj);
-        int newEXP = ceil((watson->getEXP() * 125) / 100.0);
+        int newEXP = ceil((watson->getEXP() * 1.25) - 0.001);
         watson->setEXP(newEXP);
     }
 }
@@ -95,13 +95,13 @@ void EnergyDrink::use(Character *obj, Robot *robot)
     if (ObjectType == MovingObjectType::SHERLOCK)
     {
         Sherlock *sherlock = dynamic_cast<Sherlock *>(obj);
-        int newHP = ceil((sherlock->getHP() * 120) / 100.0);
+        int newHP = ceil((sherlock->getHP() * 1.2) - 0.001);
         sherlock->setHP(newHP);
     }
     else if (ObjectType == MovingObjectType::WATSON)
     {
         Watson *watson = dynamic_cast<Watson *>(obj);
-        int newHP = ceil((watson->getHP() * 120) / 100.0);
+        int newHP = ceil((watson->getHP() * 1.2) - 0.001);
         watson->setHP(newHP);
     }
 }
@@ -151,13 +151,13 @@ void FirstAid::use(Character *obj, Robot *robot)
     if (ObjectType == MovingObjectType::SHERLOCK)
     {
         Sherlock *sherlock = dynamic_cast<Sherlock *>(obj);
-        int newHP = ceil((sherlock->getHP() * 150) / 100.0);
+        int newHP = ceil((sherlock->getHP() * 1.5) - 0.001);
         sherlock->setHP(newHP);
     }
     else if (ObjectType == MovingObjectType::WATSON)
     {
         Watson *watson = dynamic_cast<Watson *>(obj);
-        int newHP = ceil((watson->getHP() * 150) / 100.0);
+        int newHP = ceil((watson->getHP() * 1.5) - 0.001);
         watson->setHP(newHP);
     }
 }
@@ -246,7 +246,7 @@ bool PassingCard::canUse(Character *obj, Robot *robot)
 }
 void PassingCard::use(Character *obj, Robot *robot)
 {
-    int enumChallenge = 0;
+    int enumChallenge = 10;
     if (this->challenge != "all")
     {
         if (this->challenge == "RobotC")
@@ -265,21 +265,13 @@ void PassingCard::use(Character *obj, Robot *robot)
         {
             enumChallenge = 3;
         }
+
         if (enumChallenge != robot->getType())
         {
             MovingObjectType ObjectType = obj->getObjectType();
-            if (ObjectType == MovingObjectType::SHERLOCK)
-            {
-                Sherlock *sherlock = dynamic_cast<Sherlock *>(obj);
-                int newEXP = (sherlock->getEXP() - 50);
-                sherlock->setEXP(newEXP);
-            }
-            else if (ObjectType == MovingObjectType::WATSON)
-            {
-                Watson *watson = dynamic_cast<Watson *>(obj);
-                int newEXP = (watson->getEXP() - 50);
-                watson->setEXP(newEXP);
-            }
+            Watson *watson = dynamic_cast<Watson *>(obj);
+            int newEXP = (watson->getEXP() - 50);
+            watson->setEXP(newEXP);
         }
     }
 }
@@ -1039,7 +1031,6 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
     if (criminal->getCount() == 2 && index != 0)
     {
         // Create RobotC
-
         return new RobotC(index, criminal->getCurrentPosition(), map, C, criminal);
     }
 
@@ -1761,6 +1752,7 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
                 }
             }
             printMap(OUTPUT);
+
             OUTPUT << "---------------" << endl
                    << "LOG AFTER MOVE : " << endl
                    << "Sherlock HP_" << sherlock->getHP() << " EXP_" << sherlock->getEXP() << endl
@@ -1806,8 +1798,8 @@ bool ArrayMovingObject::checkMeet(int index)
 
         if (posAtIndex.isEqual(otherPos))
         {
-            MovingObjectType typeAtIndex = objAtIndex->getObjectType();
-            MovingObjectType otherType = otherObj->getObjectType();
+            MovingObjectType typeAtIndex = objAtIndex->getObjectType(); // dt dang duyet
+            MovingObjectType otherType = otherObj->getObjectType();     // dtt bi va
 
             switch (typeAtIndex)
             {
@@ -1816,7 +1808,7 @@ bool ArrayMovingObject::checkMeet(int index)
                 {
                     Robot *robot = dynamic_cast<Robot *>(otherObj);
                     RobotType typeRobot = robot->getType();
-                    bool fight = false; // Declare and initialize fight variable outside the switch statement
+                    bool fight = false;
                     switch (typeRobot)
                     {
                     case RobotType::C:
@@ -1834,17 +1826,12 @@ bool ArrayMovingObject::checkMeet(int index)
                         dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
                         break;
                     }
-                    return false;
                 }
                 else if (otherType == WATSON)
                 {
                     Sherlock *sherlock = dynamic_cast<Sherlock *>(objAtIndex);
                     Watson *watson = dynamic_cast<Watson *>(otherObj);
-                    BaseBag *tempBag = sherlock->getBag();
-
-                    sherlock->setBag(watson->getBag());
-                    watson->setBag(tempBag);
-                    return false;
+                    sherlock->meet(watson);
                 }
                 else if (otherType == CRIMINAL)
                 {
@@ -1852,52 +1839,42 @@ bool ArrayMovingObject::checkMeet(int index)
                 }
                 break;
             case WATSON:
-                // cout << "WATSON PASSPHRASE" << endl;
                 if (otherType == ROBOT)
                 {
                     Robot *robot = dynamic_cast<Robot *>(otherObj);
                     RobotType typeRobot = robot->getType();
-                    // bool fight = false;
                     switch (typeRobot)
                     {
                     case RobotType::C:
-                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
+                        dynamic_cast<Watson *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
                         break;
                     case RobotType::S:
-                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
+                        dynamic_cast<Watson *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
                         break;
                     case RobotType::W:
-                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
+                        dynamic_cast<Watson *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
                         break;
-                    // case RobotType::SW:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
-                    //     break;
-                    default:
-                        return false;
+                    case RobotType::SW:
+                        dynamic_cast<Watson *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
+                        break;
                     }
-                    return false;
                 }
                 else if (otherType == SHERLOCK)
                 {
-                    // cout << "WATSON SHERLOCK" << endl;
-
                     Watson *watson = dynamic_cast<Watson *>(objAtIndex);
                     Sherlock *sherlock = dynamic_cast<Sherlock *>(otherObj);
-                    BaseBag *tempBag = watson->getBag();
-                    watson->setBag(sherlock->getBag());
-                    sherlock->setBag(tempBag);
-                    return false;
+                    watson->meet(sherlock);
+                    continue;
                 }
                 else if (otherType == CRIMINAL)
                 {
-                    // cout << "WATSON CRIMINAL" << endl;
                     return true;
                 }
                 break;
             case CRIMINAL:
                 if (otherType == ROBOT)
                 {
-                    return false;
+                    continue;
                 }
                 else if (otherType == SHERLOCK || otherType == WATSON)
                 {
@@ -1907,63 +1884,59 @@ bool ArrayMovingObject::checkMeet(int index)
             case ROBOT:
                 if (otherType == ROBOT)
                 {
-                    return false;
+                    continue;
                 }
                 else if (otherType == SHERLOCK)
                 {
-                    Robot *robot = dynamic_cast<Robot *>(objAtIndex);
-                    // RobotType typeRobot = robot->getType();
-                    // bool fight = false; // Declare and initialize fight variable outside the switch statement
-                    // switch (typeRobot)
-                    // {
-                    // case RobotType::C:
-                    //     fight = dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
-                    //     if (fight)
-                    //         return true;
-                    //     break;
-                    // case RobotType::S:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
-                    //     break;
-                    // case RobotType::W:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
-                    //     break;
-                    // case RobotType::SW:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
-                    //     break;
-                    // }
-                    return false;
+                    Robot *robot = dynamic_cast<Robot *>(objAtIndex); // index
+                    RobotType typeRobot = robot->getType();
+                    bool fight = false;
+                    switch (typeRobot)
+                    {
+                    case RobotType::C:
+                        fight = dynamic_cast<Sherlock *>(otherObj)->meet(dynamic_cast<RobotC *>(robot));
+                        if (fight)
+                            return true;
+                        break;
+                    case RobotType::S:
+                        dynamic_cast<Sherlock *>(otherObj)->meet(dynamic_cast<RobotS *>(robot));
+                        break;
+                    case RobotType::W:
+                        dynamic_cast<Sherlock *>(otherObj)->meet(dynamic_cast<RobotW *>(robot));
+                        break;
+                    case RobotType::SW:
+                        dynamic_cast<Sherlock *>(otherObj)->meet(dynamic_cast<RobotSW *>(robot));
+                        break;
+                    }
                 }
-                else if (otherType == WATSON)
+                else if (otherType == WATSON) // robot vs watson
                 {
-                    Robot *robot = dynamic_cast<Robot *>(otherObj);
-                    // RobotType typeRobot = robot->getType();
-                    // bool fight = false; // Declare and initialize fight variable outside the switch statement
-                    // switch (typeRobot)
-                    // {
-                    // case RobotType::C:
-                    //     fight = dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
-                    //     break;
-                    // case RobotType::S:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
-                    //     break;
-                    // case RobotType::W:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
-                    //     break;
-                    // case RobotType::SW:
-                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
-                    //     break;
-                    // }
-                    return false;
+                    Robot *robot = dynamic_cast<Robot *>(objAtIndex);
+                    RobotType typeRobot = robot->getType();
+                    switch (typeRobot)
+                    {
+                    case RobotType::C:
+                        dynamic_cast<Watson *>(otherObj)->meet(dynamic_cast<RobotC *>(robot));
+                        break;
+                    case RobotType::S:
+                        dynamic_cast<Watson *>(otherObj)->meet(dynamic_cast<RobotS *>(robot));
+                        break;
+                    case RobotType::W:
+                        dynamic_cast<Watson *>(otherObj)->meet(dynamic_cast<RobotW *>(robot));
+                        break;
+                    case RobotType::SW:
+                        dynamic_cast<Watson *>(otherObj)->meet(dynamic_cast<RobotSW *>(robot));
+                        break;
+                    }
                 }
                 else if (otherType == CRIMINAL)
                 {
-                    return false;
+                    continue;
                 }
                 break;
             }
         }
     }
-
     return false;
 }
 // *CLASS: Sherlock
@@ -1975,36 +1948,84 @@ void Sherlock::setPos(Position pos)
 }
 bool Sherlock::meet(RobotS *robotS)
 {
-    if (EXP > 400)
+    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
     {
-        BaseItem *item = robotS->NewItem();
-        if (item)
+        if (this->getHP() % 2 != 0)
         {
-            bag->insert(item);
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            if (this->EXP > 400)
+            {
+                BaseItem *item = robotS->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
         }
-        return true;
+        else
+        {
+            if (this->EXP > 400)
+            {
+                BaseItem *item = robotS->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                this->EXP = ceil(this->EXP * 0.9 - 0.0001);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
+        }
     }
+
     else
     {
-        BaseItem *excemptionCard = bag->get(ItemType::EXCEMPTION_CARD);
-        if (excemptionCard)
+        if (this->EXP > 400)
         {
-            excemptionCard->use(this, robotS);
+            BaseItem *item = robotS->NewItem();
+            this->bag->insert(item);
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
+            {
+                otherItem->use(this, nullptr);
+            }
             return true;
         }
         else
         {
-            int lostExp = ceil((EXP * 10) / 100.0);
-            EXP -= lostExp;
-            BaseItem *anotherItem = bag->get();
-            while (anotherItem)
+
+            this->EXP = ceil(this->EXP * 0.9 - 0.0001);
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
             {
-                if (anotherItem->canUse(this, robotS))
-                {
-                    anotherItem->use(this, robotS);
-                    return true;
-                }
-                anotherItem = bag->get();
+                otherItem->use(this, nullptr);
             }
             return false;
         }
@@ -2012,202 +2033,372 @@ bool Sherlock::meet(RobotS *robotS)
 }
 bool Sherlock::meet(RobotW *robotW)
 {
-    BaseItem *item = robotW->NewItem();
-    if (item)
+    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD) && this->getHP() % 2 != 0)
     {
-        this->bag->insert(item);
+        BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+    }
+
+    BaseItem *item = robotW->NewItem();
+    this->bag->insert(item);
+
+    BaseItem *otherItem = bag->get();
+    if (otherItem)
+    {
+        otherItem->use(this, nullptr);
     }
     return true;
 }
 bool Sherlock::meet(RobotSW *robotSW)
 {
-
-    if (EXP > 300 && HP > 335)
+    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
     {
-        BaseItem *item = robotSW->NewItem();
-        if (item)
+        if (this->getHP() % 2 != 0)
         {
-            bag->insert(item);
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            if (EXP > 300 && HP > 335)
+            {
+                BaseItem *item = robotSW->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
         }
-        return true;
+        else
+        {
+            if (EXP > 300 && HP > 335)
+            {
+                BaseItem *item = robotSW->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                this->EXP = ceil(this->EXP * 0.85 - 0.0001);
+                this->HP = ceil(this->HP * 0.85 - 0.0001);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
+        }
     }
     else
     {
-        HP = HP - ceil((HP * 15) / 100);
-        EXP = ceil((EXP * 15) / 100);
-        return false;
+        if (EXP > 300 && HP > 335)
+        {
+            BaseItem *item = robotSW->NewItem();
+            this->bag->insert(item);
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
+            {
+                otherItem->use(this, nullptr);
+            }
+            return true;
+        }
+        else
+        {
+            this->EXP = ceil(this->EXP * 0.85 - 0.0001);
+            this->HP = ceil(this->HP * 0.85 - 0.0001);
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
+            {
+                otherItem->use(this, nullptr);
+            }
+            return false;
+        }
     }
 }
 bool Sherlock::meet(RobotC *robotC)
 {
-
-    if (EXP > 500)
+    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
     {
-        return true;
+        if (this->getHP() % 2 != 0)
+        {
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            if (this->EXP > 500)
+            {
+                this->pos = robotC->getCriminalPosition();
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                BaseItem *item = robotC->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
+        }
+        else
+        {
+            if (EXP > 500)
+            {
+
+                this->pos = robotC->getCriminalPosition();
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return true;
+            }
+            else
+            {
+                BaseItem *item = robotC->NewItem();
+                this->bag->insert(item);
+
+                BaseItem *otherItem = bag->get();
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+                return false;
+            }
+        }
     }
     else
     {
-        BaseItem *item = robotC->NewItem();
-        if (item)
+        if (EXP > 500)
         {
-            bag->insert(item);
+
+            this->pos = robotC->getCriminalPosition();
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
+            {
+                if (otherItem)
+                {
+                    otherItem->use(this, nullptr);
+                }
+            }
+            return true;
         }
-        return false;
+        else
+        {
+            BaseItem *item = robotC->NewItem();
+            this->bag->insert(item);
+
+            BaseItem *otherItem = bag->get();
+            if (otherItem)
+            {
+                otherItem->use(this, nullptr);
+            }
+            return false;
+        }
     }
 }
 bool Sherlock::meet(Watson *watson)
 {
 
-    SherlockBag *sherlockBag = dynamic_cast<SherlockBag *>(this->bag);
-    WatsonBag *watsonBag = dynamic_cast<WatsonBag *>(watson->getBag());
-
-    bool exchanged = false;
-    while (sherlockBag->checkItem(PASSING_CARD))
+    if (this->bag->checkItem(PASSING_CARD) && watson->getBag()->checkItem(EXCEMPTION_CARD))
     {
-        BaseItem *passingCard = this->bag->get(PASSING_CARD); // PASSING_CARD
-        if (passingCard != nullptr)
+        while (this->bag->checkItem(PASSING_CARD))
         {
-            watsonBag->insert(passingCard);
-            exchanged = true;
+            BaseItem *passingCard = this->bag->get(PASSING_CARD); // PASSING_CARD
+            watson->getBag()->insert(passingCard);
         }
-    }
 
-    // Then, Watson gives ExcemptionCards to Sherlock
-    while (watsonBag->checkItem(EXCEMPTION_CARD))
+        // Then, Watson gives ExcemptionCards to Sherlock
+        while (watson->getBag()->checkItem(EXCEMPTION_CARD))
+        {
+            BaseItem *excemptionCard = watson->getBag()->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
+            this->bag->insert(excemptionCard);
+        }
+        return true;
+    }
+    else
     {
-        BaseItem *excemptionCard = watson->getBag()->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
-        if (excemptionCard != nullptr)
-        {
-            sherlockBag->insert(excemptionCard);
-            exchanged = true;
-        }
+        return false;
     }
-
-    return exchanged;
 }
 // *CLASS: Watson
 // ! Lưu ý: PassingCard được dùng khi GẶP ROBOT để bỏ qua thử thách nếu đúng loại thẻ
 // ! Thực hiện get từ bag sau khi insert item
 bool Watson::meet(RobotS *robotS)
 {
-    BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
-    if (passingCard && passingCard->canUse(this, robotS))
+    if (this->getBag()->checkItem(ItemType::PASSING_CARD) && this->HP % 2 == 0)
     {
+        BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
         passingCard->use(this, robotS);
+    }
+
+    BaseItem *item = getBag()->get();
+    if (item)
+    {
+        item->use(this, nullptr);
     }
     return true;
 }
 bool Watson::meet(RobotW *robotW)
 {
-
-    BaseItem *passingCard = this->getBag()->get(ItemType::PASSING_CARD);
-    if (passingCard && passingCard->canUse(this, robotW))
+    if (this->getBag()->checkItem(ItemType::PASSING_CARD) && this->HP % 2 == 0)
     {
+        BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
         passingCard->use(this, robotW);
-        this->bag->insert(robotW->NewItem());
-        return true;
-    }
 
-    if (this->getHP() > 350)
-    {
         this->bag->insert(robotW->NewItem());
+
+        BaseItem *item = getBag()->get();
+        if (item)
+        {
+            item->use(this, nullptr);
+        }
+        return true;
     }
     else
     {
-        int newHP = this->getHP() - (ceil((this->getHP() * 5) / 100));
-        this->setHP(newHP);
-        for (int i = 0; i < getBag()->getSize(); ++i)
+        if (this->getHP() > 350)
         {
+            this->bag->insert(robotW->NewItem());
+
             BaseItem *item = getBag()->get();
-            if (item && item->canUse(this, robotW))
+            if (item)
             {
-                item->use(this, robotW);
-                break;
+                item->use(this, nullptr);
             }
+            return true;
+        }
+        else
+        {
+            int newHP = ceil(this->getHP() * 0.95 - 0.0001);
+            this->setHP(newHP);
+
+            BaseItem *item = getBag()->get();
+            if (item)
+            {
+                item->use(this, nullptr);
+            }
+            return false;
         }
     }
-
-    return true;
 }
 bool Watson::meet(RobotSW *robotSW)
 {
-
-    BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
-
-    if (passingCard && passingCard->canUse(this, robotSW))
+    if (this->getBag()->checkItem(ItemType::PASSING_CARD) && this->HP % 2 == 0)
     {
+        BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
         passingCard->use(this, robotSW);
 
+        this->bag->insert(robotSW->NewItem());
+
+        BaseItem *item = getBag()->get();
+        if (item)
+        {
+            item->use(this, nullptr);
+        }
         return true;
-    }
-
-    if (this->getEXP() > 600 && this->getHP() > 165)
-    {
-
-        getBag()->insert(robotSW->NewItem());
     }
     else
     {
-        // Watson loses and his HP and EXP are reduced by 15%
-        this->setHP(this->getHP() - ceil((this->getHP() * 15) / 100));
-        this->setEXP(this->getEXP() - ceil((this->getEXP() * 15) / 100));
-
-        for (int i = 0; i < getBag()->getSize(); ++i)
+        if (this->getEXP() > 600 && this->getHP() > 165)
         {
-            BaseItem *item = getBag()->get();
-            if (item && item->canUse(this, robotSW))
-            {
-                item->use(this, robotSW);
+            this->bag->insert(robotSW->NewItem());
 
-                break;
+            BaseItem *item = getBag()->get();
+            if (item)
+            {
+                item->use(this, nullptr);
             }
+            return true;
+        }
+        else
+        {
+            this->setHP(ceil((this->getHP() * 0.85) - 0.001));
+            this->setEXP(ceil((this->getEXP() * 0.85) - 0.001));
+            BaseItem *item = getBag()->get();
+            if (item)
+            {
+                item->use(this, nullptr);
+            }
+            return false;
         }
     }
-
-    return true;
 }
 bool Watson::meet(RobotC *robotC)
 {
-    BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
-    if (passingCard && passingCard->canUse(this, robotC))
+    if (this->getBag()->checkItem(ItemType::PASSING_CARD) && this->HP % 2 == 0)
     {
+        BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
         passingCard->use(this, robotC);
+        this->bag->insert(robotC->NewItem());
+
+        BaseItem *item = getBag()->get();
+        if (item)
+        {
+            item->use(this, nullptr);
+        }
         return true;
     }
+    else
+    {
+        this->bag->insert(robotC->NewItem());
+        BaseItem *item = getBag()->get();
 
-    // Watson defeats RobotC and receives the item
-    getBag()->insert(robotC->NewItem());
+        if (item)
+        {
+            item->use(this, nullptr);
+        }
 
-    return true;
+        return false;
+    }
 }
 bool Watson::meet(Sherlock *sherlock)
 {
-
-    SherlockBag *sherlockBag = dynamic_cast<SherlockBag *>(sherlock->getBag());
-    WatsonBag *watsonBag = dynamic_cast<WatsonBag *>(this->bag);
-
-    bool exchanged = false;
-    while (sherlockBag->checkItem(PASSING_CARD))
+    if (sherlock->getBag()->checkItem(PASSING_CARD) && this->bag->checkItem(EXCEMPTION_CARD))
     {
-        BaseItem *passingCard = sherlock->getBag()->get(PASSING_CARD); // PASSING_CARD
-        if (passingCard != nullptr)
+        while (sherlock->getBag()->checkItem(PASSING_CARD))
         {
-            watsonBag->insert(passingCard);
-            exchanged = true;
+            BaseItem *passingCard = sherlock->getBag()->get(PASSING_CARD); // PASSING_CARD
+            this->bag->insert(passingCard);
         }
-    }
 
-    while (watsonBag->checkItem(EXCEMPTION_CARD))
+        while (this->bag->checkItem(EXCEMPTION_CARD))
+        {
+            BaseItem *excemptionCard = this->bag->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
+            sherlock->getBag()->insert(excemptionCard);
+        }
+        return true;
+    }
+    else
     {
-        BaseItem *excemptionCard = this->bag->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
-        if (excemptionCard != nullptr)
-        {
-            sherlockBag->insert(excemptionCard);
-            exchanged = true;
-        }
+        return false;
     }
-
-    return exchanged;
 }
 
 BaseBag *Sherlock::getBag() const

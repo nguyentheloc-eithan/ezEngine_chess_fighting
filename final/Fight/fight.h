@@ -300,7 +300,10 @@ public:
            Map *map,
            RobotType robot_type,
            Criminal *criminal);
-
+    Position getCriminalPosition()
+    {
+        return this->criminal->getCurrentPosition();
+    }
     int getDistance(Sherlock *sherlock);
 
     int getDistance(Watson *watson);
