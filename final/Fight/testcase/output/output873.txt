@@ -772,5 +772,32 @@ Sherlock HP_65 EXP_592
 Watson HP_64 EXP_183
 SherlockBag : Bag[count=0;]
 WatsonBag : Bag[count=0;]
+
+*********************************************************
+ROUND : 8 - TURN : 0
+ArrayMovingObject[count=4;capacity=4;]
+	Criminal[index=0;pos=(0,3)]
+	Sherlock[index=1;pos=(0,4);moving_rule=LDLLUUL]
+	Watson[index=2;pos=(5,2);moving_rule=LRLRUULL]
+	Robot[pos=(0,4);type=C;dist=]
+Criminal current count : 8
+Criminal count after moving : 9
+       |      0|      1|      2|      3|      4|      5|      6|      7|      8|
+      0|       |       |  IIIII|       |    CS0|       |       |       |       |
+      1|       |       |  IIIII|  IIIII|  -----|  IIIII|       |       |       |
+      2|  IIIII|       |       |       |       |       |       |       |  -----|
+      3|       |       |  -----|       |       |  IIIII|       |       |       |
+      4|       |       |       |       |  -----|       |       |       |  IIIII|
+      5|       |  IIIII|      W|       |       |  -----|  IIIII|       |  -----|
+      6|  -----|       |       |       |       |       |       |       |       |
+      7|       |       |       |       |       |       |       |       |       |
+      8|       |       |  -----|       |       |       |       |       |       |
+      9|       |       |       |  IIIII|       |  IIIII|       |       |       |
+---------------
+LOG AFTER MOVE : 
+Sherlock HP_65 EXP_592
+Watson HP_64 EXP_183
+SherlockBag : Bag[count=0;]
+WatsonBag : Bag[count=0;]
 ---------------
 RESULT : The Criminal was caught

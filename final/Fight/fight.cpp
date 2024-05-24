@@ -1,5 +1,4 @@
 #include "fight.h"
-// ! Nội dung task cũ cần bỏ vào (chỉ bỏ dòng #include "moving.h")
 
 bool isOdd(int number)
 {
@@ -329,7 +328,6 @@ BaseItem *BaseBag::get(ItemType itemType)
     Node *prev = nullptr;
     Node *current = head;
 
-    // Traverse the list to find the node with the specified itemType
     while (current != nullptr && current->item->getType() != itemType)
     {
         prev = current;
@@ -341,23 +339,20 @@ BaseItem *BaseBag::get(ItemType itemType)
     {
         return nullptr;
     }
-
     // Swap the found node with the head node
     if (prev != nullptr)
     {
-        prev->next = head;          // Previous node points to the head node
-        Node *temp = head->next;    // Temporary node to hold head's next node
-        head->next = current->next; // Head node points to current's next node
-        current->next = temp;       // Current node points to temporary node
-        head = current;             // Update the head to the current node
+        prev->next = head;
+        Node *temp = head->next;
+        head->next = current->next;
+        current->next = temp;
+        head = current;
     }
-
-    // Now head is the node containing the item to be removed
     BaseItem *returnItem = head->item;
-    Node *temp = head; // Temporary node to hold the current head
-    head = head->next; // Update the head to the next node
-    delete temp;       // Delete the temporary node
-    size--;            // Decrement the size
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    size--;
 
     return returnItem;
 }
@@ -392,7 +387,6 @@ BaseItem *SherlockBag::get()
     Node *current = head;
     Node *prev = nullptr;
 
-    // Traverse the list to find a usable item
     while (current != nullptr)
     {
         if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
@@ -403,13 +397,11 @@ BaseItem *SherlockBag::get()
         prev = current;
         current = current->next;
     }
-
     // If no usable item is found, return nullptr
     if (current == nullptr)
     {
         return nullptr;
     }
-
     // Swap the found node with the head node if it is not already the head
     if (current != head)
     {
@@ -422,13 +414,12 @@ BaseItem *SherlockBag::get()
         current->next = temp;
         std::swap(head, current);
     }
-
     // Now head is the node containing the item to be removed
     BaseItem *returnItem = head->item;
-    Node *temp = head; // Temporary node to hold the current head
-    head = head->next; // Update the head to the next node
-    delete temp;       // Delete the temporary node
-    size--;            // Decrement the size
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    size--;
 
     return returnItem;
 }
@@ -454,14 +445,10 @@ BaseItem *WatsonBag::get()
         prev = current;
         current = current->next;
     }
-
-    // If no usable item is found, return nullptr
     if (current == nullptr)
     {
         return nullptr;
     }
-
-    // Swap the found node with the head node if it is not already the head
     if (current != head)
     {
         if (prev != nullptr)
@@ -473,14 +460,11 @@ BaseItem *WatsonBag::get()
         current->next = temp;
         std::swap(head, current);
     }
-
-    // Now head is the node containing the item to be removed
     BaseItem *returnItem = head->item;
-    Node *temp = head; // Temporary node to hold the current head
-    head = head->next; // Update the head to the next node
-    delete temp;       // Delete the temporary node
-    size--;            // Decrement the size
-
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    size--;
     return returnItem;
 }
 
@@ -1098,10 +1082,10 @@ MovingObjectType Robot::getObjectType() const
 {
     return ROBOT;
 }
-RobotType Robot::getType()
-{
-    return this->robot_type;
-}
+// RobotType Robot::getType()
+// {
+//     return this->robot_type;
+// }
 /*
  *CLASS: RobotC kế thừa class Robot
  */
@@ -1560,6 +1544,7 @@ string Configuration::str() const
     return oss.str(); // Return the built string
 }
 
+//****************************************************TASK FIGHT***************************************************************************************/
 // ! Các mục sửa đổi:
 // ! HÀM KHỞI TẠO: Sherlock và Watson thêm thuộc tính bag, Robot thêm thuộc tính để sinh item
 // !
@@ -1590,6 +1575,7 @@ bool BaseBag::checkItem(ItemType itemType)
 }
 BaseItem *Robot::NewItem()
 {
+
     int i = this->poshead.getRow();
     int j = this->poshead.getCol();
     int p = i * j;
@@ -1627,6 +1613,7 @@ BaseItem *Robot::NewItem()
     }
     else
     {
+
         return nullptr;
     }
 }
@@ -1806,7 +1793,6 @@ void StudyPinkProgram::run(ofstream &OUTPUT)
 // *CLASS: ArrayMovingObject
 bool ArrayMovingObject::checkMeet(int index)
 {
-
     MovingObject *objAtIndex = arr_mv_objs[index];
     Position posAtIndex = objAtIndex->getCurrentPosition();
 
@@ -1829,9 +1815,24 @@ bool ArrayMovingObject::checkMeet(int index)
                 if (otherType == ROBOT)
                 {
                     Robot *robot = dynamic_cast<Robot *>(otherObj);
-                    if (robot->getType() == C && dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot)))
+                    RobotType typeRobot = robot->getType();
+                    bool fight = false; // Declare and initialize fight variable outside the switch statement
+                    switch (typeRobot)
                     {
-                        return true;
+                    case RobotType::C:
+                        fight = dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
+                        if (fight)
+                            return true;
+                        break;
+                    case RobotType::S:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
+                        break;
+                    case RobotType::W:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
+                        break;
+                    case RobotType::SW:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
+                        break;
                     }
                     return false;
                 }
@@ -1851,13 +1852,35 @@ bool ArrayMovingObject::checkMeet(int index)
                 }
                 break;
             case WATSON:
+                // cout << "WATSON PASSPHRASE" << endl;
                 if (otherType == ROBOT)
                 {
                     Robot *robot = dynamic_cast<Robot *>(otherObj);
+                    RobotType typeRobot = robot->getType();
+                    // bool fight = false;
+                    switch (typeRobot)
+                    {
+                    case RobotType::C:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
+                        break;
+                    case RobotType::S:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
+                        break;
+                    case RobotType::W:
+                        dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
+                        break;
+                    // case RobotType::SW:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
+                    //     break;
+                    default:
+                        return false;
+                    }
                     return false;
                 }
                 else if (otherType == SHERLOCK)
                 {
+                    // cout << "WATSON SHERLOCK" << endl;
+
                     Watson *watson = dynamic_cast<Watson *>(objAtIndex);
                     Sherlock *sherlock = dynamic_cast<Sherlock *>(otherObj);
                     BaseBag *tempBag = watson->getBag();
@@ -1867,6 +1890,7 @@ bool ArrayMovingObject::checkMeet(int index)
                 }
                 else if (otherType == CRIMINAL)
                 {
+                    // cout << "WATSON CRIMINAL" << endl;
                     return true;
                 }
                 break;
@@ -1888,14 +1912,47 @@ bool ArrayMovingObject::checkMeet(int index)
                 else if (otherType == SHERLOCK)
                 {
                     Robot *robot = dynamic_cast<Robot *>(objAtIndex);
-                    if (robot->getType() == C && dynamic_cast<Sherlock *>(otherObj)->meet(dynamic_cast<RobotC *>(robot)))
-                    {
-                        return true;
-                    }
+                    // RobotType typeRobot = robot->getType();
+                    // bool fight = false; // Declare and initialize fight variable outside the switch statement
+                    // switch (typeRobot)
+                    // {
+                    // case RobotType::C:
+                    //     fight = dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
+                    //     if (fight)
+                    //         return true;
+                    //     break;
+                    // case RobotType::S:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
+                    //     break;
+                    // case RobotType::W:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
+                    //     break;
+                    // case RobotType::SW:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
+                    //     break;
+                    // }
                     return false;
                 }
                 else if (otherType == WATSON)
                 {
+                    Robot *robot = dynamic_cast<Robot *>(otherObj);
+                    // RobotType typeRobot = robot->getType();
+                    // bool fight = false; // Declare and initialize fight variable outside the switch statement
+                    // switch (typeRobot)
+                    // {
+                    // case RobotType::C:
+                    //     fight = dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotC *>(robot));
+                    //     break;
+                    // case RobotType::S:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotS *>(robot));
+                    //     break;
+                    // case RobotType::W:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotW *>(robot));
+                    //     break;
+                    // case RobotType::SW:
+                    //     dynamic_cast<Sherlock *>(objAtIndex)->meet(dynamic_cast<RobotSW *>(robot));
+                    //     break;
+                    // }
                     return false;
                 }
                 else if (otherType == CRIMINAL)
@@ -1929,7 +1986,6 @@ bool Sherlock::meet(RobotS *robotS)
     }
     else
     {
-        // Sherlock loses 10% EXP or uses ExcemptionCard if available
         BaseItem *excemptionCard = bag->get(ItemType::EXCEMPTION_CARD);
         if (excemptionCard)
         {
@@ -1959,12 +2015,13 @@ bool Sherlock::meet(RobotW *robotW)
     BaseItem *item = robotW->NewItem();
     if (item)
     {
-        bag->insert(item);
+        this->bag->insert(item);
     }
     return true;
 }
 bool Sherlock::meet(RobotSW *robotSW)
 {
+
     if (EXP > 300 && HP > 335)
     {
         BaseItem *item = robotSW->NewItem();
@@ -1983,6 +2040,7 @@ bool Sherlock::meet(RobotSW *robotSW)
 }
 bool Sherlock::meet(RobotC *robotC)
 {
+
     if (EXP > 500)
     {
         return true;
@@ -1999,6 +2057,7 @@ bool Sherlock::meet(RobotC *robotC)
 }
 bool Sherlock::meet(Watson *watson)
 {
+
     SherlockBag *sherlockBag = dynamic_cast<SherlockBag *>(this->bag);
     WatsonBag *watsonBag = dynamic_cast<WatsonBag *>(watson->getBag());
 
@@ -2040,17 +2099,18 @@ bool Watson::meet(RobotS *robotS)
 }
 bool Watson::meet(RobotW *robotW)
 {
-    BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
+
+    BaseItem *passingCard = this->getBag()->get(ItemType::PASSING_CARD);
     if (passingCard && passingCard->canUse(this, robotW))
     {
         passingCard->use(this, robotW);
+        this->bag->insert(robotW->NewItem());
         return true;
     }
 
-    // Watson needs to battle RobotW
     if (this->getHP() > 350)
     {
-        getBag()->insert(robotW->NewItem());
+        this->bag->insert(robotW->NewItem());
     }
     else
     {
@@ -2071,8 +2131,9 @@ bool Watson::meet(RobotW *robotW)
 }
 bool Watson::meet(RobotSW *robotSW)
 {
-    // TODO: Xử lý trao đổi khi gặp robot SW
+
     BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
+
     if (passingCard && passingCard->canUse(this, robotSW))
     {
         passingCard->use(this, robotSW);
@@ -2082,6 +2143,7 @@ bool Watson::meet(RobotSW *robotSW)
 
     if (this->getEXP() > 600 && this->getHP() > 165)
     {
+
         getBag()->insert(robotSW->NewItem());
     }
     else
@@ -2106,7 +2168,6 @@ bool Watson::meet(RobotSW *robotSW)
 }
 bool Watson::meet(RobotC *robotC)
 {
-    // TODO: Xử lý trao đổi khi gặp robot C
     BaseItem *passingCard = getBag()->get(ItemType::PASSING_CARD);
     if (passingCard && passingCard->canUse(this, robotC))
     {
@@ -2121,7 +2182,6 @@ bool Watson::meet(RobotC *robotC)
 }
 bool Watson::meet(Sherlock *sherlock)
 {
-    // TODO: Xử lý trao đổi khi gặp Sherlock
 
     SherlockBag *sherlockBag = dynamic_cast<SherlockBag *>(sherlock->getBag());
     WatsonBag *watsonBag = dynamic_cast<WatsonBag *>(this->bag);
@@ -2137,7 +2197,6 @@ bool Watson::meet(Sherlock *sherlock)
         }
     }
 
-    // Then, Watson gives ExcemptionCards to Sherlock
     while (watsonBag->checkItem(EXCEMPTION_CARD))
     {
         BaseItem *excemptionCard = this->bag->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
@@ -2153,11 +2212,9 @@ bool Watson::meet(Sherlock *sherlock)
 
 BaseBag *Sherlock::getBag() const
 {
-    // TODO: get bag
     return this->bag;
 }
 BaseBag *Watson::getBag() const
 {
-    // TODO: get bag
     return this->bag;
 }

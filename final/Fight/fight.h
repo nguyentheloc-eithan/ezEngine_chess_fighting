@@ -281,7 +281,10 @@ public:
     virtual Position getNextPosition() = 0;
     virtual void move() = 0;
     virtual string str() const = 0;
-    virtual RobotType getType();
+    RobotType getType()
+    {
+        return this->robot_type;
+    }
     virtual int getDistance() const = 0;
     ItemType getItem() { return item; } //! khác biến này do sinh  viên tự thiết kế tạo test không đc đụng tới
     BaseItem *NewItem();
