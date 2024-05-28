@@ -1020,7 +1020,6 @@ int Criminal::manhattanDistance(const Position &pos1, const Position &pos2) cons
     int distance = abs(pos1.getRow() - pos2.getRow()) + abs(pos1.getCol() - pos2.getCol());
     return distance;
 }
-
 /*
  * CLASS: Robot kế thừa class MovingObject
  */
@@ -1033,7 +1032,6 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
         // Create RobotC
         return new RobotC(index, criminal->getCurrentPosition(), map, C, criminal);
     }
-
     else
     {
         // Calculate distances to Sherlock and Watson manually
@@ -1045,7 +1043,6 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
 
         int watsonRow = watson->getCurrentPosition().getRow();
         int watsonCol = watson->getCurrentPosition().getCol();
-
         // Calculate Manhattan distances
         int distanceToSherlock = abs(criminalRow - sherlockRow) + abs(criminalCol - sherlockCol);
         int distanceToWatson = abs(criminalRow - watsonRow) + abs(criminalCol - watsonCol);
@@ -1053,7 +1050,6 @@ Robot *Robot::create(int index, Map *map, Criminal *criminal, Sherlock *sherlock
         // Compare distances and create appropriate type of robot
         if (distanceToSherlock < distanceToWatson)
         {
-
             return new RobotS(index, criminal->getCurrentPosition(), map, S, criminal, sherlock);
         }
         else if (distanceToSherlock > distanceToWatson)

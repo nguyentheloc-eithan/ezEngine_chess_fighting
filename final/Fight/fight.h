@@ -178,7 +178,6 @@ public:
     bool meet(RobotC *robotC);
     bool meet(Watson *watson);
     void setPos(Position pos);
-    // TODO implement các phương thức getNextPosition, move, str, getObjectType ....
     Position getNextPosition() override;
     void move();
     string str() const;
@@ -240,6 +239,7 @@ public:
 
     int getNumRows() const;
     int getNumCols() const;
+
     ElementType getElementType(int i, int j) const;
     MapElement *getElementAtPosition(const Position &pos) const;
 
@@ -258,9 +258,7 @@ public:
     Criminal(int index, const Position &init_pos, Map *map, Sherlock *sherlock, Watson *watson);
     Position getNextPosition() override;
     void move();
-
     string str() const;
-
     MovingObjectType getObjectType() const;
     int getCount() const;
 };
@@ -305,7 +303,6 @@ public:
         return this->criminal->getCurrentPosition();
     }
     int getDistance(Sherlock *sherlock);
-
     int getDistance(Watson *watson);
     Position getNextPosition() override;
     void move();
