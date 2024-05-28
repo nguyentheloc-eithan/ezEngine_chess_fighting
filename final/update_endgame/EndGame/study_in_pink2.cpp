@@ -1064,6 +1064,7 @@ RobotC::RobotC(int index, const Position &init_pos, Map *map, Criminal *criminal
     : Robot(index, init_pos, map, criminal)
 {
     // nextPosition = criminal->getNextPosition();
+    this->robot_type = RobotType::C;
 }
 int RobotC::getDistance(Sherlock *sherlock)
 {
@@ -1125,6 +1126,7 @@ RobotW::RobotW(int index, const Position &init_pos, Map *map, Criminal *criminal
     : Robot(index, init_pos, map, criminal), // Call base class constructor
       watson(watson)                         // Initialize Watson pointer member
 {
+    this->robot_type = RobotType::W;
 }
 
 Position RobotW::getNextPosition()
@@ -1186,6 +1188,7 @@ RobotS::RobotS(int index, const Position &init_pos, Map *map, Criminal *criminal
       sherlock(sherlock)
 {
     // Phần khởi tạo cụ thể cho lớp RobotS
+    this->robot_type = RobotType::S;
 }
 Position RobotS::getNextPosition()
 {
@@ -1245,6 +1248,7 @@ RobotSW::RobotSW(int index, const Position &init_pos, Map *map, Criminal *crimin
       watson(watson)
 {
     // Additional initialization for RobotSW
+    this->robot_type = RobotType::SW;
 }
 
 Position RobotSW::getNextPosition()

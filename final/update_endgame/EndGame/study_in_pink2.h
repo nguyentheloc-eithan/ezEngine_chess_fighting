@@ -926,7 +926,7 @@ public:
                 if (isStop())
                 {
                     // printResult();
-                    printInfo(i, j, OUTPUT);
+                    // printInfo(i, j, OUTPUT);
                     return;
                 }
                 arr_mv_objs->get(j)->move();
