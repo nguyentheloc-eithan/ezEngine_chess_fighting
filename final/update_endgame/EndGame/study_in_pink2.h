@@ -1,6 +1,5 @@
 
 
-// The library here is concretely set, students are not allowed to include any other libraries.
 #ifndef _H_STUDY_IN_PINK_2_H_
 #define _H_STUDY_IN_PINK_2_H_
 
@@ -178,18 +177,9 @@ public:
         adjacentPositions[3] = Position(r, c + 1); // Bên R
         return adjacentPositions;
     }
-    std::array<Position, 8> eightDirectionOfRobotSW() const
+    Position getCurrentPosition()
     {
-        std::array<Position, 8> adjacentPositions;
-        adjacentPositions[0] = Position(r - 2, c);     // Bên U
-        adjacentPositions[1] = Position(r - 1, c + 1); // Bên UR
-        adjacentPositions[2] = Position(r, c + 2);     // Bên R
-        adjacentPositions[3] = Position(r + 1, c + 1); // Bên DR
-        adjacentPositions[4] = Position(r + 2, c);     // Bên D
-        adjacentPositions[5] = Position(r + 1, c - 1); // Bên DL
-        adjacentPositions[6] = Position(r, c - 2);     // Bên L
-        adjacentPositions[7] = Position(r - 1, c - 1); // Bên LU
-        return adjacentPositions;
+        return Position(this->r, this->c);
     }
 };
 
@@ -651,7 +641,7 @@ public:
     string str() const;
 };
 
-class ExcemptionCard : public BaseItem
+class ExemptionCard : public BaseItem
 {
     friend class TestStudyInPink;
 

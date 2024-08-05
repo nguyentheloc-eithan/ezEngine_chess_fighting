@@ -254,7 +254,6 @@ public:
 
 int main(int argc, char *argv[])
 {
-    cout << "Start program assignments 2 KTLT" << endl;
     cout << "Running test : ";
     int start = 0, end = 0;
     if (argc == 1)
@@ -272,11 +271,11 @@ int main(int argc, char *argv[])
         start = stoi(argv[1]);
         end = stoi(argv[2]);
     }
-    string folderr = "testcase/output/output";
+    string folder = "testcase/output/output";
     // string folderr = "testcase/expect/expect";
     if (start == 0)
     {
-        string outputFile = folderr + "0.txt";
+        string outputFile = folder + "0.txt";
         OUTPUT.open(outputFile);
         TestStudyInPink::testBasic();
         OUTPUT.close();
@@ -285,9 +284,10 @@ int main(int argc, char *argv[])
     {
         if (i == 0)
             continue;
+
         cout << i << " ";
         string inputFile = "testcase/input/input" + to_string(i) + ".txt";
-        string outputFile = folderr + to_string(i) + ".txt";
+        string outputFile = folder + to_string(i) + ".txt";
         OUTPUT.open(outputFile);
         TestStudyInPink::testAll(inputFile, outputFile);
         OUTPUT.close();

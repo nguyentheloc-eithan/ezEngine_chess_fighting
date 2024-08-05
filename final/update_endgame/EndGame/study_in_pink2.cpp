@@ -1,6 +1,22 @@
 
 #include "study_in_pink2.h"
 const Position Position::npos = Position(-1, -1);
+
+// UTILS FUNCTIONS DEFINED
+std::array<Position, 8> eightDirectionOfRobotSW(int r, int c)
+{
+    std::array<Position, 8> adjacentPositions;
+    adjacentPositions[0] = Position(r - 2, c);     // Bên U
+    adjacentPositions[1] = Position(r - 1, c + 1); // Bên UR
+    adjacentPositions[2] = Position(r, c + 2);     // Bên R
+    adjacentPositions[3] = Position(r + 1, c + 1); // Bên DR
+    adjacentPositions[4] = Position(r + 2, c);     // Bên D
+    adjacentPositions[5] = Position(r + 1, c - 1); // Bên DL
+    adjacentPositions[6] = Position(r, c - 2);     // Bên L
+    adjacentPositions[7] = Position(r - 1, c - 1); // Bên LU
+    return adjacentPositions;
+}
+
 bool isOdd(int number)
 {
     return number % 2 != 0;
@@ -162,16 +178,16 @@ void FirstAid::use(Character *obj, Robot *robot)
         watson->setHP(newHP);
     }
 }
-// *CLASS: ExcemptionCard
-ItemType ExcemptionCard::getType() const
+// *CLASS: ExemptionCard
+ItemType ExemptionCard::getType() const
 {
     return ItemType::EXEMPTION_CARD;
 }
-string ExcemptionCard::str() const
+string ExemptionCard::str() const
 {
-    return "ExcemptionCard";
+    return "ExemptionCard";
 }
-bool ExcemptionCard::canUse(Character *obj, Robot *robot)
+bool ExemptionCard::canUse(Character *obj, Robot *robot)
 {
     MovingObjectType ObjectType = obj->getObjectType();
     bool flag = false;
@@ -190,7 +206,7 @@ bool ExcemptionCard::canUse(Character *obj, Robot *robot)
 
     return flag;
 }
-void ExcemptionCard::use(Character *obj, Robot *robot)
+void ExemptionCard::use(Character *obj, Robot *robot)
 {
 }
 // *CLASS: PassingCard
@@ -1255,14 +1271,17 @@ Position RobotSW::getNextPosition()
 {
     Position sherlockPos = sherlock->getCurrentPosition();
     Position watsonPos = watson->getCurrentPosition();
-
+    Position currentPos = criminal->getCurrentPosition();
     int minTotalDistance = INT_MAX;
     Position nextPos = Position::npos;
 
-    for (const Position &adjPos : pos.eightDirectionOfRobotSW())
+    for (const Position &adjPos : eightDirectionOfRobotSW(currentPos.getCol(), currentPos.getRow()))
+
     {
+
         if (map->isValid(adjPos, this))
         {
+
             int distanceToSherlockNew = criminal->manhattanDistance(adjPos, sherlockPos);
             int distanceToWatsonNew = criminal->manhattanDistance(adjPos, watsonPos);
 
@@ -1603,7 +1622,7 @@ BaseItem *Robot::NewItem()
     }
     else if (s >= 6 && s <= 7)
     {
-        return new ExcemptionCard();
+        return new ExemptionCard();
     }
     else if (s >= 8 && s <= 9)
     {
