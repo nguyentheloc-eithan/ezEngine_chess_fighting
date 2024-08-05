@@ -8,8 +8,6 @@
 // Hàm run chú ý chỉnh từ hàm run() gốc (vị trí gọi printResult và printStep)
 // Hàm move của Sherlock và Watson khi exp == 0 sẽ không thực hiện gì
 // NOTE:
-// chú ý các phần addition nên sửa đổi để tránh đạo code
-// nộp Bkel cần xóa đổi lại 2 hàm printResult và printStep gốc, xóa thuộc tính outputFile
 
 #include "study_in_pink2.h"
 
@@ -177,7 +175,7 @@ void FirstAid::use(Character *obj, Robot *robot)
 // *CLASS: ExcemptionCard
 ItemType ExcemptionCard::getType() const
 {
-    return ItemType::EXCEMPTION_CARD;
+    return ItemType::EXEMPTION_CARD;
 }
 string ExcemptionCard::str() const
 {
@@ -394,7 +392,7 @@ BaseItem *SherlockBag::get()
 
     while (current != nullptr)
     {
-        if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+        if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
             current->item->canUse(this->sherlock, nullptr))
         {
             break;
@@ -442,7 +440,7 @@ BaseItem *WatsonBag::get()
 
     while (current != nullptr)
     {
-        if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+        if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
             current->item->canUse(this->watson, nullptr))
         {
             break;
@@ -612,15 +610,6 @@ Character::Character(int index, const Position pos, Map *map, const string &name
  * CLASS: Sherlock kế thừa class Character
  */
 
-// Sherlock::Sherlock(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp)
-//     : Character(index, init_pos, map, "SHERLOCK")
-// {
-//     this->index_moving_rule = 0;
-//     this->moving_rule = moving_rule;
-//     this->hp = init_hp;
-//     this->exp = init_exp;
-// }
-
 Position Sherlock::getNextPosition()
 {
     if (moving_rule.empty())
@@ -713,15 +702,6 @@ void Sherlock::setEXP(int exp)
     }
     this->exp = expMax;
 }
-
-// Watson::Watson(int index, const string &moving_rule, const Position &init_pos, Map *map, int init_hp, int init_exp)
-//     : Character(index, init_pos, map, "WATSON")
-// {
-//     this->index_moving_rule = 0;
-//     this->exp = init_exp;
-//     this->hp = init_hp;
-//     this->moving_rule = moving_rule;
-// }
 
 Position Watson::getNextPosition()
 {
@@ -1133,10 +1113,7 @@ string RobotC::str() const
 
     return description;
 }
-// int RobotC::getDistance() const
-// {
-//     return 0;
-// }
+
 RobotType RobotC::getType() const
 {
     return RobotType::C;
@@ -1562,7 +1539,7 @@ string Configuration::str() const
 // ! HÀM KHỞI TẠO: Sherlock và Watson thêm thuộc tính bag, Robot thêm thuộc tính để sinh item
 // !
 Robot::Robot(int index, const Position &pos, Map *map, Criminal *criminal, const string &name)
-    : MovingObject(index, pos, map, name), criminal(criminal), poshead(pos)
+    : MovingObject(index, pos, map, name), criminal(criminal), posHead(pos)
 {
 }
 bool BaseBag::checkItem(ItemType itemType)
@@ -1589,8 +1566,8 @@ bool BaseBag::checkItem(ItemType itemType)
 BaseItem *Robot::NewItem()
 {
 
-    int i = this->poshead.getRow();
-    int j = this->poshead.getCol();
+    int i = this->posHead.getRow();
+    int j = this->posHead.getCol();
     int p = i * j;
     // Calculate the dominant number s
     int s = p;
@@ -1827,11 +1804,11 @@ void Sherlock::setPos(Position pos)
 }
 bool Sherlock::meet(RobotS *robotS)
 {
-    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
+    if (this->getBag()->checkItem(ItemType::EXEMPTION_CARD))
     {
         if (this->getHP() % 2 != 0)
         {
-            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXEMPTION_CARD);
             if (this->exp > 400)
             {
                 BaseItem *item = robotS->NewItem();
@@ -1912,9 +1889,9 @@ bool Sherlock::meet(RobotS *robotS)
 }
 bool Sherlock::meet(RobotW *robotW)
 {
-    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD) && this->getHP() % 2 != 0)
+    if (this->getBag()->checkItem(ItemType::EXEMPTION_CARD) && this->getHP() % 2 != 0)
     {
-        BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+        BaseItem *excemptionCard = this->bag->get(ItemType::EXEMPTION_CARD);
     }
 
     BaseItem *item = robotW->NewItem();
@@ -1929,11 +1906,11 @@ bool Sherlock::meet(RobotW *robotW)
 }
 bool Sherlock::meet(RobotSW *robotSW)
 {
-    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
+    if (this->getBag()->checkItem(ItemType::EXEMPTION_CARD))
     {
         if (this->getHP() % 2 != 0)
         {
-            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXEMPTION_CARD);
             if (exp > 300 && hp > 335)
             {
                 BaseItem *item = robotSW->NewItem();
@@ -2014,11 +1991,11 @@ bool Sherlock::meet(RobotSW *robotSW)
 }
 bool Sherlock::meet(RobotC *robotC)
 {
-    if (this->getBag()->checkItem(ItemType::EXCEMPTION_CARD))
+    if (this->getBag()->checkItem(ItemType::EXEMPTION_CARD))
     {
         if (this->getHP() % 2 != 0)
         {
-            BaseItem *excemptionCard = this->bag->get(ItemType::EXCEMPTION_CARD);
+            BaseItem *excemptionCard = this->bag->get(ItemType::EXEMPTION_CARD);
             if (this->exp > 500)
             {
                 this->pos = robotC->getCriminalPosition();
@@ -2105,7 +2082,7 @@ bool Sherlock::meet(RobotC *robotC)
 bool Sherlock::meet(Watson *watson)
 {
 
-    if (this->bag->checkItem(PASSING_CARD) && watson->getBag()->checkItem(EXCEMPTION_CARD))
+    if (this->bag->checkItem(PASSING_CARD) && watson->getBag()->checkItem(EXEMPTION_CARD))
     {
         while (this->bag->checkItem(PASSING_CARD))
         {
@@ -2114,9 +2091,9 @@ bool Sherlock::meet(Watson *watson)
         }
 
         // Then, Watson gives ExcemptionCards to Sherlock
-        while (watson->getBag()->checkItem(EXCEMPTION_CARD))
+        while (watson->getBag()->checkItem(EXEMPTION_CARD))
         {
-            BaseItem *excemptionCard = watson->getBag()->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
+            BaseItem *excemptionCard = watson->getBag()->get(EXEMPTION_CARD); // EXEMPTION_CARD
             this->bag->insert(excemptionCard);
         }
         return true;
@@ -2259,7 +2236,7 @@ bool Watson::meet(RobotC *robotC)
 }
 bool Watson::meet(Sherlock *sherlock)
 {
-    if (sherlock->getBag()->checkItem(PASSING_CARD) && this->bag->checkItem(EXCEMPTION_CARD))
+    if (sherlock->getBag()->checkItem(PASSING_CARD) && this->bag->checkItem(EXEMPTION_CARD))
     {
         while (sherlock->getBag()->checkItem(PASSING_CARD))
         {
@@ -2267,9 +2244,9 @@ bool Watson::meet(Sherlock *sherlock)
             this->bag->insert(passingCard);
         }
 
-        while (this->bag->checkItem(EXCEMPTION_CARD))
+        while (this->bag->checkItem(EXEMPTION_CARD))
         {
-            BaseItem *excemptionCard = this->bag->get(EXCEMPTION_CARD); // EXCEMPTION_CARD
+            BaseItem *excemptionCard = this->bag->get(EXEMPTION_CARD); // EXEMPTION_CARD
             sherlock->getBag()->insert(excemptionCard);
         }
         return true;

@@ -1,22 +1,8 @@
-/*
- * Ho Chi Minh City University of Technology
- * Faculty of Computer Science and Engineering
- * Initial code for Assignment 1
- * Programming Fundamentals Spring 2023
- * Author: Vu Van Tien
- * Date: 02.02.2023
- */
 
-// The library here is concretely set, students are not allowed to include any other libraries.
 #ifndef _H_STUDY_IN_PINK_2_H_
 #define _H_STUDY_IN_PINK_2_H_
 
 #include "main.h"
-////////////////////////////////////////////////////////////////////////
-/// STUDENT'S ANSWER BEGINS HERE
-/// Complete the following functions
-/// DO NOT modify any parameters in the functions.
-////////////////////////////////////////////////////////////////////////
 
 // Forward declaration
 class MovingObject;
@@ -49,7 +35,7 @@ enum ItemType
     MAGIC_BOOK,
     ENERGY_DRINK,
     FIRST_AID,
-    EXCEMPTION_CARD,
+    EXEMPTION_CARD,
     PASSING_CARD
 };
 enum ElementType
@@ -217,7 +203,7 @@ protected:
 
 public:
     MovingObject(int index, const Position pos, Map *map, const string &name = "");
-    virtual ~MovingObject(){};
+    virtual ~MovingObject() {};
     virtual Position getNextPosition() = 0;
     Position getCurrentPosition() const;
     virtual void move() = 0;
@@ -244,9 +230,7 @@ class Sherlock : public Character
     friend class TestStudyInPink;
 
 private:
-    // TODO
     int hp, exp;
-
     string moving_rule;
     int index_moving_rule;
     BaseBag *bag;
@@ -300,7 +284,7 @@ public:
     bool meet(RobotSW *robotSW);
     bool meet(RobotC *robotC);
     bool meet(Sherlock *sherlock);
-    ~Watson(){};
+    ~Watson() {};
 };
 
 class Criminal : public Character
@@ -308,7 +292,6 @@ class Criminal : public Character
     friend class TestStudyInPink;
 
 private:
-    // TODO
     Sherlock *sherlock;
     Watson *watson;
 
@@ -347,7 +330,6 @@ class ArrayMovingObject
     friend class TestStudyInPink;
 
 private:
-    // TODO
     MovingObject **arr_mv_objs;
     int count;
     int capacity;
@@ -492,7 +474,7 @@ protected:
     RobotType robot_type;
     BaseItem *item;
     Criminal *criminal;
-    Position poshead;
+    Position posHead;
 
 public:
     Robot(int index,
@@ -516,7 +498,7 @@ public:
         return 0;
     }
     BaseItem *NewItem();
-    ~Robot(){};
+    ~Robot() {};
 };
 
 class RobotC : public Robot
@@ -731,7 +713,7 @@ public:
 
             while (current != nullptr)
             {
-                if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+                if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
                     current->item->canUse(sherlock, nullptr))
                 {
                     break;
@@ -778,7 +760,7 @@ public:
 
             while (current != nullptr)
             {
-                if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+                if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
                     current->item->canUse(watson, nullptr))
                 {
                     break;
@@ -941,7 +923,4 @@ public:
     }
 };
 
-////////////////////////////////////////////////
-/// END OF STUDENT'S ANSWER
-////////////////////////////////////////////////
 #endif /* _H_STUDY_IN_PINK_2_H_ */

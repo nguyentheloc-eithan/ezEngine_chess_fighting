@@ -281,7 +281,7 @@ void testAll(string inputFile)
             else if (itemName == "FirstAid")
                 itemType = FIRST_AID;
             else if (itemName == "ExcemptionCard")
-                itemType = EXCEMPTION_CARD;
+                itemType = EXEMPTION_CARD;
             else if (itemName == "PassingCard")
                 itemType = PASSING_CARD;
             item = dynamic_cast<BaseBag *>(sherlockBag)->get(itemType);

@@ -49,7 +49,7 @@ enum ItemType
     MAGIC_BOOK,
     ENERGY_DRINK,
     FIRST_AID,
-    EXCEMPTION_CARD,
+    EXEMPTION_CARD,
     PASSING_CARD
 };
 enum ElementType
@@ -219,7 +219,7 @@ protected:
 
 public:
     MovingObject(int index, const Position pos, Map *map, const string &name = "");
-    virtual ~MovingObject(){};
+    virtual ~MovingObject() {};
     virtual Position getNextPosition() = 0;
     Position getCurrentPosition() const;
     virtual void move() = 0;
@@ -302,7 +302,7 @@ public:
     bool meet(RobotSW *robotSW);
     bool meet(RobotC *robotC);
     bool meet(Sherlock *sherlock);
-    ~Watson(){};
+    ~Watson() {};
 };
 
 class Criminal : public Character
@@ -495,7 +495,7 @@ protected:
     RobotType robot_type;
     BaseItem *item;
     Criminal *criminal;
-    Position poshead;
+    Position posHead;
 
 public:
     Robot(int index,
@@ -519,7 +519,7 @@ public:
         return 0;
     }
     BaseItem *NewItem();
-    ~Robot(){};
+    ~Robot() {};
 };
 
 class RobotC : public Robot
@@ -734,7 +734,7 @@ public:
 
             while (current != nullptr)
             {
-                if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+                if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
                     current->item->canUse(sherlock, nullptr))
                 {
                     break;
@@ -781,7 +781,7 @@ public:
 
             while (current != nullptr)
             {
-                if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+                if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
                     current->item->canUse(watson, nullptr))
                 {
                     break;

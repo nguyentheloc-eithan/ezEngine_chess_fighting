@@ -164,7 +164,7 @@ void FirstAid::use(Character *obj, Robot *robot)
 // *CLASS: ExcemptionCard
 ItemType ExcemptionCard::getType() const
 {
-    return ItemType::EXCEMPTION_CARD;
+    return ItemType::EXEMPTION_CARD;
 }
 string ExcemptionCard::str() const
 {
@@ -398,7 +398,7 @@ BaseItem *SherlockBag::get()
     // Traverse the list to find a usable item
     while (current != nullptr)
     {
-        if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+        if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
             current->item->canUse(this->sherlock, nullptr))
         {
             break;
@@ -453,7 +453,7 @@ BaseItem *WatsonBag::get()
     // Traverse the list to find a usable item
     while (current != nullptr)
     {
-        if (current->item->getType() != EXCEMPTION_CARD && current->item->getType() != PASSING_CARD &&
+        if (current->item->getType() != EXEMPTION_CARD && current->item->getType() != PASSING_CARD &&
             current->item->canUse(this->watson, nullptr))
         {
             break;

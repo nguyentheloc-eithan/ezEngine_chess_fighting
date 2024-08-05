@@ -49,7 +49,7 @@ enum ItemType
     MAGIC_BOOK,
     ENERGY_DRINK,
     FIRST_AID,
-    EXCEMPTION_CARD,
+    EXEMPTION_CARD,
     PASSING_CARD
 };
 enum ElementType

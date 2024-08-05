@@ -2361,7 +2361,7 @@ void tc_1333()
     watsonBag->insert(excemptionCard1);
     watsonBag->insert(excemptionCard2);
 
-    watsonBag->get(EXCEMPTION_CARD);
+    watsonBag->get(EXEMPTION_CARD);
 
     OUTPUT << watsonBag->getCount() << endl;
 
@@ -9300,7 +9300,7 @@ void TestStudyInPink::tc_1346()
     watsonBag->insert(excemptionCard1);
     watsonBag->insert(excemptionCard2);
 
-    watsonBag->get(EXCEMPTION_CARD);
+    watsonBag->get(EXEMPTION_CARD);
 
     OUTPUT << watsonBag->getCount() << endl;
 

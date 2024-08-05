@@ -24,7 +24,7 @@ enum ItemType
     MAGIC_BOOK,
     ENERGY_DRINK,
     FIRST_AID,
-    EXCEMPTION_CARD,
+    EXEMPTION_CARD,
     PASSING_CARD
 };
 class Robot;
@@ -269,7 +269,7 @@ protected:
     Criminal *criminal;
     ItemType item; //! khác biến này do sinh  viên tự thiết kế tạo test không đc đụng tới
     RobotType robot_type;
-    Position poshead; //! khác biến này do sinh  viên tự thiết kế tạo test không đc đụng tới
+    Position posHead; //! khác biến này do sinh  viên tự thiết kế tạo test không đc đụng tới
 
 public:
     Robot(int index, const Position &pos, Map *map, RobotType robot_type, Criminal *criminal, const string &name = "");
