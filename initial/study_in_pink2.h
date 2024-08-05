@@ -1,6 +1,5 @@
 
 
-// The library here is concretely set, students are not allowed to include any other libraries.
 #ifndef _H_STUDY_IN_PINK_2_H_
 #define _H_STUDY_IN_PINK_2_H_
 
@@ -267,6 +266,5 @@ public:
 };
 
 ////////////////////////////////////////////////
-/// END OF STUDENT'S ANSWER
 ////////////////////////////////////////////////
 #endif /* _H_STUDY_IN_PINK_2_H_ */
