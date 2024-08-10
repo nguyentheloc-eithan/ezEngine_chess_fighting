@@ -1,11 +1,3 @@
-/*
- * Ho Chi Minh City University of Technology
- * Faculty of Computer Science and Engineering
- * Initial code for Assignment 1
- * Programming Fundamentals Spring 2023
- * Author: Vu Van Tien
- * Date: 02.02.2023
- */
 
 // The library here is concretely set, students are not allowed to include any other libraries.
 #ifndef _H_STUDY_IN_PINK_2_H_
